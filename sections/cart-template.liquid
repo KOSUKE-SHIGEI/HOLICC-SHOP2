@@ -1,0 +1,527 @@
+{% comment %}
+カート内に予約商品と通常商品が存在しているか = カート内に商品種類が2つあるかつ予約商品が存在している
+{% endcomment %}
+{% assign isPreItemsInCart = false %}
+{% if cart.items.size > 1 %}
+{% for item in cart.items %}
+{% unless item.properties == empty %}
+{% for property in item.properties %}
+{% if property.first contains '予約商品'  %}
+{% assign isPreItemsInCart = true %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endif %}
+<!-- {{ isPreItemsInCart }} -->
+
+{% assign uniqueProductIdsString= cart.items | map: 'product_id'| uniq | join: ', ' %}
+
+<div 
+  class="cart page-width
+    {% if cart.items.size == 0%} cart--empty{% endif %} 
+    {% if cart.total_price >= 1000000 %} cart--postage-free{% endif %} 
+    {% if uniqueProductIdsString contains 7474640715939 and  uniqueProductIdsString contains 7474636095651 %} cart--in-packbag-plus-set{% endif %}
+    {% if uniqueProductIdsString contains 7504024043683 %}
+      {% unless uniqueProductIdsString contains 7474640715939 and  uniqueProductIdsString contains 7474636095651 %} cart--recommend-packbag-plus-set{% endunless %}
+    {% endif %}" 
+  data-section-id="{{ section.id }}" data-section-type="cart-template" data-cart-token="{{ cart.id }}"
+  >
+  <div class="section-header section-header--small text-center">
+    <h1 class="section-header__title h2">{{ 'cart.general.title' | t }}</h1>
+  </div>
+
+  {% comment %}
+  Packbag+単品で購入している場合、セットに誘導する
+  {% endcomment %}
+<!--   <div class="set-message-box set-message-box--packbag-plus">
+    <div class="set-message-box__main">
+      <div class="set-message-box__main-icon">
+        <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/attention.png?v=1630854034">
+      </div>
+      <div class="set-message-box__main-text">
+        PackBag+はセット割があります<span class="pc">。</span><br class="sp">S/Lセットは17,900円でお得です
+      </div>
+    </div>
+    <div class="set-message-box__link">
+      <a href="https://holicc.jp/products/packbagplus-set">セットの商品ページを見る</a>
+    </div>
+  </div> -->
+
+  
+  {% comment %}
+  Cart no cookies state
+  {% endcomment %}
+  <div class="cart__no-cookies">
+    <div class="cart-message text-center">
+      <p>{{ 'cart.general.cookies_required' | t }}</p>
+    </div>
+  </div>
+
+  {% comment %}
+  Cart Empty State
+  {% endcomment %}
+  <div class="cart__empty">
+    <div class="cart-message text-center">
+      <p>{{ 'cart.general.empty' | t }}</p>
+      <p><a href="https://holicc.jp/collections/holicc-items" class="btn btn--primary">{{ 'cart.general.continue_browsing' | t }}</a></p>
+    </div>
+  </div>
+
+  
+  {% if isPreItemsInCart %}
+  <div class="set-message-box set-message-box--alert">
+    <div class="set-message-box__main">
+      <div class="set-message-box__main-icon">
+        <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/attention.png?v=1630854034">
+      </div>
+      <div class="set-message-box__main-text">
+        予約商品が含まれています
+      </div>
+    </div>
+    <div class="set-message-box__text" style="text-align: left;">
+      通常商品のみすぐに発送希望の場合、通常商品と予約商品を別々にご注文ください。同時に注文いただくと、通常商品も予約商品と同時のお届けとなります。
+    </div>
+  </div>
+  {% endif %}
+
+  
+  <form action="{{ routes.cart_url }}" method="post" novalidate class="cart__form">
+    <table class="cart__table table">
+      <thead class="cart__table-header border-bottom">
+        <th class="text-left" colspan="2">{{ 'cart.label.product' | t }}</th>
+        <th class="text-left">{{ 'cart.label.quantity' | t }}</th>
+        <th class="text-right small--hide">{{ 'cart.label.total' | t }}</th>
+      </thead>
+
+      <tbody data-cart-item-list>
+
+        {% comment %}
+        If the cart has no items, then include a item element with a template class
+        so that it is hidden but still available for use client-side by ajax-cart.js
+        {% endcomment %}
+
+        {%- assign cartItems = 'template ' | split: ' ' -%}
+        {% if cart.items.size > 0 %}
+          {%- assign cartItems = cart.items -%}
+        {% endif %}
+
+        
+        
+        {% for item in cartItems %}
+          <tr class="cart-item{% if item == 'template' %} ajax-cart__template{% endif %}"  data-product-id="{{ item.product_id }}" data-cart-item data-cart-item-id="{{ item.key }}">
+            <td class="cart-item__image-wrapper">
+              {% assign itemImage = true %}
+              {% if item.image == blank and item.product.featured_image == blank %}
+                {% assign itemImage = false %}
+              {% endif %}
+              <a class="cart-item__image-link" href="{{ item.url | within: collections.all }}" style="background-image: {% if itemImage %}url('{{ item | img_url: 'medium' }}'){% else %}none{% endif %};" data-cart-item-background-image data-cart-item-href>
+                <img class="cart-item__image lazyload {% unless itemImage %}hide{% endunless %}" src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}" data-cart-item-image>
+              </a>
+            </td>
+
+            <td class="cart-item__meta small--text-left">
+              <a class="cart-item__meta-title h4" href="{{ item.url }}" data-cart-item-href data-cart-item-title>{{ item.product.title }}</a>
+              <p class="cart-item__meta-variant" data-cart-item-variant-title>
+                {% unless item.product.has_only_default_variant %}
+                  {% unless item.variant.title == 'Default Title' %}
+                    {{ item.variant.title }}
+                  {% endunless %}
+                {% endunless %}
+              </p>
+              
+
+              {% comment %}
+              Optional, loop through custom product line items if available
+
+              Line item properties come in as having two parts. The first part will be passed with the default form,
+              but p.last is the actual custom property and may be blank. If it is, don't show it.
+
+              For more info on line item properties, visit:
+              - https://help.shopify.com/themes/customization/products/features/get-customization-information-for-products
+
+              If the item has no properties, then include a property element with a template class
+              so that it is hidden but still available for use client-side by ajax-cart.js
+              {% endcomment %}
+
+              {%- assign itemProperties = 'template ' | split: ' ' -%}
+              {%- assign property_size = item.properties | size -%}
+
+              {% if property_size > 0 %}
+                {%- assign itemProperties = item.properties -%}
+              {% endif %}
+
+              <ul class="cart-item__properties" data-cart-item-property-list>
+                {% for p in itemProperties %}
+                  {% assign first_character_in_key = p.first | truncate: 1, '' %}
+                  {% unless p.last == blank or first_character_in_key == '_' %}
+                    <li class="cart-item__property{% if p == 'template' %} ajax-cart__template{% endif %}{% if p.last == blank %} visually-hidden{% endif %}" data-cart-item-property>
+                      {{ p.first }}:
+
+                      {% comment %}
+                      Check if there was an uploaded file associated
+                      {% endcomment %}
+                      {% if p.last contains '/uploads/' %}
+                        <a href="{{ p.last }}">
+{% assign file_type = p.last | split: '.' | last | downcase %}
+{% assign file_types = 'jpg,jpeg,webp,gif,png,apng,avif,svg,bmp,ico,tiff' | split: ',' %}
+{% if file_types contains file_type %}
+  <div class="bcpo-cart-file"><img src="{{ p.last }}" style="max-width: 100px; height: auto;"></div>
+{% else %}
+  <span class="bcpo-cart-file">Uploaded file</span>
+{% endif %}
+</a>
+                      {% else %}
+                        {{ p.last }}
+                      {% endif %}
+                    </li>
+                  {% endunless %}
+                {% endfor %}
+              </ul>
+
+              <!--      価格表記ここから      -->
+              <div class="">
+                <div data-cart-item-price-container>
+                  {%- if item.original_price != item.final_price -%}
+                    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                    <del class="cart-item__original-price">{{ item.original_price | money }}</del>
+                    <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+                    <span class="order-discount cart-item__price">{{ item.final_price | money }}</span>
+                  {%- else -%}
+                    <span class="cart-item__original-price cart-item__price">{{ item.original_price | money }}</span>
+                  {%- endif -%}
+
+
+                  {%- if item.variant.available and item.unit_price_measurement -%}
+                    {% include 'product-unit-price', variant: item, available: item.variant.available %}
+                  {%- endif -%}
+                </div>
+
+                {% comment %}
+                If the item has no discounts, then include a discount element with a template class
+                so that it is hidden but still available for use client-side by ajax-cart.js
+                {% endcomment %}
+
+                {%- assign itemDiscounts = 'template ' | split: ' ' -%}
+                {% if item.line_level_discount_allocations != blank %}
+                  {%- assign itemDiscounts = item.line_level_discount_allocations -%}
+                {% endif %}
+
+                <ul class="order-discount order-discount--list order-discount--title order-discount--cart medium-up--hide" aria-label="{{ 'customer.order.discount' | t }}" data-cart-item-discount-list>
+                  {%- for discount_allocation in itemDiscounts -%}
+                    <li class="order-discount__item{% if discount_allocation == 'template' %} ajax-cart__template{% endif %}" data-cart-item-discount>
+                      {%- include 'icon-saletag' -%}<span data-cart-item-discount-title>{{ discount_allocation.discount_application.title }}</span> (-<span data-cart-item-discount-amount>{{ discount_allocation.amount | money }}</span>)
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+              <!--      価格表記ここまで      -->
+
+              <p class="cart-item__message" data-item-message></p>
+              
+              {% comment %}
+              ギフトラッピングに対応している特定の商品だけ導線を追加する
+              {% endcomment %}
+              {% if item.product.metafields.my_fields.is_gift_wrapping %}
+              <a class="cart-item__gift-wrapping-link" href="https://holicc.jp/products/giftwrapping ">ギフトラッピングをする</a>
+              {% endif %}
+
+              <!--       数量選択         -->
+              <div class="cart-item__qty medium-up--hide">
+                <span style="font-size:13px;">数量</span>
+                <select id="quantity_{{ item.key }}" class="cart-item__qty-input" name="updates[{{ item.key }}]" required data-cart-item-input-quantity>
+                  <option value="1" {%- if item.quantity == 1 -%} selected{%- endif -%}>1</option>
+                  <option value="2" {%- if item.quantity == 2 -%} selected{%- endif -%}>2</option>
+                  <option value="3" {%- if item.quantity == 3 -%} selected{%- endif -%}>3</option>
+                  <option value="4" {%- if item.quantity == 4 -%} selected{%- endif -%}>4</option>
+                  <option value="5" {%- if item.quantity == 5 -%} selected{%- endif -%}>5</option>
+                </select>
+                <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="btn-link cart-item__remove" data-cart-item-delete>{{ 'cart.general.remove' | t }}</a>
+              </div>
+              
+            </td>
+
+
+            <td class="cart-item__update-wrapper text-right small--hide">
+              <div class="cart-item__qty">
+                <select id="quantity_{{ item.key }}" class="cart-item__qty-input" name="updates[{{ item.key }}]" required data-cart-item-input-quantity>
+                  <option value="1" {%- if item.quantity == 1 -%} selected{%- endif -%}>1</option>
+                  <option value="2" {%- if item.quantity == 2 -%} selected{%- endif -%}>2</option>
+                  <option value="3" {%- if item.quantity == 3 -%} selected{%- endif -%}>3</option>
+                  <option value="4" {%- if item.quantity == 4 -%} selected{%- endif -%}>4</option>
+                  <option value="5" {%- if item.quantity == 5 -%} selected{%- endif -%}>5</option>
+                </select>
+<!--                 <input id="quantity_{{ item.key }}" class="cart-item__qty-input" value="{{ item.quantity }}" type="number" pattern="\d*" min="1" name="updates[{{ item.key }}]" required data-cart-item-input-quantity> -->
+              <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="btn-link cart-item__remove" data-cart-item-delete>{{ 'cart.general.remove' | t }}</a>
+              </div>
+            </td>
+
+            <td class="text-right small--hide">
+              <div data-cart-item-line-price-container>
+                {%- if item.original_line_price != item.final_line_price -%}
+                  <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                  <del class="cart-item__original-price">{{ item.original_line_price | money }}</del>
+                  <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+                  <span class="order-discount cart-item__price">{{ item.final_line_price | money }}</span>
+                {%- else -%}
+                  <span class="cart-item__original-price cart-item__price">{{ item.original_line_price | money }}</span>
+                {%- endif -%}
+
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <footer class="cart-footer">
+      <div class="grid">
+        {% if section.settings.cart_notes_enable %}
+          <div class="grid__item medium-up--one-half cart-note">
+			
+            {% if isPreItemsInCart %}
+<!--            <div class="set-message-box">
+              <div class="set-message-box__main">
+                <div class="set-message-box__main-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/attention.png?v=1630854034">
+                </div>
+                <div class="set-message-box__main-text">
+                  予約商品が含まれています
+                </div>
+              </div>
+              <div class="set-message-box__text" style="text-align: left;">
+通常商品のみすぐに発送希望の場合、通常商品と予約商品を別々にご注文ください。同時に注文いただくと、通常商品も予約商品と同時のお届けとなります。
+              </div>
+            </div>
+             <div class="order-shipping-type">
+              <div class="order-shipping-type__wrapper">
+                <div class="order-shipping-type__header">
+                  <label class="order-shipping-type__title">配送方法</label>
+                </div>
+                <div class="order-shipping-type__main">
+                  <div class="order-shipping-type__col">
+                    <label for="is-separate-delivery--no" >
+                      <input id="is-separate-delivery--no" class="order-shipping-type__input hide" type="radio" name="attributes[is separate delivery]" value="no"{% if cart.attributes["is separate delivery"] == "no" %} checked{% endif %} checked>
+                      <span>予約商品と通常商品を一緒に配送する</span>
+                    </label>
+                  </div>
+                  <div class="order-shipping-type__col">
+                    <label for="is-separate-delivery--yes" >
+                      <input id="is-separate-delivery--yes" class="order-shipping-type__input hide"  type="radio" name="attributes[is separate delivery]" value="yes"{% if cart.attributes["is separate delivery"] == "yes" %} checked{% endif %}>
+                      <span>先に通常商品を配送する</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="order-shipping-type__footer">
+                  <span>※合計購入金額が1万円以上の場合は配送方法に関わらず送料無料です。</span>
+                </div>
+              </div>
+            </div> -->
+            {% endif %}
+            
+            <div>
+              <label for="CartSpecialInstructions" class="cart-footer__note-label small--text-center">{{ 'cart.general.note' | t }}</label>
+              <div class="shipping-message-box__sub">※配送日時のご指定などもこちらにご記入ください</div>
+              <textarea name="note" id="CartSpecialInstructions" class="cart-footer__note-input" rows="4" data-cart-note>{{ cart.note }}</textarea>
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="grid__item text-right small--text-center{% if section.settings.cart_notes_enable %} medium-up--one-half{% endif %}">
+
+          {% comment %}
+          If the cart has no discount, then include a discount element with a template class
+          so that it is hidden but still available for use client-side by ajax-cart.js
+          {% endcomment %}
+
+          {%- assign cartDiscounts = 'template ' | split: ' ' -%}
+          {% if cart.cart_level_discount_applications.size > 0 %}
+            {%- assign cartDiscounts = cart.cart_level_discount_applications -%}
+          {% endif %}
+
+          <div data-cart-discount-container>
+            {%- for discount_application in cartDiscounts -%}
+              <div class="order-discount-cart-wrapper{% if discount_application == 'template' %} ajax-cart__template{% endif %}" data-cart-discount>
+                <span class="order-discount order-discount--title order-discount--cart-title">
+                  {%- include 'icon-saletag' -%}<span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span><span data-cart-discount-title>{{- discount_application.title -}}</span>
+                </span>
+                <span class="order-discount order-discount--cart-price">-<span data-cart-discount-amount>{{ discount_application.total_allocated_amount | money }}</span></span>
+              </div>
+            {%- endfor -%}
+          </div>
+
+          <div data-loyal-target="subtotal">
+            <div class="cart-subtotal">
+              <span class="cart-subtotal__title h4">{{ 'cart.general.subtotal' | t }}</span>
+              <span
+                class="cart-subtotal__price"
+                data-loyal-target="total_price"
+                data-loyal-total-price="{{ cart.total_price }}"
+                data-cart-subtotal
+              >
+                {{ cart.total_price | money }}
+              </span>
+            </div>
+          </div>
+
+          {%- assign shipping_discount  = 1000000 | minus : cart.total_price -%}
+          <div class="shipping-message-box">
+            <div class="shipping-message-box__sub">＼10,000円以上ご購入でお得／</div>
+            <div class="shipping-message-box__main">あと<span class="shipping-message-box__main-em">{{ shipping_discount | money_without_currency }}円</span>で送料無料</div>
+          </div>
+
+          {%- capture taxes_shipping_checkout -%}
+            {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
+              {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- elsif shop.taxes_included -%}
+              {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+            {%- elsif shop.shipping_policy.body != blank -%}
+              {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+            {%- else -%}
+              {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
+            {%- endif -%}
+          {%- endcapture -%}
+			
+          <!--           <p class="cart-policies text-small rte">{{ taxes_shipping_checkout }}</p> -->
+          <p class="cart-policies--packbag-plus">PackBag+はセット割がありますが、決済時に18,200円で決済され、<b>まれに割引が適用にならない不具合が発生</b>しています。<br>万が一、割引が適用されなかった場合は<b>差額を返金いたします</b>ので、お手数ですが、ご注文確認メールのアドレス宛に割引が適用にならなかった旨をご連絡ください。</p>
+          <div class="btn-group">
+            <input type="submit" name="update" class="btn btn--secondary supports-no-js supports-js--hide" value="{{ 'cart.general.update' | t }}">
+            <button type="submit" name="checkout" class="checkout-btn btn btn--loader" data-cart-submit>
+              {{ 'cart.general.checkout' | t }}
+              <span class="btn--loader-balls"></span>
+            </button>
+          </div>
+          <div class="cart-footer__message-container">
+            <div class="cart-footer__message" data-cart-message></div>
+          </div>
+          <div class="">
+            <a class="cart-link" href="https://holicc.jp/collections/holicc-items">ショッピングを続ける</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-reccomend-items">
+        <div class="cart-reccomend-items__header">こちらもおすすめ</div>
+        <div class="cart-reccomend-items__wrapper">          
+          {% assign uniqueProductIdsString = cart.items | map: 'product_id'| uniq | join: ', ' %}
+          {% for product in collections["holicc-items"].products %}
+          {% unless uniqueProductIdsString contains product.id  %}
+          {% unless uniqueProductIdsString contains  7153581949091 and  product.id == 7258590511267 %}{% comment %}カートにTが入っているとき、T2は除外{% endcomment %}
+          {% unless uniqueProductIdsString contains  7258590511267 and  product.id == 7153581949091 %}{% comment %}カートにT2が入っているとき、Tは除外{% endcomment %}
+          {% unless uniqueProductIdsString contains  5871286845603 and  product.id == 7192304681123 %}{% comment %}カートにセットが入っているとき、バラは除外{% endcomment %}
+          {% unless uniqueProductIdsString contains  7192304681123 and  product.id == 5871286845603 %}{% comment %}カートにバラが入っているとき、セットは除外{% endcomment %}
+          <div class="cart-reccomend-item">
+            <a class="cart-reccomend-item__wrapper" href="{{ product.url }}">
+              <div class="cart-reccomend-item__image">
+                <img src="{{ product.metafields.my_fields._main_image | img_url: "medium" }}">
+              </div>
+              <div class="cart-reccomend-item__content">
+                <div class="cart-reccomend-item__subtitle">{{ product.metafields.descriptors.subtitle }}</div>
+                <div class="cart-reccomend-item__title">{{ product.title }}</div>
+                <div class="cart-reccomend-item__price">{{ product.price  | money }}<span class="cart-reccomend-item__price-tax">(税込)</span></div>
+  <!--               <div class="cart-reccomend-item__action"><a class="cart-reccomend-item__action-link" href="{{ product.url }}">詳しくはこちら</a></div> -->
+              </div>
+            </a>
+          </div>
+          {% endunless %}
+          {% endunless %}
+          {% endunless %}
+          {% endunless %}
+          {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+      
+    </footer>
+  </form>
+</div>
+
+<style>
+  .cart-policies--packbag-plus{
+    margin-top: 10px;
+    text-align: left;
+    line-height: 1.9;
+    font-size: 14px;
+  }
+  .cart .cart-policies--packbag-plus,
+  .cart .set-message-box--packbag-plus{
+    display: none;
+  }
+  .cart.cart--in-packbag-plus-set .cart-policies--packbag-plus,
+  .cart.cart--recommend-packbag-plus-set .set-message-box--packbag-plus{
+    display: block;
+  }
+  .cart .shipping-message-box{
+    display: block;
+  }
+  .cart.cart--postage-free .shipping-message-box{
+    display: none;
+  }
+    
+</style>
+<script>
+window.addEventListener('pageshow',()=>{
+  $('.checkout-btn').removeClass('btn--loader-active');
+});
+</script>
+
+
+{% schema %}
+{
+  "name": {
+    "cs": "Stránka košíku",
+    "da": "Side med indkøbskurv",
+    "de": "Warenkorb-Seite",
+    "en": "Cart page",
+    "es": "Página del carrito de compras",
+    "fi": "Ostoskorisivu",
+    "fr": "Page du panier",
+    "hi": "कार्ट पेज",
+    "it": "Pagina del carrello",
+    "ja": "カートページ",
+    "ko": "카트 페이지",
+    "nb": "Handlekurvside",
+    "nl": "Winkelwagenpagina",
+    "pl": "Strona koszyka",
+    "pt-BR": "Página do carrinho",
+    "pt-PT": "Página do carrinho",
+    "sv": "Varukorgssida",
+    "th": "หน้าตะกร้าสินค้า",
+    "tr": "Sepet sayfası",
+    "vi": "Trang giỏ hàng",
+    "zh-CN": "购物车页面",
+    "zh-TW": "購物車頁面"
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "cart_notes_enable",
+      "label": {
+        "cs": "Povolit poznámky ke košíku",
+        "da": "Aktivér bemærkninger til indkøbskurv",
+        "de": "Warenkorbanmerkungen erlauben",
+        "en": "Enable cart notes",
+        "es": "Habilitar notas del carrito de compra",
+        "fi": "Ota tilauskommentit käyttöön",
+        "fr": "Activer les notes de panier",
+        "hi": "कार्ट नोट्स सक्षम करें",
+        "it": "Abilita note carrello",
+        "ja": "カートメモを有効にする",
+        "ko": "카트 참고 사항 사용",
+        "nb": "Aktiver handlekurvmerknader",
+        "nl": "Opmerkingen voor winkelwagen inschakelen",
+        "pl": "Włącz uwagi dotyczące koszyka",
+        "pt-BR": "Habilitar observações do carrinho",
+        "pt-PT": "Ativar notas do carrinho",
+        "sv": "Aktivera varukorgsmeddelanden",
+        "th": "เปิดใช้หมายเหตุสำหรับตะกร้าสินค้า",
+        "tr": "Sepet notlarını etkinleştir",
+        "vi": "Bật ghi chú trong giỏ hàng",
+        "zh-CN": "启用购物车备注",
+        "zh-TW": "啟用購物車備註"
+      },
+      "default": true
+    }
+  ]
+}
+{% endschema %}

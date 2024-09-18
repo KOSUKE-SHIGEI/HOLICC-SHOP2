@@ -1,0 +1,31 @@
+<div id="test">
+{{ content_for_index }}
+</div>
+
+<style>
+@media only screen and (max-width: 768px ){
+  .featured-collection .grid{
+    margin: 0;
+  }
+  .featured-collection .card-list__column{
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+$(window).load(function(){
+  if($('.announcement-bar').hasClass('announcement-bar--visible')){
+    console.log('あり');
+    $('.main-content').css('margin-top',  $('.announcement-bar').height());
+  }else{
+    console.log('なし');
+  }
+});
+</script>

@@ -1,0 +1,876 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<header class="section-header text-center holicc-generator-eyecatch">
+  <h1 class="section-header__title h2">{{ page.title }}</h1>
+</header>
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
+      <div style="margin-bottom: 32px;">
+        {{ page.content }}
+      </div>
+     
+      <h2 class="section-header__title h3">① メールアドレスの入力</h2>
+      <form method="post" action="/account" id="create_customer-worldmap" accept-charset="UTF-8">
+        <input type="hidden" name="form_type" value="create_customer">
+        <input type="hidden" name="utf8" value="✓">
+
+        <label for="Email" class="label--hidden">メールアドレス</label>
+        <input type="email" name="customer[email]" id="Email" class="" placeholder="メールアドレス" autocorrect="off"
+          autocapitalize="off">
+
+        <h2 class="section-header__title h3">② 訪問国の選択</h2>
+        <ul class="worldmap__links">
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>アジア</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>インド</div><input type="checkbox" name="countries" value="IN" />
+                  </label></li>
+                <li><label>
+                    <div>インドネシア</div><input type="checkbox" name="countries" value="ID" />
+                  </label></li>
+                <li><label>
+                    <div>ウズベキスタン</div><input type="checkbox" name="countries" value="UZ" />
+                  </label></li>
+                <li><label>
+                    <div>カザフスタン</div><input type="checkbox" name="countries" value="KZ" />
+                  </label></li>
+                <li><label>
+                    <div>カンボジア</div><input type="checkbox" name="countries" value="KH" />
+                  </label></li>
+                <li><label>
+                    <div>キルギス</div><input type="checkbox" name="countries" value="KG" />
+                  </label></li>
+                <li><label>
+                    <div>ココス諸島</div><input type="checkbox" name="countries" value="CC" />
+                  </label></li>
+                <li><label>
+                    <div>シンガポール</div><input type="checkbox" name="countries" value="SG" />
+                  </label></li>
+                <li><label>
+                    <div>スリランカ</div><input type="checkbox" name="countries" value="LK" />
+                  </label></li>
+                <li><label>
+                    <div>タイ</div><input type="checkbox" name="countries" value="TH" />
+                  </label></li>
+                <li><label>
+                    <div>タジキスタン</div><input type="checkbox" name="countries" value="TJ" />
+                  </label></li>
+                <li><label>
+                    <div>トルクメニスタン</div><input type="checkbox" name="countries" value="TM" />
+                  </label></li>
+                <li><label>
+                    <div>ネパール</div><input type="checkbox" name="countries" value="NP" />
+                  </label></li>
+                <li><label>
+                    <div>パキスタン</div><input type="checkbox" name="countries" value="PK" />
+                  </label></li>
+                <li><label>
+                    <div>バングラデシュ</div><input type="checkbox" name="countries" value="BD" />
+                  </label></li>
+                <li><label>
+                    <div>フィリピン</div><input type="checkbox" name="countries" value="PH" />
+                  </label></li>
+                <li><label>
+                    <div>ブータン</div><input type="checkbox" name="countries" value="BT" />
+                  </label></li>
+                <li><label>
+                    <div>ブルネイ</div><input type="checkbox" name="countries" value="BN" />
+                  </label></li>
+                <li><label>
+                    <div>ベトナム</div><input type="checkbox" name="countries" value="VN" />
+                  </label></li>
+                <li><label>
+                    <div>マカオ</div><input type="checkbox" name="countries" value="MO" />
+                  </label></li>
+                <li><label>
+                    <div>マレーシア</div><input type="checkbox" name="countries" value="MY" />
+                  </label></li>
+                <li><label>
+                    <div>ミャンマー</div><input type="checkbox" name="countries" value="MM" />
+                  </label></li>
+                <li><label>
+                    <div>モルディブ</div><input type="checkbox" name="countries" value="MV" />
+                  </label></li>
+                <li><label>
+                    <div>モンゴル</div><input type="checkbox" name="countries" value="MN" />
+                  </label></li>
+                <li><label>
+                    <div>ラオス</div><input type="checkbox" name="countries" value="LA" />
+                  </label></li>
+                <li><label>
+                    <div>韓国</div><input type="checkbox" name="countries" value="KR" />
+                  </label></li>
+                <li><label>
+                    <div>香港</div><input type="checkbox" name="countries" value="HK" />
+                  </label></li>
+                <li><label>
+                    <div>台湾</div><input type="checkbox" name="countries" value="TW" />
+                  </label></li>
+                <li><label>
+                    <div>中国</div><input type="checkbox" name="countries" value="CN" />
+                  </label></li>
+                <li><label>
+                    <div>東ティモール</div><input type="checkbox" name="countries" value="TL" />
+                  </label></li>
+                <li><label>
+                    <div>日本</div><input type="checkbox" name="countries" value="JP" />
+                  </label></li>
+                <li><label>
+                    <div>北朝鮮</div><input type="checkbox" name="countries" value="KP" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>中近東</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>アフガニスタン</div><input type="checkbox" name="countries" value="AF" />
+                  </label></li>
+                <li><label>
+                    <div>アラブ首長国連邦</div><input type="checkbox" name="countries" value="AE" />
+                  </label></li>
+                <li><label>
+                    <div>イエメン</div><input type="checkbox" name="countries" value="YE" />
+                  </label></li>
+                <li><label>
+                    <div>イスラエル</div><input type="checkbox" name="countries" value="IL" />
+                  </label></li>
+                <li><label>
+                    <div>イラク</div><input type="checkbox" name="countries" value="IQ" />
+                  </label></li>
+                <li><label>
+                    <div>イラン</div><input type="checkbox" name="countries" value="IR" />
+                  </label></li>
+                <li><label>
+                    <div>オマーン</div><input type="checkbox" name="countries" value="OM" />
+                  </label></li>
+                <li><label>
+                    <div>カタール</div><input type="checkbox" name="countries" value="QA" />
+                  </label></li>
+                <li><label>
+                    <div>キプロス</div><input type="checkbox" name="countries" value="CY" />
+                  </label></li>
+                <li><label>
+                    <div>クウェート</div><input type="checkbox" name="countries" value="KW" />
+                  </label></li>
+                <li><label>
+                    <div>クルディスタン地域</div><input type="checkbox" name="countries" value="KRD" />
+                  </label></li>
+                <li><label>
+                    <div>サウジアラビア</div><input type="checkbox" name="countries" value="SA" />
+                  </label></li>
+                <li><label>
+                    <div>シリア</div><input type="checkbox" name="countries" value="SY" />
+                  </label></li>
+                <li><label>
+                    <div>トルコ</div><input type="checkbox" name="countries" value="TR" />
+                  </label></li>
+                <li><label>
+                    <div>バーレーン</div><input type="checkbox" name="countries" value="BH" />
+                  </label></li>
+                <li><label>
+                    <div>パレスチナ</div><input type="checkbox" name="countries" value="PS" />
+                  </label></li>
+                <li><label>
+                    <div>ヨルダン</div><input type="checkbox" name="countries" value="JO" />
+                  </label></li>
+                <li><label>
+                    <div>レバノン</div><input type="checkbox" name="countries" value="LB" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>アフリカ</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>アセンション島</div><input type="checkbox" name="countries" value="AC" />
+                  </label></li>
+                <li><label>
+                    <div>アルジェリア</div><input type="checkbox" name="countries" value="DZ" />
+                  </label></li>
+                <li><label>
+                    <div>アンゴラ</div><input type="checkbox" name="countries" value="AO" />
+                  </label></li>
+                <li><label>
+                    <div>ウガンダ</div><input type="checkbox" name="countries" value="UG" />
+                  </label></li>
+                <li><label>
+                    <div>エジプト</div><input type="checkbox" name="countries" value="EG" />
+                  </label></li>
+                <li><label>
+                    <div>エチオピア</div><input type="checkbox" name="countries" value="ET" />
+                  </label></li>
+                <li><label>
+                    <div>エリトリア</div><input type="checkbox" name="countries" value="ER" />
+                  </label></li>
+                <li><label>
+                    <div>ガーナ</div><input type="checkbox" name="countries" value="GH" />
+                  </label></li>
+                <li><label>
+                    <div>カーボベルデ</div><input type="checkbox" name="countries" value="CV" />
+                  </label></li>
+                <li><label>
+                    <div>ガボン</div><input type="checkbox" name="countries" value="GA" />
+                  </label></li>
+                <li><label>
+                    <div>カメルーン</div><input type="checkbox" name="countries" value="CM" />
+                  </label></li>
+                <li><label>
+                    <div>ガンビア</div><input type="checkbox" name="countries" value="GM" />
+                  </label></li>
+                <li><label>
+                    <div>ギニア</div><input type="checkbox" name="countries" value="GN" />
+                  </label></li>
+                <li><label>
+                    <div>ギニアビサウ</div><input type="checkbox" name="countries" value="GW" />
+                  </label></li>
+                <li><label>
+                    <div>ケニア</div><input type="checkbox" name="countries" value="KE" />
+                  </label></li>
+                <li><label>
+                    <div>コートジボワール</div><input type="checkbox" name="countries" value="CI" />
+                  </label></li>
+                <li><label>
+                    <div>コモロ</div><input type="checkbox" name="countries" value="KM" />
+                  </label></li>
+                <li><label>
+                    <div>コンゴ共和国</div><input type="checkbox" name="countries" value="CG" />
+                  </label></li>
+                <li><label>
+                    <div>コンゴ民主共和国</div><input type="checkbox" name="countries" value="CD" />
+                  </label></li>
+                <li><label>
+                    <div>サントメ・プリンシペ</div><input type="checkbox" name="countries" value="ST" />
+                  </label></li>
+                <li><label>
+                    <div>ザンビア</div><input type="checkbox" name="countries" value="ZM" />
+                  </label></li>
+                <li><label>
+                    <div>シエラレオネ</div><input type="checkbox" name="countries" value="SL" />
+                  </label></li>
+                <li><label>
+                    <div>ジブチ</div><input type="checkbox" name="countries" value="DJ" />
+                  </label></li>
+                <li><label>
+                    <div>ジンバブエ</div><input type="checkbox" name="countries" value="ZW" />
+                  </label></li>
+                <li><label>
+                    <div>スーダン</div><input type="checkbox" name="countries" value="SD" />
+                  </label></li>
+                <li><label>
+                    <div>スワジランド</div><input type="checkbox" name="countries" value="SZ" />
+                  </label></li>
+                <li><label>
+                    <div>セーシェル</div><input type="checkbox" name="countries" value="SC" />
+                  </label></li>
+                <li><label>
+                    <div>セネガル</div><input type="checkbox" name="countries" value="SN" />
+                  </label></li>
+                <li><label>
+                    <div>セントヘレナ</div><input type="checkbox" name="countries" value="SH" />
+                  </label></li>
+                <li><label>
+                    <div>ソマリア</div><input type="checkbox" name="countries" value="SO" />
+                  </label></li>
+                <li><label>
+                    <div>タンザニア</div><input type="checkbox" name="countries" value="TZ" />
+                  </label></li>
+                <li><label>
+                    <div>チャド</div><input type="checkbox" name="countries" value="TD" />
+                  </label></li>
+                <li><label>
+                    <div>チュニジア</div><input type="checkbox" name="countries" value="TN" />
+                  </label></li>
+                <li><label>
+                    <div>トーゴ</div><input type="checkbox" name="countries" value="TG" />
+                  </label></li>
+                <li><label>
+                    <div>ナイジェリア</div><input type="checkbox" name="countries" value="NG" />
+                  </label></li>
+                <li><label>
+                    <div>ナミビア</div><input type="checkbox" name="countries" value="NA" />
+                  </label></li>
+                <li><label>
+                    <div>ニジェール</div><input type="checkbox" name="countries" value="NE" />
+                  </label></li>
+                <li><label>
+                    <div>ブルキナファソ</div><input type="checkbox" name="countries" value="BF" />
+                  </label></li>
+                <li><label>
+                    <div>ブルンジ</div><input type="checkbox" name="countries" value="BI" />
+                  </label></li>
+                <li><label>
+                    <div>ベナン</div><input type="checkbox" name="countries" value="BJ" />
+                  </label></li>
+                <li><label>
+                    <div>ボツワナ</div><input type="checkbox" name="countries" value="BW" />
+                  </label></li>
+                <li><label>
+                    <div>マダガスカル</div><input type="checkbox" name="countries" value="MG" />
+                  </label></li>
+                <li><label>
+                    <div>マヨット島</div><input type="checkbox" name="countries" value="YT" />
+                  </label></li>
+                <li><label>
+                    <div>マラウイ</div><input type="checkbox" name="countries" value="MW" />
+                  </label></li>
+                <li><label>
+                    <div>マリ</div><input type="checkbox" name="countries" value="ML" />
+                  </label></li>
+                <li><label>
+                    <div>モーリシャス</div><input type="checkbox" name="countries" value="MU" />
+                  </label></li>
+                <li><label>
+                    <div>モーリタニア</div><input type="checkbox" name="countries" value="MR" />
+                  </label></li>
+                <li><label>
+                    <div>モザンビーク</div><input type="checkbox" name="countries" value="MZ" />
+                  </label></li>
+                <li><label>
+                    <div>モロッコ</div><input type="checkbox" name="countries" value="MA" />
+                  </label></li>
+                <li><label>
+                    <div>リビア</div><input type="checkbox" name="countries" value="LY" />
+                  </label></li>
+                <li><label>
+                    <div>リベリア</div><input type="checkbox" name="countries" value="LR" />
+                  </label></li>
+                <li><label>
+                    <div>ルワンダ</div><input type="checkbox" name="countries" value="RW" />
+                  </label></li>
+                <li><label>
+                    <div>レソト</div><input type="checkbox" name="countries" value="LS" />
+                  </label></li>
+                <li><label>
+                    <div>レユニオン</div><input type="checkbox" name="countries" value="RE" />
+                  </label></li>
+                <li><label>
+                    <div>西サハラ</div><input type="checkbox" name="countries" value="EH" />
+                  </label></li>
+                <li><label>
+                    <div>赤道ギニア</div><input type="checkbox" name="countries" value="GQ" />
+                  </label></li>
+                <li><label>
+                    <div>中央アフリカ共和国</div><input type="checkbox" name="countries" value="CF" />
+                  </label></li>
+                <li><label>
+                    <div>南アフリカ</div><input type="checkbox" name="countries" value="ZA" />
+                  </label></li>
+                <li><label>
+                    <div>南スーダン</div><input type="checkbox" name="countries" value="SS" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>ヨーロッパ</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>アイスランド</div><input type="checkbox" name="countries" value="IS" />
+                  </label></li>
+                <li><label>
+                    <div>アイルランド</div><input type="checkbox" name="countries" value="IE" />
+                  </label></li>
+                <li><label>
+                    <div>アゼルバイジャン</div><input type="checkbox" name="countries" value="AZ" />
+                  </label></li>
+                <li><label>
+                    <div>アルバニア</div><input type="checkbox" name="countries" value="AL" />
+                  </label></li>
+                <li><label>
+                    <div>アルメニア</div><input type="checkbox" name="countries" value="AM" />
+                  </label></li>
+                <li><label>
+                    <div>アンドラ</div><input type="checkbox" name="countries" value="AD" />
+                  </label></li>
+                <li><label>
+                    <div>イギリス</div><input type="checkbox" name="countries" value="GB" />
+                  </label></li>
+                <li><label>
+                    <div>イタリア</div><input type="checkbox" name="countries" value="IT" />
+                  </label></li>
+                <li><label>
+                    <div>ウクライナ</div><input type="checkbox" name="countries" value="UA" />
+                  </label></li>
+                <li><label>
+                    <div>エストニア</div><input type="checkbox" name="countries" value="EE" />
+                  </label></li>
+                <li><label>
+                    <div>オーストリア</div><input type="checkbox" name="countries" value="AT" />
+                  </label></li>
+                <li><label>
+                    <div>オランダ</div><input type="checkbox" name="countries" value="NL" />
+                  </label></li>
+                <li><label>
+                    <div>ガーンジー</div><input type="checkbox" name="countries" value="GG" />
+                  </label></li>
+                <li><label>
+                    <div>ギリシャ</div><input type="checkbox" name="countries" value="GR" />
+                  </label></li>
+                <li><label>
+                    <div>グリーンランド</div><input type="checkbox" name="countries" value="GL" />
+                  </label></li>
+                <li><label>
+                    <div>クロアチア</div><input type="checkbox" name="countries" value="HR" />
+                  </label></li>
+                <li><label>
+                    <div>サンマリノ</div><input type="checkbox" name="countries" value="SM" />
+                  </label></li>
+                <li><label>
+                    <div>ジブラルタル</div><input type="checkbox" name="countries" value="GI" />
+                  </label></li>
+                <li><label>
+                    <div>ジャージー</div><input type="checkbox" name="countries" value="JE" />
+                  </label></li>
+                <li><label>
+                    <div>ジョージア</div><input type="checkbox" name="countries" value="GE" />
+                  </label></li>
+                <li><label>
+                    <div>スイス</div><input type="checkbox" name="countries" value="CH" />
+                  </label></li>
+                <li><label>
+                    <div>スヴァールバル諸島・ヤンマイエン島</div><input type="checkbox" name="countries" value="SJ" />
+                  </label></li>
+                <li><label>
+                    <div>スウェーデン</div><input type="checkbox" name="countries" value="SE" />
+                  </label></li>
+                <li><label>
+                    <div>スペイン</div><input type="checkbox" name="countries" value="ES" />
+                  </label></li>
+                <li><label>
+                    <div>スロバキア</div><input type="checkbox" name="countries" value="SK" />
+                  </label></li>
+                <li><label>
+                    <div>スロベニア</div><input type="checkbox" name="countries" value="SI" />
+                  </label></li>
+                <li><label>
+                    <div>セルビア</div><input type="checkbox" name="countries" value="RS" />
+                  </label></li>
+                <li><label>
+                    <div>チェコ</div><input type="checkbox" name="countries" value="CZ" />
+                  </label></li>
+                <li><label>
+                    <div>デンマーク</div><input type="checkbox" name="countries" value="DK" />
+                  </label></li>
+                <li><label>
+                    <div>ドイツ</div><input type="checkbox" name="countries" value="DE" />
+                  </label></li>
+                <li><label>
+                    <div>ノルウェー</div><input type="checkbox" name="countries" value="NO" />
+                  </label></li>
+                <li><label>
+                    <div>バチカン市国</div><input type="checkbox" name="countries" value="VA" />
+                  </label></li>
+                <li><label>
+                    <div>ハンガリー</div><input type="checkbox" name="countries" value="HU" />
+                  </label></li>
+                <li><label>
+                    <div>フィンランド</div><input type="checkbox" name="countries" value="FI" />
+                  </label></li>
+                <li><label>
+                    <div>フェロー諸島</div><input type="checkbox" name="countries" value="FO" />
+                  </label></li>
+                <li><label>
+                    <div>フランス</div><input type="checkbox" name="countries" value="FR" />
+                  </label></li>
+                <li><label>
+                    <div>ブルガリア</div><input type="checkbox" name="countries" value="BG" />
+                  </label></li>
+                <li><label>
+                    <div>ベラルーシ</div><input type="checkbox" name="countries" value="BY" />
+                  </label></li>
+                <li><label>
+                    <div>ベルギー</div><input type="checkbox" name="countries" value="BE" />
+                  </label></li>
+                <li><label>
+                    <div>ポーランド</div><input type="checkbox" name="countries" value="PL" />
+                  </label></li>
+                <li><label>
+                    <div>ボスニア・ヘルツェゴビナ</div><input type="checkbox" name="countries" value="BA" />
+                  </label></li>
+                <li><label>
+                    <div>ポルトガル</div><input type="checkbox" name="countries" value="PT" />
+                  </label></li>
+                <li><label>
+                    <div>マケドニア</div><input type="checkbox" name="countries" value="MK" />
+                  </label></li>
+                <li><label>
+                    <div>マルタ</div><input type="checkbox" name="countries" value="MT" />
+                  </label></li>
+                <li><label>
+                    <div>マン島</div><input type="checkbox" name="countries" value="IM" />
+                  </label></li>
+                <li><label>
+                    <div>モナコ</div><input type="checkbox" name="countries" value="MC" />
+                  </label></li>
+                <li><label>
+                    <div>モルドバ</div><input type="checkbox" name="countries" value="MD" />
+                  </label></li>
+                <li><label>
+                    <div>モンテネグロ</div><input type="checkbox" name="countries" value="ME" />
+                  </label></li>
+                <li><label>
+                    <div>ラトビア</div><input type="checkbox" name="countries" value="LV" />
+                  </label></li>
+                <li><label>
+                    <div>リトアニア</div><input type="checkbox" name="countries" value="LT" />
+                  </label></li>
+                <li><label>
+                    <div>リヒテンシュタイン</div><input type="checkbox" name="countries" value="LI" />
+                  </label></li>
+                <li><label>
+                    <div>ルーマニア</div><input type="checkbox" name="countries" value="RO" />
+                  </label></li>
+                <li><label>
+                    <div>ルクセンブルク</div><input type="checkbox" name="countries" value="LU" />
+                  </label></li>
+                <li><label>
+                    <div>ロシア</div><input type="checkbox" name="countries" value="RU" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>オセアニア</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>アメリカ領サモア</div><input type="checkbox" name="countries" value="AS" />
+                  </label></li>
+                <li><label>
+                    <div>ウォリス・フツナ</div><input type="checkbox" name="countries" value="WF" />
+                  </label></li>
+                <li><label>
+                    <div>オーストラリア</div><input type="checkbox" name="countries" value="AU" />
+                  </label></li>
+                <li><label>
+                    <div>キリバス</div><input type="checkbox" name="countries" value="KI" />
+                  </label></li>
+                <li><label>
+                    <div>グアム</div><input type="checkbox" name="countries" value="GU" />
+                  </label></li>
+                <li><label>
+                    <div>クック諸島</div><input type="checkbox" name="countries" value="CK" />
+                  </label></li>
+                <li><label>
+                    <div>クリスマス島</div><input type="checkbox" name="countries" value="CX" />
+                  </label></li>
+                <li><label>
+                    <div>サモア</div><input type="checkbox" name="countries" value="WS" />
+                  </label></li>
+                <li><label>
+                    <div>ソロモン諸島</div><input type="checkbox" name="countries" value="SB" />
+                  </label></li>
+                <li><label>
+                    <div>ツバル</div><input type="checkbox" name="countries" value="TV" />
+                  </label></li>
+                <li><label>
+                    <div>トケラウ</div><input type="checkbox" name="countries" value="TK" />
+                  </label></li>
+                <li><label>
+                    <div>トンガ</div><input type="checkbox" name="countries" value="TO" />
+                  </label></li>
+                <li><label>
+                    <div>ナウル</div><input type="checkbox" name="countries" value="NR" />
+                  </label></li>
+                <li><label>
+                    <div>ニウエ</div><input type="checkbox" name="countries" value="NU" />
+                  </label></li>
+                <li><label>
+                    <div>ニューカレドニア</div><input type="checkbox" name="countries" value="NC" />
+                  </label></li>
+                <li><label>
+                    <div>ニュージーランド</div><input type="checkbox" name="countries" value="NZ" />
+                  </label></li>
+                <li><label>
+                    <div>ノーフォーク島</div><input type="checkbox" name="countries" value="NF" />
+                  </label></li>
+                <li><label>
+                    <div>バヌアツ</div><input type="checkbox" name="countries" value="VU" />
+                  </label></li>
+                <li><label>
+                    <div>パプアニューギニア</div><input type="checkbox" name="countries" value="PG" />
+                  </label></li>
+                <li><label>
+                    <div>パラオ</div><input type="checkbox" name="countries" value="PW" />
+                  </label></li>
+                <li><label>
+                    <div>ピトケアン諸島</div><input type="checkbox" name="countries" value="PN" />
+                  </label></li>
+                <li><label>
+                    <div>フィジー</div><input type="checkbox" name="countries" value="FJ" />
+                  </label></li>
+                <li><label>
+                    <div>フランス領ポリネシア</div><input type="checkbox" name="countries" value="PF" />
+                  </label></li>
+                <li><label>
+                    <div>マーシャル諸島</div><input type="checkbox" name="countries" value="MH" />
+                  </label></li>
+                <li><label>
+                    <div>ミクロネシア連邦</div><input type="checkbox" name="countries" value="FM" />
+                  </label></li>
+                <li><label>
+                    <div>北マリアナ諸島</div><input type="checkbox" name="countries" value="MP" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>北米</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>アメリカ</div><input type="checkbox" name="countries" value="US" />
+                  </label></li>
+                <li><label>
+                    <div>カナダ</div><input type="checkbox" name="countries" value="CA" />
+                  </label></li>
+                <li><label>
+                    <div>サンピエール島・ミクロン島</div><input type="checkbox" name="countries" value="PM" />
+                  </label></li>
+                <li><label>
+                    <div>バミューダ諸島</div><input type="checkbox" name="countries" value="BM" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>中南米</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>アメリカ領ヴァージン諸島</div><input type="checkbox" name="countries" value="VI" />
+                  </label></li>
+                <li><label>
+                    <div>アルゼンチン</div><input type="checkbox" name="countries" value="AR" />
+                  </label></li>
+                <li><label>
+                    <div>アルバ</div><input type="checkbox" name="countries" value="AW" />
+                  </label></li>
+                <li><label>
+                    <div>アンギラ</div><input type="checkbox" name="countries" value="AI" />
+                  </label></li>
+                <li><label>
+                    <div>アンティグア・バーブーダ</div><input type="checkbox" name="countries" value="AG" />
+                  </label></li>
+                <li><label>
+                    <div>イギリス領ヴァージン諸島</div><input type="checkbox" name="countries" value="VG" />
+                  </label></li>
+                <li><label>
+                    <div>ウルグアイ</div><input type="checkbox" name="countries" value="UY" />
+                  </label></li>
+                <li><label>
+                    <div>エクアドル</div><input type="checkbox" name="countries" value="EC" />
+                  </label></li>
+                <li><label>
+                    <div>エルサルバドル</div><input type="checkbox" name="countries" value="SV" />
+                  </label></li>
+                <li><label>
+                    <div>オランダ領アンティル</div><input type="checkbox" name="countries" value="AN" />
+                  </label></li>
+                <li><label>
+                    <div>ガイアナ</div><input type="checkbox" name="countries" value="GY" />
+                  </label></li>
+                <li><label>
+                    <div>キューバ</div><input type="checkbox" name="countries" value="CU" />
+                  </label></li>
+                <li><label>
+                    <div>キュラソー島</div><input type="checkbox" name="countries" value="CW" />
+                  </label></li>
+                <li><label>
+                    <div>グアテマラ</div><input type="checkbox" name="countries" value="GT" />
+                  </label></li>
+                <li><label>
+                    <div>グアドループ</div><input type="checkbox" name="countries" value="GP" />
+                  </label></li>
+                <li><label>
+                    <div>グレナダ</div><input type="checkbox" name="countries" value="GD" />
+                  </label></li>
+                <li><label>
+                    <div>ケイマン諸島</div><input type="checkbox" name="countries" value="KY" />
+                  </label></li>
+                <li><label>
+                    <div>コスタリカ</div><input type="checkbox" name="countries" value="CR" />
+                  </label></li>
+                <li><label>
+                    <div>コロンビア</div><input type="checkbox" name="countries" value="CO" />
+                  </label></li>
+                <li><label>
+                    <div>サウスジョージア・サウスサンドウィッチ諸島</div><input type="checkbox" name="countries" value="GS" />
+                  </label></li>
+                <li><label>
+                    <div>サン・バルテルミー島</div><input type="checkbox" name="countries" value="BL" />
+                  </label></li>
+                <li><label>
+                    <div>ジャマイカ</div><input type="checkbox" name="countries" value="JM" />
+                  </label></li>
+                <li><label>
+                    <div>シント・マールテン</div><input type="checkbox" name="countries" value="SX" />
+                  </label></li>
+                <li><label>
+                    <div>スリナム</div><input type="checkbox" name="countries" value="SR" />
+                  </label></li>
+                <li><label>
+                    <div>セントクリストファー・ネイビス</div><input type="checkbox" name="countries" value="KN" />
+                  </label></li>
+                <li><label>
+                    <div>セントビンセント・グレナディーン</div><input type="checkbox" name="countries" value="VC" />
+                  </label></li>
+                <li><label>
+                    <div>セントルシア</div><input type="checkbox" name="countries" value="LC" />
+                  </label></li>
+                <li><label>
+                    <div>タークス・カイコス諸島</div><input type="checkbox" name="countries" value="TC" />
+                  </label></li>
+                <li><label>
+                    <div>チリ</div><input type="checkbox" name="countries" value="CL" />
+                  </label></li>
+                <li><label>
+                    <div>ドミニカ共和国</div><input type="checkbox" name="countries" value="DO" />
+                  </label></li>
+                <li><label>
+                    <div>ドミニカ国</div><input type="checkbox" name="countries" value="DM" />
+                  </label></li>
+                <li><label>
+                    <div>トリニダード・トバゴ</div><input type="checkbox" name="countries" value="TT" />
+                  </label></li>
+                <li><label>
+                    <div>ニカラグア</div><input type="checkbox" name="countries" value="NI" />
+                  </label></li>
+                <li><label>
+                    <div>ハイチ</div><input type="checkbox" name="countries" value="HT" />
+                  </label></li>
+                <li><label>
+                    <div>パナマ</div><input type="checkbox" name="countries" value="PA" />
+                  </label></li>
+                <li><label>
+                    <div>バハマ</div><input type="checkbox" name="countries" value="BS" />
+                  </label></li>
+                <li><label>
+                    <div>パラグアイ</div><input type="checkbox" name="countries" value="PY" />
+                  </label></li>
+                <li><label>
+                    <div>バルバドス</div><input type="checkbox" name="countries" value="BB" />
+                  </label></li>
+                <li><label>
+                    <div>プエルトリコ</div><input type="checkbox" name="countries" value="PR" />
+                  </label></li>
+                <li><label>
+                    <div>フォークランド諸島</div><input type="checkbox" name="countries" value="FK" />
+                  </label></li>
+                <li><label>
+                    <div>ブラジル</div><input type="checkbox" name="countries" value="BR" />
+                  </label></li>
+                <li><label>
+                    <div>フランス領ギアナ</div><input type="checkbox" name="countries" value="GF" />
+                  </label></li>
+                <li><label>
+                    <div>ベネズエラ</div><input type="checkbox" name="countries" value="VE" />
+                  </label></li>
+                <li><label>
+                    <div>ベリーズ</div><input type="checkbox" name="countries" value="BZ" />
+                  </label></li>
+                <li><label>
+                    <div>ペルー</div><input type="checkbox" name="countries" value="PE" />
+                  </label></li>
+                <li><label>
+                    <div>ボネール島</div><input type="checkbox" name="countries" value="BQ" />
+                  </label></li>
+                <li><label>
+                    <div>ボリビア</div><input type="checkbox" name="countries" value="BO" />
+                  </label></li>
+                <li><label>
+                    <div>ホンジュラス</div><input type="checkbox" name="countries" value="HN" />
+                  </label></li>
+                <li><label>
+                    <div>マルティニーク</div><input type="checkbox" name="countries" value="MQ" />
+                  </label></li>
+                <li><label>
+                    <div>メキシコ</div><input type="checkbox" name="countries" value="MX" />
+                  </label></li>
+                <li><label>
+                    <div>モントセラト</div><input type="checkbox" name="countries" value="MS" />
+                  </label></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="worldmap__link">
+            <div class="worldmap__expand-sublinks">
+              <span>南極</span>
+              <svg focusable="false" role="presentation" class="icon worldmap__icon-arrow-down" viewBox="0 0 20 20">
+                <path fill="#444" d="M3.2 6l6.4 8.4c.4 0 6.8-8.4 6.8-8.4H3.2z"></path>
+              </svg>
+            </div>
+            <div class="worldmap__sublinks-container" style="display: none;">
+              <ul class="worldmap__sublinks">
+                <li><label>
+                    <div>南極</div><input type="checkbox" name="countries" value="AQ" />
+                  </label></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="section-header__title h3">③ 訪問国の色の選択</h2>
+        <div style="margin-bottom: 32px;">
+          初期設定はHOLICCダークグレーに設定されています。クリックして好きな色を選択してください。
+          <input type="color" value="#43434e" name="color" style="width:128px;height:40px;" />
+        </div>
+
+        <p style="text-align: center;">
+          <button class="btn worldmap-btn" type="button" id="generate-button">結果をメールで受け取る</button>
+        </p>
+        <input name="return_to" type="hidden" value="/pages/worldmap-completed">
+      </form>
+    </div>
+  </div>
+</div>

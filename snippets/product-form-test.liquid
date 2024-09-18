@@ -1,0 +1,241 @@
+{% unless current_variant.available %}
+  {% assign button_text = 'products.product.sold_out' | t %}
+{% else %}
+  {% assign button_text = 'products.product.add_to_cart' | t %}
+{% endunless %}
+
+{% form 'product', product, class:'product-form' %}
+  {% unless product.has_only_default_variant %}
+    {% for option in product.options_with_values %}
+      <div class="product-form__item supports-js">
+
+        <select id="{{ option.name | escape }}" name="{{ option.name | escape }}" class="single-option-selector" data-option-input>
+          {% for value in option.values %}
+            {% assign safeValue = value | replace: '"', '&quot;' %}
+            <option value="{{ safeValue }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endfor %}
+  {% endunless %}
+
+
+  {% comment %}
+  line_itemのテスト
+  {% endcomment %}
+  <input id="your-name" type="text" name="properties[SKU]" value="SKUUPDATED">
+
+  {% comment %}
+  選択項目に合わせて実装していく処理 for infinityoption
+  {% endcomment %}
+<!-- <style>
+  #infiniteoptions-container > div:nth-child(2),
+  #infiniteoptions-container > div:nth-child(3),
+  #infiniteoptions-container > div:nth-child(4),
+  #infiniteoptions-container > div:nth-child(5) {
+    display: none;
+  }
+</style> -->
+<!-- <script>
+  $(document).on('change', '#infiniteoptions-container select', function(){
+   switch ($(this).attr('name')) {
+      case 'properties[セット/単品]':
+        console.log('properties[セット/単品]');
+        switch ($(this).val()) {
+          case 'S&Lセット':
+            console.log('S&Lセット');
+            
+            break;
+          case 'Sサイズのみ':
+            console.log('Sサイズのみ');
+            break;
+          case 'Lサイズのみ':
+            console.log('Lサイズのみ');
+            break;
+        }
+        break;
+      case 'properties[Sサイズのカラー]':
+        console.log('properties[Sサイズのカラー]');
+        break;
+    }
+  });
+</script>
+ -->
+
+  {% comment %}
+  ZOZOライクな商品選択の実装テスト中 for infinityoption
+  {% endcomment %}
+<style>
+  #infiniteoptions-container
+/*   #infiniteoptions-container > div:nth-child(2),
+  #infiniteoptions-container > div:nth-child(3),
+  #infiniteoptions-container > div:nth-child(4),
+  #infiniteoptions-container > div:nth-child(5) */
+  {
+/*     display: none; */
+  }
+</style>
+<script>
+//   $('#infiniteoptions-container ')
+  variants = [
+    {
+      header: 'S&Lセット',
+      options: [
+        ['Sサイズのカラー：メタルブラック', 'Sサイズのショルダーストラップ：Plain black', 'Lサイズのカラー：メタルブラック', 'Lサイズのショルダーストラップ：Plain black'],
+        ['Sサイズのカラー：メタルブラック', 'Sサイズのショルダーストラップ：Plain black', 'Lサイズのカラー：メタルブラック', 'Lサイズのショルダーストラップ：Plain black'],
+        ['Sサイズのカラー：メタルブラック', 'Sサイズのショルダーストラップ：Plain black', 'Lサイズのカラー：メタルブラック', 'Lサイズのショルダーストラップ：Plain black'],
+        ['Sサイズのカラー：メタルブラック', 'Sサイズのショルダーストラップ：Plain black', 'Lサイズのカラー：メタルブラック', 'Lサイズのショルダーストラップ：Plain black'],
+        ['Sサイズのカラー：メタルブラック', 'Sサイズのショルダーストラップ：Plain black', 'Lサイズのカラー：メタルブラック', 'Lサイズのショルダーストラップ：Plain black'],
+        ['Sサイズのカラー：メタルブラック', 'Sサイズのショルダーストラップ：Plain black', 'Lサイズのカラー：メタルブラック', 'Lサイズのショルダーストラップ：Plain black']
+      ]
+    }
+  ]
+  console.log(variants);
+  $(function(){
+    var variants_html = '';
+    $.each(variants, function(index, value) {
+//       console.log(value);
+//       console.log(value['header']);
+      var header_html = '<div class="list-options__header">' + value['header'] + '</div>';
+      var options_html = '';
+      $.each(value['options'], function(index, option) {
+        var label_text = '';
+        $.each(value['options'], function(index, label) {
+          text += label;
+        });
+        var options_html += '<div class="list-options__options"><div class="list-options__option"><div class="list-options__option-name">' + text + '</div><div class="list-options__option-action">購入する</div></div>';
+      });
+      var html = header_html + options_html
+      console.log(html);
+    });
+    $('#list-options').append(variants_html);
+  });
+
+</script>
+<style>
+  .list-options{
+  }
+  .list-options__col{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .list-options__header{
+    min-width: 100px;
+  }
+  .list-options__options{
+    width: 100%;
+  }
+  .list-options__option{
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .list-options__option:last-child{
+    border-bottom: none;
+  }
+  .list-options__option-name{
+    font-size: 12px;
+  }
+</style>
+
+<div id="list-options" class="list-options"></div>
+
+<div class="list-options">
+  <div class="list-options__col">
+    <div class="list-options__header">
+      S&Lセット
+    </div>
+    <div class="list-options__options">
+      <div class="list-options__option">
+        <div class="list-options__option-name">
+          Sサイズのカラー：メタルブラック<br>
+          Sサイズのショルダーストラップ：Plain black<br>
+          Lサイズのカラー：メタルブラック<br>
+          Lサイズのショルダーストラップ：Plain black
+        </div>
+        <div class="list-options__option-action">購入する</div>
+      </div>
+      <div class="list-options__option">
+        <div class="list-options__option-name">
+          Sサイズのカラー：メタルブラック<br>
+          Sサイズのショルダーストラップ：Plain black<br>
+          Lサイズのカラー：メタルブラック<br>
+          Lサイズのショルダーストラップ：Plain black
+        </div>
+        <div class="list-options__option-action">購入する</div>
+      </div>
+      <div class="list-options__option">
+        <div class="list-options__option-name">
+          Sサイズのカラー：メタルブラック<br>
+          Sサイズのショルダーストラップ：Plain black<br>
+          Lサイズのカラー：メタルブラック<br>
+          Lサイズのショルダーストラップ：Plain black
+        </div>
+        <div class="list-options__option-action">購入する</div>
+      </div>
+    </div>
+</div>
+
+  {% comment %}
+  ZOZOライクな商品選択の実装テスト中
+  {% endcomment %}
+  {% for variant in product.variants %}
+  <div>
+    {% if variant.available %}
+    {{ variant.title }} - {{ variant.price | money_with_currency }}
+
+    {% else %}
+    {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+    {% endif %}
+    {% endfor %}
+  </div>
+
+<select name="id" class="product-form__master-select supports-no-js" data-master-select>
+    {% for variant in product.variants %}
+      {% if variant.available %}
+        {% comment %}
+        Note: if you use option_selection.js, your select tag will be overwritten, meaning what you have inside <option> will not reflect what you coded below.
+        {% endcomment %}
+        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+
+      {% else %}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+
+  {% if section.settings.show_quantity_selector %}
+    <div class="product-form__item product-form__quantity-selector">
+      <label class="product-form__quantity-label{% unless section.settings.show_variant_labels %} product-form__quantity-label--hidden{% endunless %}" for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
+      <input class="product-form__quantity-input" type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" pattern="[0-9]*">
+    </div>
+  {% endif %}
+
+
+
+
+  <button class="btn-submit btn--emphasis  section-btn btn--to-secondary btn--full product__add-to-cart-button{% if section.settings.enable_payment_button and current_variant.available %} shopify-payment-btn btn--secondary{% endif %}"
+    data-cart-submit
+    type="submit" name="add"
+    {% unless current_variant.available %} disabled="true"{% endunless %}
+    aria-label="{{ button_text }}"
+    data-scroll=" "
+	data-delighter
+  >
+    <div class="btn_inner">
+      <span class="primary-text" aria-hidden="false" data-cart-primary-submit-text>
+        {{ button_text }}
+      </span>
+      <span class="secondary-text" aria-hidden=true data-cart-secondary-submit-text>{{ 'products.product.view_cart' | t }}</span>
+    </div>
+  </button>
+
+<p class="product__notification text-small text-center" data-cart-notification></p>
+{% endform %}

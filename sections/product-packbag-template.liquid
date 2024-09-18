@@ -1,0 +1,1105 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign current_variant_sale = false -%}
+{% if current_variant.compare_at_price > current_variant.price %}
+  {%- assign current_variant_sale = true -%}
+{% endif %}
+{% assign featured_media = current_variant.featured_media | default: product.featured_media %}
+<div class="product-template" data-section-id="{{ section.id }}" data-section-type="product-template" data-variant-id="{{ current_variant.id }}">
+  <meta itemprop="name" content="{{ product.title }}">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ featured_media | img_url: 'grande' }}">
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  商品詳細
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+  
+  {% include 'product-header', product: product %}
+
+  
+  <section id="section-box--2" class="section-box section-box--2">
+    <div class="section-box--2_dot"><span></span><span></span><span></span></div>
+    <div class="section-box__wrapper page-width page-width--no-gutter">
+      <header class="section-box__header">
+        <h3 class="section-box__title">
+          旅好きの集まりの私たちだから作れる、<br>「本気で旅して、本気で働く」<br class="sp">という生き方に寄り添うアイテム
+        </h3>
+      </header>
+      <div class="text_area">
+        <p>
+          リモートワークやワーケーションが身近になり、<br class="pc">
+          旅と仕事の境目のない生き方が注目されていますが、<br class="pc">
+          その生き方に合うアイテムはまだありません。<br class="pc"><br class="pc">
+
+          「旅好きの私たちが本当に欲しいと思えるものを追求すれば、<br class="pc">
+          同じような生き方の方々の「相棒」になるものが作れるのでは？」<br class="pc">
+          そんな想いでクラウドファンディングを実施しました。
+        </p>
+      </div>
+      <div class="section-box__content section-box__content--2col">
+        <div class="section-box__content-center">
+          <div class="area">
+          <div class="text_box">
+            <p>クラウドファンディングで予約殺到、</p>
+            <p>わずか１時間で目標数完売。</p>
+            <p>最終的に目標金額3000%達成！</p>
+          </div>
+          <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_makuake_result.png?v=1613531228" height="100%" width="380px">
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section-box section-box--4">
+    <div class="section-box__wrapper page-width page-width--no-gutter">
+      <header class="section-box__header">
+        <h3 class="section-box__title">
+          <span class="PackBag_font">PackBag</span>は<br>
+          <span class="section-box__title--emphasis">“圧縮パッキングバッグ”<br class="sp">“ショルダーバッグ”</span><br>
+          の２つの役割で、身軽でミニマルな<br class="sp">ライフスタイルを実現します
+        </h3>
+      </header>
+      <div class="section-box__content section-box__content--2col">
+        <div class="feature-2way">
+          <div class="feature-2way_left">
+            <div class="text_area"><p>かさばる持ち物を圧縮してコンパクトに</p></div>
+          </div>
+          <div class="feature-2way_right">
+            <div class="text_area"><p>ストラップをつけてショルダーバッグに</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <header class="section-box__header">
+        <h3 class="section-box_line_title">お客さまの声</h3>
+      </header>
+  
+  <section class="voice">
+    <p class="sub_title">ご愛用中の方から<br class="sp">喜びの声をいただいています</p>
+    <div class="voice-slider">
+      <div class="voice_area">
+        <div class="title">
+          <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_voices_influencer-taguchi.png?v=1612954663">
+          <div class="text_area">
+            <p class="name">株式会社サンリオ CDO 田口 歩 <span>さま</span></p>
+            <p class="MR_comment">思い立ったら気分を変えにカフェで読書や仕事。あくまでも自由に軽快に</p>
+          </div>
+        </div>
+        <div class="box">
+          <p  class="text_area">
+            手に持った時の軽さは想像以上。なのに、すごくしっかりしていて安心感もあります。
+            旅にはしばらく行けそうもないけど、軽快に街歩きも悪くないですね。<span class="PackBag_font">PackBag</span>にノートPCをいれて近所のカフェに行ったときの写真がこちら。とても軽快でノマドワークが捗りそうです。
+          </p>
+          <div class="img_area"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_voices_influencer-taguchi-ugc_02.png?v=1613639843"></div>
+        </div>
+      </div>
+      <div class="voice_area">
+        <div class="title">
+          <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_voices_influencer-osera.png?v=1612958092">
+          <div class="text_area">
+            <p class="name">HafH代表 大瀬良 亮 <span>さま</span></p>
+            <p class="MR_comment">ブランドの「顔」として、全国を転々と旅しながら働くスタイルを実践している</p>
+          </div>
+        </div>
+        <div class="box">
+          <p  class="text_area">
+            頑丈で、機能的。冬のモコモコした服も、これでスーツケースがスッキリ。この写真のようにコンパクトになりました。サコッシュにもなるって革命的。今までのはすぐにファスナーが壊れたりしていたけど、<span class="blue">#HOLICC</span> は頑丈な上に、一年保証だから壊れても直してくれる。こういうの待ってた！
+          </p>
+          <div class="img_area"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_voices_influencer-osera-ugc_6efb3f30-9934-44d5-8cce-059f0fad443c.jpg?v=1614861342"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section-box section_judgeme">
+    <div class="section-box__wrapper page-width page-width--no-gutter">
+      <header class="section-box__header">
+        <h3 class="section-box__title">その他にも、<br class="sp">たくさんの方に満足いただいています</h3>
+      </header>
+      <div class="review-container" data-action="slider" data-review-type="product" data-gname="{{ product.id }}" data-group="true" data-review-length=400 data-review-count="20" data-autoplay="1" data-autoplay-speed="5000" data-sort="date" data-sort-order="desc" data-ukomi-widget="0"></div>
+      
+    </div>
+<!--     <div class="review_btn">
+      <a href="">もっとレビューをみる</a>
+    </div> -->
+  </section>
+ 
+  <section class="section_feature">
+     <header class="section-box__header">
+       <h3 class="section-box_line_title"><span class="PackBag_font">PackBag</span>の特徴</h3>
+      </header>
+    <div class="wrapper">
+      <div class="feature_content">
+         <div class="box_title_A">
+           <div class="text_area">
+             <p>圧縮パッキングバッグ<br class="sp"><span class="small">として</span></p>
+           </div>
+        </div>
+        <article class="box">
+          <div class="text_area">
+            <div class="title"><span class="number">01</span><p>ファスナーで楽々50%圧縮</p></div>
+            <div class="img_area sp">
+            <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_packing-1_compressed.mp4?v=1614861678" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_01.jpg?v=1613561812"></video>
+          </div>
+            <div class="MR_comment">
+              <p>重さ以上にかさばる洋服などの荷物を最大50%圧縮してカバンの中をコンパクトにまとめ上げていきます。ファスナーを閉めるだけで圧縮できるため、大きな力は要りません。</p>
+            </div>
+          </div>
+          <div class="img_area pc">
+            <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_packing-1_compressed.mp4?v=1614861678" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_01.jpg?v=1613561812"></video>
+          </div>
+        </article>
+         <article class="box">
+          <div class="text_area">
+            <div class="title"><span class="number">02</span><p>用途色々、2つの独立空間</p></div>
+            <div class="img_area sp">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_packing-2.png?v=1613028118">
+          </div>
+            <div class="MR_comment">
+              <p>2部屋構造で、荷物を分けて収納できます。<br class="pc">旅の始まりは全て片側にパッキングし、着た後の汚れた服を逆側に入れていくことで、混ざらずに管理できます。さらに片側は止水仕様で、濡れた水着やタオル、汗をかいた服を入れても安心。様々なシーンで活用できます。</p>
+            </div>
+          </div>
+          <div class="img_area pc">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_packing-2.png?v=1613028118">
+          </div>
+        </article>
+         <article class="box">
+          <div class="text_area">
+            <div class="title"><span class="number">03</span><p>強靭性と軽量性の両立</p></div>
+            <div class="img_area sp">
+              <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_toughtness.jpg?v=1613645089">
+<!--             <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_fabric.mp4?v=1613028549" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_03.jpg?v=1613561906"></video> -->
+          </div>
+            <div class="MR_comment">
+              <p>通常ナイロンよりも圧倒的に強度が高く軽量な生地を採用することで、「壊れづらく丈夫」と「軽くて持ち歩きやすい」を両立。パーツには日本が誇る丈夫で壊れにくいYKK製ダブルファスナーを採用しました。</p>
+            </div>
+          </div>
+          <div class="img_area pc">
+              <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_toughtness.jpg?v=1613645089">
+<!--             <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_fabric.mp4?v=1613028549" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_03.jpg?v=1613561906"></video> -->
+          </div>
+        </article>
+        <div class="box_title_B">
+           <div class="text_area">
+             <p>ショルダーバッグ<br class="sp"><span class="small">として</span></p>
+           </div>
+        </div>
+        <article class="box">
+           <div class="img_area pc">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_bag-1.jpg?v=1613032643">
+          </div>
+          <div class="text_area">
+            <div class="title"><span class="number">01</span><p>どんなシーンにも合うミニマルデザイン</p></div>
+            <div class="img_area sp">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_bag-1.jpg?v=1613032643">
+          </div>
+            <div class="MR_comment">
+              <p>付属のストラップをつければ、ショルダーバッグに早変わり。黒を基調としたシンプルなデザインで旅、移動、仕事とシーンを選びません。</p>
+            </div>
+          </div>
+        </article>
+        <article class="box">
+           <div class="img_area pc">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_bag-2.jpg?v=1613033423">
+          </div>
+          <div class="text_area">
+            <div class="title"><span class="number">02</span><p>用途ごとにフィットする 最適なサイズ</p></div>
+             <div class="img_area sp">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_bag-2.jpg?v=1613033423">
+          </div>
+            <div class="MR_comment">
+              <p>Sサイズは、財布、鍵、本、ペットボトルなどが同時に入り、街歩きにぴったり。Lサイズは、13インチのPCと充電ケーブル、ノート、小物類などの収納が可能。カフェでのリモートワークにも便利です。</p>
+            </div>
+          </div>
+        </article>
+        <article class="box">
+           <div class="img_area pc">
+           <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_bag-3_compressed.mp4?v=1614861674" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_02.jpg?v=1613561898"></video>
+          </div>
+          <div class="text_area">
+            <div class="title"><span class="number">03</span><p>雨でも中身が濡れない撥水仕様</p></div>
+             <div class="img_area sp">
+           <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_bag-3_compressed.mp4?v=1614861674" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_02.jpg?v=1613561898"></video>
+          </div>
+            <div class="MR_comment">
+              <p>長期間の撥水性が保たれる生地と、止水ファスナー(片側)を採用しているため、移動中や旅先での急な雨でも、あなたの大事なバッグの中身を守ります。</p>
+            </div>
+          </div>
+        </article>
+        <div class="box_title_C">
+           <div class="text_area">
+             <p>こだわりの高級・高性能生地<br class="sp">「シルナイロン コーデュラ<sup>&reg;</sup>」</p>
+           </div>
+        </div>
+        <article class="fablic">
+          <p class="sub_title">さわって驚く、<br class="sp">想像以上に軽くて気持ち良い質感</p>
+          <div class="img_area">
+            <video src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/video_feature_fabric_1_compressed.mp4?v=1614861681" muted autoplay playsinline loop poster="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/movie_thumbnail_03.jpg?v=1613561906"></video>
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_feature_fabric_explaination.png?v=1613035561">
+            <p class="notes">※Cordura<sup>&reg;</sup>は、強度と耐久性に優れたインビスタ社の<br class="pc">ファブリックに対する登録商標です</p>
+          </div>
+          <div class="text_area">
+            <p>
+              通常ナイロンと比べて、米軍も採用するほどの圧倒的強度を持つコーデュラ<sup>&reg;</sup>ナイロン。その中でも軽さに特化した種類を使用しており、丈夫なだけでなく非常に軽量です。PackBagでは、更にそれをシリコンコーティングした「シルナイロン コーデュラ<sup>&reg;</sup>」を使用しているため、撥水性が長期間保たれます。入手困難かつ高価な素材で、通常バッグなどに使われることは少ないですが、今回は理想のアイテムを追求し採用しました。その質感には、購入者から驚きの声が多数寄せられています。
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section_anatomy">
+     <header class="section-box__header">
+       <h3 class="section-box_line_title"><span class="PackBag_font">PackBag</span>を解剖！</h3>
+      </header>
+    <div class="wrapper">
+      <div class="img_area">
+        <div class="pc"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/about_Packbag_2.jpg?v=1638417381"></div>
+        <div class="sp"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/about_Packbag_2.jpg?v=1638417381"></div>
+      </div>
+    </div>
+  </section>
+   <section class="section_use-scene">
+     <header class="section-box__header">
+       <h3 class="section-box_line_title"><span class="PackBag_font">PackBag</span>の利用シーン</h3>
+      </header>
+    <div class="wrapper">
+      <p class="sub_title">旅行・出張時はもちろん、<br>ジムへ行く際などの普段使いでも万能に活躍！</p>
+      <div class="use-scene_area">
+        <article class="box">
+          <div class="title">
+            <div class="title_img"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/ver.2_Scenes_1.png?v=1638966714" alt="出張"></div>
+            <p>with <span class="PackBag_font">PackBag</span></p>
+          </div>
+          <div class="img_area">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_withPB_businessTrip.png?v=1613040563">
+          </div>
+          <div class="text_area">
+            <p>飛行機内でSサイズを手元の荷物用バッグに、洋服はLサイズに入れスーツケースへ。ほどよい光沢感がスーツスタイルにもピッタリ！</p>
+          </div>
+        </article>
+         <article class="box">
+          <div class="title">
+            <div class="title_img"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/ver.2_Scenes_3.png?v=1638966714" alt="ジム"></div>
+            <p>with <span class="PackBag_font">PackBag</span></p>
+          </div>
+          <div class="img_area">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_withPB_gym.jpg?v=1636696364?v=1613042852">
+          </div>
+          <div class="text_area">
+            <p>仕事帰りにジムやサウナなどに行く時も、圧縮してコンパクトに持ち運べます。汗をかいた服とその他のものを分けられるのも便利！</p>
+          </div>
+        </article>
+         <article class="box">
+          <div class="title">
+            <div class="title_img"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/ver.2_Scenes_2.png?v=1638966714" alt="1泊旅行"></div>
+            <p>with <span class="PackBag_font">PackBag</span></p>
+          </div>
+          <div class="img_area">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_withPB_2daytrip-b.jpg?v=1619562186">
+          </div>
+          <div class="text_area">
+            <p>衣類がかさばる泊まりの旅行も、<span class="PackBag_font">PackBag</span>で圧縮すればとってもコンパクトに。<br class="pc">バッグ一つにまとめて、せっかくの旅行や帰省を身軽に楽しめます。</p>
+          </div>
+        </article>
+         <article class="box">
+          <div class="title">
+            <div class="title_img"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/ver.2_Scenes_4.png?v=1638966714" alt="子供と公園"></div>
+            <p>with <span class="PackBag_font">PackBag</span></p>
+          </div>
+          <div class="img_area">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_withPB_parkwithKids.png?v=1613043214">
+          </div>
+          <div class="text_area">
+            <p>子供の着替えやオムツ、タオルを入れ、逆側に財布など貴重品を入れて持ち歩けます。撥水性の生地のため汚れても水で洗い流せます。</p>
+          </div>
+        </article> 
+      </div>
+    </div>
+  </section>
+  <section class="section-box section-box--6">
+    <div class="section-box__wrapper page-width page-width--no-gutter" style="position:relative;">
+      <header class="section-box__header">
+        <h3 class="section-box__title">
+          シンプルでスタイリッシュなデザインで<br class="sp">ビジネススーツにも、<br>カジュアルな旅スタイルにも◎
+        </h3>
+      </header>
+      <div class="section-box__content">
+          <div
+               style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+               class="swiper section-box-scene-swiper"
+               >
+            <div class="swiper-wrapper section-box-scene">
+              <div class="section-box-scene__chapter swiper-slide">
+                <div class="">
+                  <img class="section-box-scene__chapter-image lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/201109_synchro00078.png?v=1607954254">
+                </div>
+                <p class="section-box-scene__chapter-text">仕事帰りのジム、フットサル、サウナ、ヨガなど、⽇常でも活躍します</p>
+              </div>
+              <div class="section-box-scene__chapter swiper-slide">
+                <div class="">
+                  <img class="section-box-scene__chapter-image lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/DSC06128b.png?v=1607954254">
+                </div>
+                <p class="section-box-scene__chapter-text">旅先でホテルから外出時にも。ガイドブックや飲み物もSサイズに入る</p>
+              </div>
+              <div class="section-box-scene__chapter swiper-slide">
+                <div class="">
+                  <img class="section-box-scene__chapter-image lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/201109_synchro00083.png?v=1607954253">
+                </div>
+                <p class="section-box-scene__chapter-text">Lサイズに13インチのPCが入るので旅先で外へPCを持ち出すときにも◎</p>
+              </div>
+              <div class="section-box-scene__chapter swiper-slide">
+                <div class="">
+                  <img class="section-box-scene__chapter-image lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/DSC06368.png?v=1608084299">
+                </div>
+                <p class="section-box-scene__chapter-text">ショルダーストラップを付けて、身軽に全力で旅を楽しむ</p>
+              </div>
+            </div>
+            <div class="section-box-scene-swiper-button-next swiper-button-next"></div>
+            <div class="section-box-scene-swiper-button-prev swiper-button-prev"></div>
+          </div>
+      </div>
+      <div class="section-box-scene-swiper-pagination swiper-pagination"></div>
+    </div>
+  </section>
+  <section class="section_story">
+    <header class="section-box__header">
+        <h3 class="section-box_line_title">開発ストーリー</h3>
+      </header>
+    <div class="wrapper">
+      <p class="sub_title">本気で旅して働く私たちが欲しい<br class="sp">ものづくりを。<br><span class="PackBag_font">PackBag</span>ができるまで</p>
+      <div class="content">
+        <div class="connection">
+          <p>一年中旅をしている私たちが、まず注目したのは、移動に欠かせない圧縮袋。便利なアイテムでありながら「空気を抜くのが大変」「壊れやすい」など不満に感じている点も。<br>
+そこで、ずっと使えるくらい頑丈なのに軽量で機能的な「パッキングアイテムの決定版」を作ろうと開発が始まりました。</p>
+        </div>
+        <div class="img_block">
+          <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_story_meeting-1.jpg?v=1614861342">
+        </div>
+        <div class="connection">
+          <p>また荷物を圧縮するだけでなく「旅先で使う用に別でバッグを持っていく必要をなくし荷物を減らす」という観点から、ストラップをつけてショルダーバッグとしても使える仕様に。<br>
+その後も細部までこだわり切り、試作を何度も重ね、PackBagが生まれました。</p>
+        </div>
+        <div class="connection">
+          <div class="profile_btn">
+            <a href="https://holicc.jp/blogs/holicc-magazine/developmentstory-packbag" target="_blank"><span>開発ストーリーをもっと読む</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <p class="sub_title">
+          私たち HOLICC について
+        </p>
+        <div class="img_area"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/169_1_-min.jpg?v=1619562186"></div>
+        <div class="text_area">
+          <p>
+            旅も仕事も遊びも人生をかけて楽しみたい。そんな私たちが大事にしているのは、旅と仕事の境目の無い生き方。でも、そのライフスタイルにはこんな悩みが。
+          </p>
+        </div>
+        <article class="box_D">
+          <div class="text_area">
+            <div class="name"><p>シンクロ代表 西井 <span class="count">(訪問国数141カ国)</span></p></div>
+            <div class="comment_box">
+              <p>
+                仕事でお客さんのところに行って、その足で旅に出るということがよくある。そのとき、旅行のスタイルで仕事にいくのは微妙だし、仕事のスタイルでそのまま旅行に行くのもしんどいんだよね。仕事も旅もどっちも行ける良い商品がなかなかないと思う。
+              </p>
+            </div>
+          </div>
+        </article>
+        <div class="text_area">
+          <p>
+            私たちと同じように、常識に囚われずに自分らしく道を切り拓こうとする人をエンパワーメントしたい。そんな思いから、本気で働き旅する大人のためのブランド「HOLICC」を立ち上げ、同じような思いを持つ仲間の生き方をアシストするものづくりを始めることになりました。
+          </p>
+        </div>
+        <div class="white_block">
+          <p class="title">HOLICCは直接販売だからリーズナブル</p>
+          <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_aboutus_d2c.png?v=1613057350">
+          <p>私たちは、中間業者を挟まず、商品の品質を高める以外にかかるコストを極限までカットすることで、お求めになりやすい価格で高品質なものをお届けしています。</p>
+        </div>
+        <div class="profile_btn">
+          <a href="https://holicc.jp/pages/value" target="_blank"><span>HOLICCについて詳しくみる</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_description">
+    <header class="section-box__header">
+        <h3 class="section-box_line_title">商品説明</h3>
+      </header>
+    <div class="wrapper">
+      <div class="spec">
+        <div class="img_area"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_cart_PackBag.png?v=1613130334"></div>
+        <div class="table_area">
+          <div class="table_border s_size">
+            <table>
+              <tr class="title">
+                <th colspan="2">Sサイズ</th>
+              </tr>
+              <tr>
+                <th>サイズ</th>
+                <td>24.5cm x 18cm</td>
+              </tr>
+              <tr>
+                <th>本体重量</th>
+                <td>149g</td>
+              </tr>
+              <tr>
+                <th>容量</th>
+                <td>5L</td>
+              </tr>
+              <tr>
+                <th>素材</th>
+                <td>シルナイロン コーデュラ<sup>&reg;</sup></td>
+              </tr>
+              <tr>
+                <th>ポケット</th>
+                <td>伸縮性メッシュポケット</td>
+              </tr>
+              <tr>
+                <th>生産地</th>
+                <td>Made in CHINA</td>
+              </tr>
+            </table>
+          </div>
+          <div class="table_border l_size">
+            <table>
+              <tr class="title">
+                <th colspan="2">Lサイズ</th>
+              </tr>
+              <tr>
+                <th>サイズ</th>
+                <td>36cm x 25.5cm</td>
+              </tr>
+              <tr>
+                <th>本体重量</th>
+                <td>213g</td>
+              </tr>
+              <tr>
+                <th>容量</th>
+                <td>10L</td>
+              </tr>
+              <tr>
+                <th>素材</th>
+                <td>シルナイロン コーデュラ<sup>&reg;</sup></td>
+              </tr>
+              <tr>
+                <th>ポケット</th>
+                <td>伸縮性メッシュポケット</td>
+              </tr>
+              <tr>
+                <th>生産地</th>
+                <td>Made in CHINA</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="warranty">
+        <div class="box">
+          <div class="img_area pc"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_warranty.png?v=1613131958" alt="１年保証"></div>
+          <div class="text_area">
+            <p class="title">万が一のときも安心の1年保証つき</p>
+            <div class="img_area sp"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_warranty.png?v=1613131958" alt="１年保証"></div>
+            <p>
+              安心してご購入いただけるように、1年間の保証をつけております。もしも、破損してしまった場合は、商品を返送いただき、修理等の対応をさせていただきます。(故意による破損の場合は保証の対象外となります)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section-cta section-lp" id="fixed-scroll-end">
+    <div class="section-cta__wrapper section-lp__wrapper">
+      <div class="section-cta__product">
+        <div class="section-cta__product-meta-wrapper">
+          <div class="section-cta__product-meta">
+            <div class="section-cta__product-meta-caption">
+              <div class="section-cta__product-meta-title">
+                PackBag 
+              </div>
+              <div class="section-cta__product-meta-price">
+                <span class="section-cta__product-meta-price-number" data-regular-price>{{ current_variant.price | money }}</span>
+                <span class="section-cta__product-meta-price-tax">(税込)</span>
+              </div>
+            </div>
+            <div class="section-cta__product-meta-subcaption">size：S/Lセット | color：BLACK</div>
+          </div>
+          <div class="section-cta__product-image">
+            <div class="">
+                <img id="section-cta__product-image-main" class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_cart_PackBag3-2-min.jpg?v=1622542548">
+            </div>
+          </div>
+        </div>
+        <div class="section-cta__product-meta2">
+          <div class="section-cta__product-tags">
+            
+            <div class="section-cta__product-tag section-cta__product-tag--delivery">
+              <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_shipping.png?v=1635217307" heght="23px" width="23px">
+              {% if current_variant.price >= 1000000 %}
+              送料無料
+			{% else if %}
+              1万円未満のご購入は送料¥500(沖縄県は¥1500)
+			{% endif %}
+            </div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_box.png?v=1635217307" heght="23px" width="23px">通常1営業日で発送</div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_payment.png?v=1635217307" heght="23px" width="23px">AmazonPay 対応</div>
+          </div>
+          <div class="section-cta__line">
+            <div class="section-cta__line-wrapper">
+              <div class="section-cta__line-text">
+                <div class="section-cta__line-caption">友だち追加&30秒アンケートで<br>お得な<span class="section-cta__line-caption--emp">500円クーポンGET</span></div>
+              </div>
+              <a class="section-cta__line-btn" href="https://line.me/R/ti/p/%40027gciii" target="_blank">LINE友だち追加</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta__form">
+        {% include 'product-form-cta' %}
+        <div class="section-cta__annotation">
+          <div>
+            新作「PackBag+」を<a href="https://holicc.jp/collections/holicc-items-1/products/packbagplus-set">こちらのページ</a>にて販売中です。合わせてご検討ください。
+          </div>
+          {% if product.metafields.my_fields.is_gift_wrapping %}
+          <div class="section-pulldown">
+            <div class="section-pulldown__wrapper">
+              <div class="section-pulldown__label">
+                ギフトラッピングをご希望の方へ
+              </div>
+              <div class="section-pulldown__content">
+                この商品はギフトラッピング可能です。ご希望の場合は、本商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
+              </div>
+            </div>
+          </div>
+          {% else %}
+          ※この商品はギフトラッピング対象外です
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section>
+    <div class="wrapper" style="max-width: 980px; margin: 0 auto;">
+    	  <div class="review-container" data-pid="{{ product.id }}" data-sort="date" data-sort-order="desc" data-gname="{{ product.id }}" data-name="{{ product.title }}" data-url="{{ shop.url | append: product.url }}" data-image-url="{{ product.featured_image | product_img_url: 'large'}}" data-price="{{ product.price | divided_by: 100 }}" data-currency="{{ shop.currency }}" data-description="{{ product.metafields.global.description_tag | escape }}" data-action="widget" data-group="true" data-review-count="5"></div>
+    </div>
+  </section>
+  
+  
+  <section class="section_qa-area">
+    <header class="section-box__header">
+        <h3 class="section-box_line_title">よくあるご質問</h3>
+      </header>
+    <div class="wrapper">
+      <div class="flex_line">
+        <div class="box">
+          <p class="ques">支払い方法を教えてください</p>
+          <p class="ans">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。
+          </p>
+        </div>
+        <div class="box">
+          <p class="ques">返品・交換はできますか？</p>
+          <p class="ans">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。
+          </p>
+        </div>
+      </div>
+       <div class="flex_line">
+        <div class="box">
+          <p class="ques">送料はいくらかかりますか？</p>
+          <p class="ans">HOLICCでは、ご購入金額の合計が10,000円以上の場合、送料無料となります。そのため、本商品をご購入の方は送料無料となります。
+          </p>
+        </div>
+        <div class="box">
+          <p class="ques">注文後、どれくらいで届きますか？</p>
+          <p class="ans">平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。
+          </p>
+        </div>
+      </div>
+       <div class="flex_line">
+        <div class="box">
+          <p class="ques">配送の日時指定はできますか？</p>
+          <p class="ans">できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。
+          </p>
+        </div>
+        <div class="box">
+          <p class="ques">ギフト用のラッピングはできますか？</p>
+          <p class="ans">有料（500円）にて承ります。ギフトラッピングをご希望の方は商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="fixed-footer active">
+    <div class="fixed-footer__wrapper">
+      <div class="fixed-footer__header pc">
+        <div class="fixed-footer__title">
+           {%- if product.metafields.custom._fixed-banner-title != blank -%}
+          {{ product.metafields.custom._fixed-banner-title | newline_to_br }}
+        {%- else -%}
+          {{ product.title }}
+        {%- endif -%}
+        </div>
+
+        <div class="fixed-footer__price">
+          <span class="product__sale-price-label visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+          <span class="product__regular-price-label visually-hidden">{{ 'products.product.price' | t }}</span>
+          <span class="product__current-price" data-regular-price>{{ current_variant.price | money }}</span>
+
+          <span class="product__compare-price-label visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+          <s class="product__compare-price" data-compare-price>{{ current_variant.compare_at_price | money }}</s>
+
+          {% include 'product-unit-price', variant: current_variant %}
+          <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+          <meta itemprop="priceCurrency" content="{{ cart.currency.iso_code }}">
+          <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+          <span class="fixed-footer__price-tax">(税込)</span>
+        </div>
+      </div>
+      <div class="fixed-footer__content">
+        <a id="fixed-footer-btn" class="fixed-footer__btn section-btn proudct-purchase-link" href="#fixed-scroll-end">
+          <span class="fixed-footer__btn-text">購入にすすむ</span>
+          <span class="fixed-footer__btn-arrow"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/grey_122_arr_24.png?v=1614858713" width="15px" height="15px"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('.section-pulldown__label').on('click', function(){
+      var a = $(this).closest('.section-pulldown');
+      if(a.hasClass('section-pulldown--open')){
+        a.removeClass('section-pulldown--open');
+      }else{
+        a.addClass('section-pulldown--open');
+      }
+    });
+    var sectionBoxSceneSwiper = new Swiper(".section-box-scene-swiper", {
+      breakpoints: {
+          769: {
+              slidesPerView: 3,
+        },
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".section-box-scene-swiper-button-next",
+        prevEl: ".section-box-scene-swiper-button-prev",
+      },
+      pagination: {
+        el: '.section-box-scene-swiper-pagination',
+        type: 'bullets',
+      },      
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 100,
+      watchSlidesProgress: true,
+    });
+    $(document).on('click', '#NullsGiftWrapTitle', function(){
+      var a = $('#NullsgiftWrap');
+      if(a.prop('checked')){
+        a.prop('checked', false);
+      }else{
+        a.prop('checked', true);
+      }
+    });
+  $(function(){
+    $('a[href^="#"]').click(function(e) {
+      var href = $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+
+      $.when(
+        $("html, body").animate({
+          scrollTop: position
+        }, 400, "swing"),
+        e.preventDefault(),
+      ).done(function() {
+        var diff = target.offset().top;
+        if (diff === position) {
+        } else {
+          $("html, body").animate({
+            scrollTop: diff
+          }, 10, "swing");
+        }
+      });
+    });
+
+    $(document).scroll(function(){
+      var scrollStart = $('body').offset().top;
+      var scrollEnd = $('#fixed-scroll-end').offset().top;
+      var distance = 0;
+      distance = $(this).scrollTop();
+      if (scrollStart <= distance) {
+        $('.fixed-footer').addClass('active');
+      } else if (scrollStart >= distance) {
+        $('.fixed-footer').removeClass('active');
+      }
+
+      if (scrollEnd <= distance) {
+        $('.fixed-footer').addClass('none');
+      } else{
+        $('.fixed-footer').removeClass('none');
+      }
+    });
+
+    Delighters.config({    
+      start: 0.9,
+    });
+
+  });
+  </script>
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  Product Data
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+  <script type="application/json" data-product-json>
+    {{ product | json }}
+  </script>
+
+  <script type="application/json" data-model-json="{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "cs": "Stránky produktu",
+    "da": "Produktsider",
+    "de": "Produktseiten",
+    "en": "Product pages",
+    "es": "Páginas de productos",
+    "fi": "Tuotesivut",
+    "fr": "Pages de produits",
+    "hi": "उत्पाद पेज",
+    "it": "Pagine di prodotto",
+    "ja": "商品ページ",
+    "ko": "제품 페이지",
+    "nb": "Produktsider",
+    "nl": "Productpagina's",
+    "pl": "Strony produktu",
+    "pt-BR": "Páginas de produtos",
+    "pt-PT": "Páginas de produtos",
+    "sv": "Produktsidor",
+    "th": "หน้าสินค้า",
+    "tr": "Ürün sayfaları",
+    "vi": "Trang sản phẩm",
+    "zh-CN": "产品页面",
+    "zh-TW": "產品頁面"
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": {
+        "cs": "Zobrazit výběr množství",
+        "da": "Vis antalsvælger",
+        "de": "Mengenauswahl anzeigen",
+        "en": "Show quantity selector",
+        "es": "Mostrar selector de cantidad",
+        "fi": "Näytä määrän valitsin",
+        "fr": "Afficher le sélecteur de quantité",
+        "hi": "मात्रा चयनकर्ता दिखाएं",
+        "it": "Mostra selettore quantità",
+        "ja": "数量セレクターを表示する",
+        "ko": "수량 선택기 표시",
+        "nb": "Vis mengdevelger",
+        "nl": "Hoeveelheidskiezer weergeven",
+        "pl": "Pokaż selektor ilości",
+        "pt-BR": "Exiba um seletor de quantidade",
+        "pt-PT": "Mostrar seletor de quantidade",
+        "sv": "Visa kvantitetsväljare",
+        "th": "แสดงตัวเลือกจำนวน",
+        "tr": "Adet seçiciyi göster",
+        "vi": "Hiển thị hộp chọn số lượng",
+        "zh-CN": "显示数量选择器",
+        "zh-TW": "顯示數量選擇器"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_labels",
+      "label": {
+        "cs": "Zobrazit popisky variant",
+        "da": "Vis variantlabels",
+        "de": "Varianten-Etiketten anzeigen",
+        "en": "Show variant labels",
+        "es": "Mostrar etiquetas de variantes",
+        "fi": "Näytä vaihtoehtoiset tarrat",
+        "fr": "Afficher le nom des variantes",
+        "hi": "वेरिएंट लेबल दिखाएं",
+        "it": "Mostra etichette varianti",
+        "ja": "バリエーションのラベルを表示する",
+        "ko": "이형 상품 레이블 표시",
+        "nb": "Vis variantetiketter",
+        "nl": "Variantlabels weergeven",
+        "pl": "Pokaż etykiety wariantów",
+        "pt-BR": "Exibir etiquetas de variantes",
+        "pt-PT": "Mostrar etiquetas de variantes",
+        "sv": "Visa variantetiketter",
+        "th": "แสดงป้ายกำกับตัวเลือกสินค้า",
+        "tr": "Varyasyon etiketlerini göster",
+        "vi": "Hiển thị nhãn mẫu mã",
+        "zh-CN": "显示多属性标签",
+        "zh-TW": "顯示子類選項標籤"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "cs": "Zobrazit dodavatele produktu",
+        "da": "Vis produktleverandør",
+        "de": "Produktanbieter anzeigen",
+        "en": "Show product vendor",
+        "es": "Mostrar proveedor del producto",
+        "fi": "Näytä tuotteen myyjä",
+        "fr": "Afficher le distributeur du produit",
+        "hi": "उत्पाद विक्रेता दिखाएं",
+        "it": "Indica fornitore prodotto",
+        "ja": "商品の販売元を表示する",
+        "ko": "제품 공급 업체 표시",
+        "nb": "Vis produktleverandør",
+        "nl": "Productleverancier weergeven",
+        "pl": "Pokaż dostawcę produktu",
+        "pt-BR": "Exiba o fornecedor do produto",
+        "pt-PT": "Mostrar fornecedor do produto",
+        "sv": "Visa produktleverantör",
+        "th": "แสดงผู้ขายสินค้า",
+        "tr": "Ürün satıcısını göster",
+        "vi": "Hiển thị nhà cung cấp sản phẩm",
+        "zh-CN": "显示产品厂商",
+        "zh-TW": "顯示產品廠商"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": {
+        "cs": "Zobrazit dynamické tlačítko pokladny",
+        "da": "Vis dynamisk betalingsknap",
+        "de": "Dynamischen Checkout Button anzeigen",
+        "en": "Show dynamic checkout button",
+        "es": "Mostrar botón de pago dinámico",
+        "fi": "Näytä dynaaminen kassapainike",
+        "fr": "Afficher le bouton de paiement dynamique",
+        "hi": "डायनेमिक चेकआउट बटन दिखाएं",
+        "it": "Mostra pulsante di check-out dinamico",
+        "ja": "動的チェックアウトボタンを表示する",
+        "ko": "동적 결제 버튼 표시",
+        "nb": "Vis dynamisk knapp for å gå til kassen",
+        "nl": "Dynamische betaalknop weergeven",
+        "pl": "Pokaż dynamiczny przycisk realizacji zakupu",
+        "pt-BR": "Exibir botão de checkout dinâmico",
+        "pt-PT": "Mostrar botão dinâmico de finalização da compra",
+        "sv": "Visa dynamiska betalningsknappar",
+        "th": "แสดงปุ่มชำระเงินแบบไดนามิก",
+        "tr": "Dinamik ödeme düğmesini göster",
+        "vi": "Hiển thị nút thanh toán động",
+        "zh-CN": "显示动态结账按钮",
+        "zh-TW": "顯示動態結帳按鈕"
+      },
+      "info": {
+        "cs": "Každý zákazník uvidí platební metodu, kterou ze všech metod dostupných v obchodě (například PayPal nebo Apple Pay) nejvíce preferuje. [Další informace](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "da": "Den enkelte kunde vil se sin foretrukne betalingsmetode blandt dem, der er tilgængelige i din butik, f.eks. PayPal eller Apple Pay. [Få mere at vide](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "de": "Jeder Kunde sieht seine bevorzugte Zahlungsmethode aus den in deinem Shop verfügbaren Zahlungsmethoden wie PayPal oder Apple Pay. [Mehr Informationen](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "es": "Cada cliente verá su forma de pago preferida entre las disponibles en tu tienda, como PayPal o Apple Pay. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "fi": "Kukin asiakas näkee ensisijaisen valintansa kauppasi tarjoamista maksutavoista, esim. PayPal tai Apple Pay. [Lisätietoja](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "fr": "Chaque client verra son moyen de paiement préféré parmi ceux qui sont proposés sur votre boutique, tels que PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "hi": "प्रत्येक ग्राहक आपके स्टोर पर उपलब्ध अपनी पसंदीदा भुगतान की विधि देखेंगे जैसे PayPal या Apple Pay. [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "it": "Ogni cliente vedrà il suo metodo di pagamento preferito tra quelli disponibili nel tuo negozio, come PayPal o Apple Pay. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "ja": "PayPalやApple Payなど、ストアで利用可能な希望の決済方法がお客様に表示されます。[詳細情報](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "ko": "각 고객은 PayPal 또는 Apple Pay와 같이 스토어에서 사용 가능한 지불 방법을 확인할 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "nb": "Hver enkelt kunde vil se sin foretrukne betalingsmåte blant de som er tilgjengelig i butikken din, som PayPal eller Apple Pay. [Finn ut mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "nl": "Elke klant ziet zijn of haar beschikbare voorkeursmethode om af te rekenen, zoals PayPal of Apple Pay. [Meer informatie](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pl": "Każdy klient zobaczy swoją preferowaną metodę płatności wśród metod dostępnych w Twoim sklepie, np. PayPal lub Apple Pay. [Dowiedz się więcej ](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pt-BR": "Cada cliente verá a forma de pagamento preferencial dele dentre as disponíveis na loja, como PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pt-PT": "Cada cliente irá ver o seu método de pagamento preferido entre os disponíveis na loja, como o PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "sv": "Varje kund kommer att se den föredragna betalningsmetoden från de som finns tillgängliga i din butik, till exempel PayPal eller Apple Pay. [Läs mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "th": "ลูกค้าแต่ละรายจะเห็นวิธีการชำระเงินที่ต้องการจากวิธีที่ใช้ได้ในร้านค้าของคุณ เช่น PayPal หรือ Apple Pay [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "tr": "Her müşteri, mağazanız sunulanlar arasından tercih ettikleri ödeme yöntemini görür (ör. PayPal veya Apple Pay). [Daha fazla bilgi edinin](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "vi": "Mỗi khách hàng sẽ thấy phương thức thanh toán ưu tiên của họ trong những phương thức thanh toán được hỗ trợ tại cửa hàng như PayPal hoặc Apple Pay. [Tìm hiểu thêm](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "zh-CN": "每位客户都可在您商店提供的付款方式中看到他们的首选付款方式，例如 PayPal 或 Apple Pay。[了解详细信息](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "zh-TW": "每位顧客都可以在您商店內開放使用的付款方式中看見他們偏好使用的方式，如 PayPal、Apple Pay 等。[深入瞭解](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": {
+        "cs": "Zobrazit tlačítka pro sdílení na sociálních sítích",
+        "da": "Vis knapper til deling på sociale medier",
+        "de": "Buttons für Social Media anzeigen",
+        "en": "Show social sharing buttons",
+        "es": "Mostrar botones para compartir en redes sociales",
+        "fi": "Näytä sosiaalisen median jakamispainikkeet",
+        "fr": "Afficher les boutons de partage sur les médias sociaux",
+        "hi": "सोशल शेयरिंग बटन दिखाएं",
+        "it": "Mostra i pulsanti per la condivisione sui social",
+        "ja": "ソーシャルメディアでの共有ボタンを表示する",
+        "ko": "소셜 공유 버튼 표시",
+        "nb": "Vis knapper for deling på sosiale medier",
+        "nl": "Knoppen voor delen via social media weergeven",
+        "pl": "Pokaż przyciski udostępniania w mediach społecznościowych",
+        "pt-BR": "Exibir botões de compartilhamento em redes sociais",
+        "pt-PT": "Mostrar botões de partilha nas redes sociais",
+        "sv": "Visa knappar för delning i sociala medier",
+        "th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
+        "tr": "Sosyal medya paylaşım düğmelerini göster",
+        "vi": "Hiển thị nút chia sẻ qua mạng xã hội",
+        "zh-CN": "显示社交分享按钮",
+        "zh-TW": "顯示社群分享按鈕"
+      },
+      "info": {
+        "cs": "Nezapomeňte povolit sdílení na sociálních sítích v obecném nastavení.",
+        "da": "Sørg for, at du har aktiveret deling på sociale medier under Generelle indstillinger",
+        "de": "Vergewissere dich, dass du in den allgemeinen Einstellungen das Teilen in sozialen Netzwerken aktiviert hast",
+        "en": "Make sure you have enabled social sharing in general settings",
+        "es": "Asegúrate de haber habilitado la opción para compartir en redes sociales en la configuración general.",
+        "fi": "Varmista, että olet ottanut sosiaalisen median jakamisen käyttöön yleisissä asetuksissa",
+        "fr": "Assurez-vous d'avoir activé le partage social dans les paramètres généraux",
+        "hi": "सुनिश्चित करें कि आपने सामान्य सेटिंग में सोशल शेयरिंग सक्षम किया है",
+        "it": "Assicurati di aver abilitato la condivisione sui social nelle impostazioni generali",
+        "ja": "一般設定でソーシャルメディアでの共有を有効にしていることを確認してください。",
+        "ko": "일반 설정에서 소셜 공유가 되었는지 확인하십시오.",
+        "nb": "Sørg for at du har aktivert sosial deling i generelle innstillinger",
+        "nl": "Zorg ervoor dat je delen via social media hebt ingeschakeld in de algemene instellingen",
+        "pl": "Upewnij się, że włączyłeś(-aś) udostępnianie w mediach społecznościowych w ustawieniach ogólnych",
+        "pt-BR": "Verifique se você habilitou o compartilhamento em redes sociais nas configurações gerais",
+        "pt-PT": "Certifique-se de que ativou a partilha nas redes sociais nas definições gerais",
+        "sv": "Se till att du har aktiverat social delning i allmänna inställningar",
+        "th": "ตรวจสอบให้แน่ใจว่าคุณได้เปิดใช้การแชร์บนโซเชียลในการตั้งค่าทั่วไป",
+        "tr": "Genel ayarlardan sosyal paylaşımı etkinleştirdiğinizden emin olun",
+        "vi": "Đảm bảo bạn đã bật chia sẻ qua mạng xã hội trong cài đặt chung",
+        "zh-CN": "确保您在“通用”设置中启用了社交分享",
+        "zh-TW": "請確定您已在一般設定內啟用社群分享功能"
+      },
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": {
+        "cs": "Multimédia",
+        "da": "Medie",
+        "de": "Medien",
+        "en": "Media",
+        "es": "Elementos multimedia",
+        "fi": "Media",
+        "fr": "Médias",
+        "hi": "मीडिया",
+        "it": "Media",
+        "ja": "メディア",
+        "ko": "미디어",
+        "nb": "Medier",
+        "nl": "Media",
+        "pl": "Multimedia",
+        "pt-BR": "Mídia",
+        "pt-PT": "Multimédia",
+        "sv": "Media",
+        "th": "สื่อ",
+        "tr": "Medya",
+        "vi": "Phương tiện",
+        "zh-CN": "媒体",
+        "zh-TW": "媒體"
+      },
+      "info": {
+        "cs": "Další informace o [typech multimédií](https://help.shopify.com/manual/products/product-media)",
+        "da": "Få mere at vide om [media types](https://help.shopify.com/manual/products/product-media)",
+        "de": "Mehr Informationen über [Medientypen ](https://help.shopify.com/manual/products/product-media)",
+        "en": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)",
+        "es": "Más información sobre [tipos de archivos multimedia](https://help.shopify.com/manual/products/product-media)",
+        "fi": "Lue lisää [mediatyypeistä](https://help.shopify.com/manual/products/product-media)",
+        "fr": "En savoir plus sur les [types de supports multimédia](https://help.shopify.com/manual/products/product-media)",
+        "hi": "[मीडिया प्रकार](https://help.shopify.com/manual/products/product-media) के बारे में और जानें",
+        "it": "Scopri di più sulle [tipologie di file multimediali](https://help.shopify.com/manual/products/product-media)",
+        "ja": "[メディアのタイプ](https://help.shopify.com/manual/products/product-media) について詳しくはこちら",
+        "ko": "[미디어 유형](https://help.shopify.com/manual/products/product-media)에 대해 자세히 알아보기",
+        "nb": "Lær mer om [medietyper](https://help.shopify.com/manual/products/product-media)",
+        "nl": "Meer informatie over [mediatypen](https://help.shopify.com/manual/products/product-media)",
+        "pl": "Dowiedz się więcej o [typach multimediów](https://help.shopify.com/manual/products/product-media)",
+        "pt-BR": "Saiba mais sobre [tipos de mídia](https://help.shopify.com/manual/products/product-media)",
+        "pt-PT": "Saiba mais sobre [media types](https://help.shopify.com/manual/products/product-media)",
+        "sv": "Läs mer om [mediatyper](https://help.shopify.com/manual/products/product-media)",
+        "th": "ดูข้อมูลเพิ่มเติมเกี่ยวกับ [ประเภทของสื่อ](https://help.shopify.com/manual/products/product-media)",
+        "tr": "[Medya türleri](https://help.shopify.com/manual/products/product-media) hakkında daha fazla bilgi edinin",
+        "vi": "Tìm hiểu thêm về [loại phương tiện](https://help.shopify.com/manual/products/product-media)",
+        "zh-CN": "详细了解[媒体类型](https://help.shopify.com/manual/products/product-media)",
+        "zh-TW": "深入瞭解 [媒體類型](https://help.shopify.com/manual/products/product-media)"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": {
+        "cs": "Povolit smyčky videa",
+        "da": "Aktivér looping af videoer",
+        "de": "Videoschleife aktivieren",
+        "en": "Enable video looping",
+        "es": "Habilitar la reproducción de video en bucle",
+        "fi": "Ota käyttöön videosilmukka",
+        "fr": "Activer le bouclage de la vidéo",
+        "hi": "वीडियो लूपिंग सक्षम करें",
+        "it": "Abilita la riproduzione in loop dei video",
+        "ja": "ビデオのループを有効にする",
+        "ko": "동영상 루프 활성화",
+        "nb": "Aktiver løkkeavspilling av video",
+        "nl": "Video-looping inschakelen",
+        "pl": "Włącz zapętlanie filmu",
+        "pt-BR": "Habilitar loop de vídeo",
+        "pt-PT": "Ativar ciclo de vídeo",
+        "sv": "Aktivera video-loopning",
+        "th": "เปิดใช้การวนซ้ำวิดีโอ",
+        "tr": "Video döngüsünü etkinleştir",
+        "vi": "Bật vòng lặp video",
+        "zh-CN": "启用视频循环",
+        "zh-TW": "啟用影片循環功能"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_variant_media",
+      "label": {
+        "cs": "Skrýt varianty multimédií v galerii",
+        "da": "Skjul variantmedie i galleriet",
+        "de": "Medienvarianten in der Galerie ausblenden",
+        "en": "Hide variant media in gallery",
+        "es": "Ocultar elementos multimedia de variantes en la galería",
+        "fi": "Piilota versioiden aineisto galleriassa",
+        "fr": "Masquer les supports multimédia des variantes dans la galerie",
+        "hi": "गैलरी में वेरिएंट मीडिया छिपाएं",
+        "it": "Nascondi le varianti dei file nella galleria",
+        "ja": "ギャラリーのバリエーションメディアを非表示にする",
+        "ko": "갤러리의 이형 상품 미디어 숨기기",
+        "nb": "Skjul variantmedier i galleriet",
+        "nl": "Verschillende media verbergen in galerie",
+        "pl": "Ukryj multimedia wariantów w galerii",
+        "pt-BR": "Ocultar mídia variante na galeria",
+        "pt-PT": "Ocultar multimédia variante na galeria",
+        "sv": "Dölj variantmedia i galleriet",
+        "th": "ซ่อนสื่อสำหรับตัวเลือกสินค้าในแกลเลอรี",
+        "tr": "Galeride varyasyon medyasını gizle",
+        "vi": "Ẩn phương tiện mẫu mã trong bộ sưu tập ảnh",
+        "zh-CN": "在图库中隐藏多属性媒体",
+        "zh-TW": "在圖庫中隱藏子類選項多媒體檔案"
+      },
+      "default": true
+    }
+  ]
+}
+{% endschema %}

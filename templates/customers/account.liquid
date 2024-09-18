@@ -1,0 +1,88 @@
+<!-- /templates/customers/account.liquid -->
+<div class="page-width">
+  <header class="section-header section-header--small text-center">
+    <h1 class="section-header__title h2 account__title">MY PAGE<span>{{ 'customer.account.title' | t }}</span></h1>
+<!--     <div class="section-header__btn">
+      <a class="btn-link" href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a>
+    </div> -->
+  </header>
+
+
+<!--   <a class="section-header text-center holicc-generator-eyecatch holicc-generator-eyecatch--mypage" href="https://holicc.jp/pages/worldmap-register">
+    <div class="section-header__title h2"><div class="holicc-generator-eyecatch__title">HOLICC旅背景ジェネレーター</div></div>
+  </a>
+   -->
+  
+  <div class="grid grid--rows account__grid">
+    <div class="grid__item medium-up--one-quarter account-details">
+      <h2 class="h4">{{ 'customer.account.details' | t }}</h2>
+      <p class="name">{{  customer.last_name  }} {{ customer.first_name }}</p>
+      {{ customer.default_address | format_address | replace: customer.last_name, '' | replace: customer.first_name, '' }} 
+
+      <p>
+        <a href="{{ routes.account_addresses_url }}" class="btn-link">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a>
+      </p>
+
+      <div class="account--side__btn">
+        <a class="btn-link" href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a>
+      </div>
+
+    </div>
+    <div class="grid__item medium-up--seven-tenths">
+
+      <h2 class="h4">{{ 'customer.orders.title' | t }}</h2>
+
+      {% paginate customer.orders by 20 %}
+      {% if customer.orders.size != 0 %}
+
+        <table class="responsive-table account-summary">
+          <thead>
+          <tr>
+            <th>{{ 'customer.orders.order_number' | t }}</th>
+            <th>{{ 'customer.orders.date' | t }}</th>
+            <th>{{ 'customer.orders.payment_status' | t }}</th>
+            <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+            <th>{{ 'customer.orders.total' | t }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for order in customer.orders %}
+            <tr class="responsive-table__row">
+              <td data-label="{{ 'customer.orders.order_number' | t }}">
+                <a href="{{ order.customer_url }}"
+                   class="btn-link btn-link--wide">
+                   {{ order.name }}
+                 </a>
+              </td>
+              <td data-label="{{ 'customer.orders.date' | t }}">
+                {{ order.created_at | time_tag: format: 'date' }}
+              </td>
+              <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+              <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+              <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+      {% else %}
+
+        <p>{{ 'customer.orders.none' | t }}</p>
+
+      {% endif %}
+      {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+      {% endif %}
+      {% endpaginate %}
+    </div>
+  </div>
+
+  <a href="https://holicc.jp/collections/holicc-items" class="account__banner">
+      <picture>
+    <source media="(max-width: 768px)" srcset="{{ 'ITEM-sp.jpg' | asset_url }}">
+    <img src="{{ 'ITEM-pc.jpg' | asset_url }}" alt="">
+  </picture>
+  </a>
+
+
+</div>

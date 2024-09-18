@@ -1,0 +1,1070 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign current_variant_sale = false -%}
+{% if current_variant.compare_at_price > current_variant.price %}
+  {%- assign current_variant_sale = true -%}
+{% endif %}
+{% assign featured_media = current_variant.featured_media | default: product.featured_media %}
+
+<div class="product-template" data-section-id="{{ section.id }}" data-section-type="product-template" data-variant-id="{{ current_variant.id }}">
+  
+  <meta itemprop="name" content="{{ product.title }}">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ featured_media | img_url: 'grande' }}">
+
+  
+  
+  {% comment %}
+  ------------------------------------------------------------------------------
+  商品詳細
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+  
+  {% include 'product-header_sabir', product: product %}
+
+  
+  
+  {% comment %}
+  ------------------------------------------------------------------------------
+ Sabir -サビル-とは
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">Sabir<small> -サビル-</small>とは</h2>
+        </header>
+
+      <div class="section-lp__description section-lp__description__sabir1">タオルの起源「ぺシマテル」を進化、<br class="sp">サウナハットにもなる<br><b>超速乾2wayタオル</b></div>
+
+        
+        <div class="section-lp-product-description">
+            <div class="description__area">
+                <div class="description__area__img">
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/whatsabir_1-min.jpg?v=1714313301" alt="Sabir">
+                </div>
+                <div class="description__area__txt description__area__txt__sabir">
+                    <div class="title">前身の「ネオペシテマル」がより便利に</div>
+                    世界を旅する中で出会ったトルコの多機能タオル「ペシテマル」。薄さと吸水・速乾性の高さが特徴で、公衆浴場ハマムで古くから使われていました。 「ペシテマル」を現代の形に作り替えたのが、Sabirの前身「ネオペシテマル」。ご好評の中完売となったこの商品を、お客さまから頂いたご意見を参考に更に進化させたのが、トルコ語で「忍耐」を意味するこの「Sabir」です。
+                </div>
+            </div>
+            <div class="description__area">
+                <div class="description__area__img">
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/whatsabir_2-min.jpg?v=1714312514" alt="Sabir">
+                </div>
+                <div class="description__area__txt description__area__txt__sabir">
+                    <div class="title">超速乾タオルがサウナハットに</div>
+                    Sabirの大きな特徴の1つがタオルだけでなくサウナハットとしても使用ができること。持ち運びのタオルとしても、旅先も、サウナでも、シーンを問わず使えます。 高い吸水性と超速乾で、使用後もすぐに乾き、カバンが濡れたり重くなるストレスもなし。1枚入れておくだけで安心・便利。かさばらずスマートに持ち歩けます。
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+　</section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  8つの特長
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">8つの特長</h2>
+        </header>
+  
+        <div class="section-lp-features">
+          
+            <article class="feature feature--odd">
+              <div class="feature__head">
+                <div class="feature__head__num feature__head__num__sabir">01</div>
+                <h3 class="feature__head__title feature__head__title__sabir">
+                  綿タオルの数倍早く乾く｢速乾性」<span>雨天や旅行時の室内干し問題もカラッと解決</span>
+                </h3>
+              </div>
+              <div class="feature__content">
+                <div class="feature__content__img">                  
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features01_pc-min.jpg?v=1714316501" alt="綿タオルの数倍早く乾く「速乾性」">
+                </div>
+                <div class="feature__content__txt feature__content__txt__sabir">
+                  しっかり吸水しても絞ってすぐ乾くマイクロファイバー生地を採用。使用後カバンに入れても他の荷物が濡れません。 洗濯機で洗った後は脱水だけで半乾きになり、部屋干しでもすぐ乾くため、梅雨や花粉が多い時期も安心。綿タオルの数倍の速さで乾くから、嫌な生乾き臭の心配もありません。
+                  <div class="feature__content__txt__img">
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features01_checkpoint.jpg?v=1714316234" alt="checkpoint">
+                    <span class="feature__content__txt__smalltext">※カケンテストセンターの拡散性残留水分率検査にて、60分で0.1%に</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature feature--even">
+              <div class="feature__head">
+                <div class="feature__head__num feature__head__num__sabir">02</div>
+                <h3 class="feature__head__title feature__head__title__sabir">
+                  手のひらに収まる「携帯性」<span>コンパクトなポーチ付きで旅行や出張にも</span>
+                </h3>
+              </div>
+              <div class="feature__content">
+                <div class="feature__content__img">                  
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features02_pc-min.jpg?v=1714316501" alt="手のひらに収まる「携帯性」">
+                </div>
+                <div class="feature__content__txt feature__content__txt__sabir">
+                  一般的なフェイスタオルよりも少し大きめなのに、薄くてコンパクト。手のひらサイズの付属ポーチに入れて、荷物を少なくしたい旅行や、シューズやウェアなど荷物が多くなるジム・スポーツの時もスッキリと。周りの荷物を濡らすこともありません。さらにタオルとポーチを接続できるボタン付き。使わないときも紛失しづらい工夫が加えてあります。
+                  <div class="feature__content__txt__img">
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features02_checkpoint.jpg?v=1714319194" alt="checkpoint">
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature feature--odd">
+              <div class="feature__head">
+                <div class="feature__head__num feature__head__num__sabir">03</div>
+                <h3 class="feature__head__title feature__head__title__sabir" style="letter-spacing: 0.03em;">
+                  大量の水をサッと､抜群の｢吸水性」<span>フェイスタオルサイズなのに髪も体も1枚で</span>
+                </h3>
+              </div>
+              <div class="feature__content">
+                <div class="feature__content__img">                  
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features_03-min.jpg?v=1714319360" alt="大量の水をサッと、抜群の「吸水性」">
+                </div>
+                <div class="feature__content__txt feature__content__txt__sabir">
+                  付属ポーチに収まるほど薄くてコンパクトなのに、自重の2.5倍の水分を吸収可能。髪も体もフェイスタオルサイズ1枚で拭けます。素早く吸水するため、髪を乾かすのも短時間で完了。 優しく当てるだけで水分を拭き取れるので、子どもや肌の弱い方にも安心してお使いいただけます。
+                </div>
+              </div>
+            </article>
+
+            <article class="feature feature--odd">
+              <div class="feature__head">
+                <div class="feature__head__num feature__head__num__sabir">04</div>
+                <h3 class="feature__head__title feature__head__title__sabir">
+                  サウナハットに変身&nbsp;<span>タオルの端を穴に通すだけ</span>
+                </h3>
+              </div>
+              <div class="feature__content__3column">
+                <div class="content__column">
+                  <div class="content__column__img">
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/step1-min.jpg?v=1714320902" alt="サウナハットに変身">
+                  </div>
+                  <div class="content__column__txt">頭を覆うことで、熱から髪や頭皮を守れます。</div>
+                </div>
+                <div class="content__column">
+                  <div class="content__column__img">
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/step2-min.jpg?v=1714320902" alt="サウナハットに変身">
+                  </div>
+                  <div class="content__column__txt">顔面も保護したいときは、口元を覆う形に。</div>
+                </div>
+                <div class="content__column">
+                  <div class="content__column__img">
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/step3-min.jpg?v=1714320902" alt="サウナハットに変身">
+                  </div>
+                  <div class="content__column__txt">タオルのボタンホールに、端を通すことができます。</div>
+                </div>
+              </div>
+              <div class="feature__content">
+                <div class="feature__content__img">                  
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features04-min.jpg?v=1714320903" alt="サウナハットに変身">
+                </div>
+                <div class="feature__content__txt feature__content__txt__sabir feature__content__txt__sabir04">
+                  ボタンホールにタオルの端を通すだけで、サウナハットに早変わり。サウナの課題である「熱による髪や頭皮のダメージ」や「顔面の焼け感」を防げます。<br><br>ギュッと絞って専用ポーチに入れれば、サウナ終わりも濡れずに持ち運びが可能。 水分を吸ったタオルが重い、カバンがかさばる。そんなお悩みまで解消する新しいサウナアイテムです。
+                </div>
+              </div>
+            </article>
+            
+
+            <div class="box-col-2">
+              
+              <article class="feature feature--odd">
+                <div class="feature__head feature__head__sabir">
+                  <div class="feature__head__num feature__head__num__sabir">05</div>
+                  <h3 class="feature__head__title feature__head__title__sabir">
+                    滑らかで<br class="sp">やさしい肌ざわり
+                  </h3>
+                </div>
+                <div class="feature__content">
+                  <div class="feature__content__img">                    
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features_05-min.jpg?v=1714323488" alt="滑らかでやさしい肌ざわり">
+                  </div>
+                  <div class="feature__content__txt feature__content__txt__sabir">
+                    髪の毛の100分の1の極細繊維を丁寧かつ均一に。短い毛足で作られたこだわりのスエード調の生地は抜群の肌触りです。
+                  </div>
+                </div>
+              </article>
+
+              <article class="feature feature--odd">
+                <div class="feature__head feature__head__sabir">
+                  <div class="feature__head__num feature__head__num__sabir">06</div>
+                  <h3 class="feature__head__title feature__head__title__sabir">
+                    引っ掛けられる<br class="sp">ネームタグ
+                  </h3>
+                </div>
+                <div class="feature__content">
+                  <div class="feature__content__img">                    
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features_06-min.jpg?v=1714323488" alt="引っ掛けられるネームタグ">
+                  </div>
+                  <div class="feature__content__txt feature__content__txt__sabir">
+                    <span style="font-weight: bold; color:#A0232E;">前身商品より改良</span><br>皆様からのご要望を受け、ネームタグを単独でも引っ掛けられて乾かせる仕様に改良しました。
+                  </div>
+                </div>
+              </article>
+
+            </div> 
+
+            <div class="box-col-2">
+              
+              <article class="feature feature--odd">
+                <div class="feature__head feature__head__sabir">
+                  <div class="feature__head__num feature__head__num__sabir">07</div>
+                  <h3 class="feature__head__title feature__head__title__sabir">
+                    何回洗濯しても<br class="sp">毛玉にならない
+                  </h3>
+                </div>
+                <div class="feature__content">
+                  <div class="feature__content__img">                    
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features_07-min.jpg?v=1714323488" alt="何回洗濯しても毛玉にならない">
+                  </div>
+                  <div class="feature__content__txt feature__content__txt__sabir">
+                    丈夫な繊維を使用している為、洗濯しても毛玉やケバがでず、長期間お使いいただけます※使用環境にもよります
+                  </div>
+                </div>
+              </article>
+
+              <article class="feature feature--odd">
+                <div class="feature__head feature__head__sabir">
+                  <div class="feature__head__num feature__head__num__sabir">08</div>
+                  <h3 class="feature__head__title feature__head__title__sabir">
+                    紫外線を<br class="sp">99.9%カｯト
+                  </h3>
+                </div>
+                <div class="feature__content">
+                  <div class="feature__content__img">                    
+                    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/features_08-min.jpg?v=1714323488" alt="紫外線を99.9%以上カット">
+                  </div>
+                  <div class="feature__content__txt feature__content__txt__sabir">
+                    海やプールなどのレジャーでも嬉しい紫外線カット仕様。羽織りとして使用することでお肌を紫外線から守ります。 
+                  </div>
+                </div>
+              </article>
+
+            </div> 
+
+
+        </div>       
+        
+    </div>
+　</section>
+  
+  
+  {% comment %}
+  ------------------------------------------------------------------------------
+  利用シーン
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp  section-lp-gray">
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">利用シーン</h2>
+        </header>
+
+        <div class="section-lp__description section-lp__description__sabir2"><b>旅行やサウナはもちろん、<br class="sp">ジムや出張時などでも万能に活躍！</b></div>
+  
+        <div class="section-lp-scene">
+
+          <div class="scene-box__sabir"> 
+            <article class="scene-box__img">
+              <div class="scene__img">                
+                <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene_1-min.jpg?v=1714326091" alt="サウナや温泉で">
+              </div>
+            </article>
+            <article class="scene-box__txt">
+              <h3 class="scene__title scene__title__sabir">
+                サウナや温泉で
+              </h3>
+              <div class="scene__description">
+                体を拭くのも、汗を拭くのもSabirがあればOK。パッカブルで場所をとらないので、旅先で大活躍。
+              </div>
+            </article>
+          </div>
+
+          <div class="scene-box">        
+            <article class="scene">
+              <h3 class="scene__title scene__title__sabir">
+                ジムやスポーツで
+              </h3>
+              <div class="scene__img">                
+                <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene_2-min.jpg?v=1714326091" alt="ジムやサウナで">
+              </div>
+              <div class="scene__description scene__description__sabir">
+                汗拭き用もシャワー後も1枚で。ポーチに入れて荷物を濡らさず、すっきりコンパクトに！
+              </div>
+            </article>
+  
+            <article class="scene">
+              <h3 class="scene__title scene__title__sabir">
+                自転車通勤のお供に
+              </h3>
+              <div class="scene__img">
+                <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene_3-min.jpg?v=1714326090" alt="自転車通勤のお供に">
+              </div>
+              <div class="scene__description scene__description__sabir">
+                濡らして首に巻けば冷却効果も。パッカブルなので、汗を拭いた後の臭いの心配もなし。
+              </div>
+            </article>
+  
+            <article class="scene">
+              <h3 class="scene__title scene__title__sabir">
+                子供と公園に行くときに
+              </h3>
+              <div class="scene__img">                
+                <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene_4-min.jpg?v=1714326091" alt="子供と公園に行くときに">
+              </div>
+              <div class="scene__description scene__description__sabir">
+                何度も手を洗って拭いても、保水性が高いからグショグショにならない。思う存分遊べます！
+              </div>
+            </article>
+  
+            <article class="scene">
+              <h3 class="scene__title scene__title__sabir">
+                泊まりでもこれ一枚で
+              </h3>
+              <div class="scene__img">                
+                <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene_5-min.jpg?v=1714326091" alt="泊まりでもこれ一枚で">
+              </div>
+              <div class="scene__description scene__description__sabir">
+                速乾性が高く、洗ってもすぐ乾く。湿っていてもポーチに入れれば他の荷物を濡らさずコンパクトに持ち運べます。
+              </div>
+            </article>
+
+          </div>
+          
+            
+        </div>       
+        
+    </div>
+　</section>
+
+
+{% comment %}
+  ------------------------------------------------------------------------------
+  Sabir利用者のコメント
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">Sabir利用者のコメント</h2>
+        </header>
+  
+        <div class="section-lp-features">
+          
+            <article class="feature feature--odd">
+              <div class="feature__content">
+                <div class="feature__content__img">                  
+                  <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/sabir_yosukesan-min.jpg?v=1715162976" alt="サウナハットに変身">
+                </div>
+                <div class="feature__content__txt feature__content__txt__sabir">
+                  <div class="feature__content__txt__title">AI関連会社経営 佐藤洋介さん</div>
+                  普段から色々なサウナを利用しますが、サウナハットは忘れやすくてうまく使えていません。持っていくのを忘れたり、持っていっても置き忘れたりします。高価なハットを忘れたときは絶望しました。でも髪は保護したい。これは持ち運びやすく、かぶりやすいのでアリです。
+                </div>
+              </div>
+            </article>
+
+        </div>       
+        
+    </div>
+　</section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  開発ストーリー
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+ 
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">開発ストーリー</h2>
+        </header>
+  
+        <div class="section-lp__description section-lp__description__sabir3"><b>Sabir -サビル-は<br>旅が大好きな私たち自身の経験と<br>お客さまの声から生まれました</b></div>
+
+        <div class="section-lp-story">
+            
+
+          <div class="story-description story-description__sabir">
+            <p>旅先で出会った、トルコで古くから使われる多機能タオル「ペシテマル」。そのペシテマルを現代のライフスタイルに合わせて進化させた、前身の商品「ネオペシテマル」。</p>
+            <p>吸水性の高さや、薄く乾きやすい機能性に好評を頂き完売したネオペシテマルをお客さまからのご意見を元に更に進化した商品を作りたい。そんな思いを形にしたのが「Sabir -サビル-」です。</p>  
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/story_1-min.jpg?v=1714371032" alt="サビル">
+  
+            <p class="txt-strong">高い機能性はそのままに<br>あったら嬉しい機能を更にプラス</p>
+  
+            <p>髪から体まで拭けて、小さく軽く持ち運べる。日常も旅でも使える1枚に、サウナーに嬉しい機能をプラス。<br>
+              タオルの端を穴に通すことで頭と顔をぐるりと覆うサウナハットに変身。「熱から髪や頭皮を守りたい、顔が焼けるのも防ぎたい、けれどサウナハットを買うほどでは・・・」そんな思いを持つ方が1枚でサウナタイムを楽しめるアイテムが誕生しました。</p><br>
+              <p>更に付属ポーチをよりコンパクトにしたり、引っ掛けられるネームタグをつけたりと、お客さまの意見を反映した様々な工夫を加えて。 コンパクトに持ち運べて、他の荷物を濡らす心配もなく、どんなシーンでも使える1枚へ。 </p><br>
+              <p>サウナに。出かける時に。旅先に。ジムに。いつも持ち歩くカバンに。日々を身軽に、Sabirとともにぜひお楽しみください。</p>
+              
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/story_2-min.jpg?v=1714371032" alt="サビル">
+          </div>          
+        </div>       
+        
+    </div>
+　</section>
+
+  <section class="section-lp">
+  {% include 'product-section-content-about-holicc' %}
+  </section>
+
+  
+  {% comment %}
+  ------------------------------------------------------------------------------
+  サイズ・仕様
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">サイズ・仕様</h2>
+        </header>
+  
+        <div class="section-lp-size">
+            <div class="box">
+              <div class="box__img">                
+                <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/sabir_size_2-min.jpg?v=1714372385" alt="サイズ・仕様">
+              </div>
+              <div class="box__txt box__txt__sabir">
+                <b>【本体</b>】<br>
+                サイズ：縦40cm x 横90cm<small>(大きめのフェイスタオル)</small><br>
+                重さ　：74g<br>
+                素材　：ポリエステル80%、ナイロン20％<br>
+                生産地：中国<br><br class="sp">
+                <b>【ポーチ】</b><br>
+                サイズ：縦12cm x 横14cm<small>（手のひらサイズ）</small><br>
+                重さ　：18g<br>
+                素材　：ナイロン100％<br>
+                生産地：中国
+              </div>
+            </div>
+        </div>       
+        
+    </div>
+　</section>
+  
+
+ 
+  {% comment %}
+  ------------------------------------------------------------------------------
+  商品購入フォーム
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-cta section-lp" id="fixed-scroll-end">
+    <div class="section-cta__wrapper section-lp__wrapper">
+      <div class="section-cta__product">
+        <div class="section-cta__product-meta-wrapper">
+          <div class="section-cta__product-meta">
+            <div class="section-cta__product-meta-caption">
+              <div class="section-cta__product-meta-title section-cta__product-meta-title__sabir">
+                Sabir 
+    <!--             {{ product.title }} -->
+              </div>
+              <div class="section-cta__product-meta-price__sabir">
+                <span class="section-cta__product-meta-price-number" data-regular-price>{{ current_variant.price | money }}</span>
+                <span class="section-cta__product-meta-price-tax">(税込)</span>
+              </div>
+            </div>
+            <div class="section-cta__product-meta-subcaption section-cta__product-meta-subcaption__sabir">color：エーゲネイビー / カッパドキアグレー<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;アヤソフィアピンク /パムッカレグリーン</div>
+          </div>
+          <div class="section-cta__product-image">
+            <div class="">
+                <img id="section-cta__product-image-main" class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/cart_1-min.jpg?v=1714328708">
+            </div>
+          </div>
+        </div>
+        <div class="section-cta__product-meta2">
+          <div class="section-cta__product-tags">
+            
+            <div class="section-cta__product-tag section-cta__product-tag--delivery">
+              <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_shipping.png?v=1635217307">
+              {% if current_variant.price >= 1000000 %}
+              送料無料
+			{% else if %}
+              1万円未満のご購入は送料¥500(沖縄県は¥1500)
+			{% endif %}
+            </div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_box.png?v=1635217307">通常1営業日で発送</div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_payment.png?v=1635217307">AmazonPay 対応</div>
+          </div>
+          <div class="section-cta__line">
+            <div class="section-cta__line-wrapper">
+              <div class="section-cta__line-text">
+                <div class="section-cta__line-caption">友だち追加&30秒アンケートで<br>お得な<span class="section-cta__line-caption--emp">500円クーポンGET</span></div>
+              </div>
+              <a class="section-cta__line-btn" href="https://line.me/R/ti/p/%40027gciii" target="_blank">LINE友だち追加</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta__form">
+        {% include 'product-form-cta' %}
+        <div class="section-cta__annotation">
+          {% if product.metafields.my_fields.is_gift_wrapping %}
+          <div class="section-pulldown">
+            <div class="section-pulldown__wrapper">
+              <div class="section-pulldown__label section-pulldown__label__sabir">
+                ギフトラッピングをご希望の方へ
+              </div>
+              <div class="section-pulldown__content section-pulldown__content__sabir">
+                この商品はギフトラッピング可能です。ご希望の場合は、本商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
+              </div>
+            </div>
+          </div>
+          {% else %}
+          ※この商品はギフトラッピング対象外です
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="variant-images" style="display: none;">
+    {% for variant in product.variants %}
+    <div class="" data-id="{{ variant.id }}" data-image="{{ variant.metafields.my_fields._image }}"></div>
+    {% endfor %}
+  </div>
+  
+  <script>
+    $(document).on('click', '.bcpo-front-image-label', function(){
+      setTimeout (function(){
+        var id = $('#bcpo-select').val();
+        var image = $('#variant-images [data-id=' + id + ']').data('image');
+        $('#section-cta__product-image-main').prop('src', image);
+      }, 1);
+    });
+  </script>
+  
+  
+  <section class="section-lp ">
+    <div class="wrapper" style="max-width: 980px; margin: 0 auto;">
+      {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+    </div>
+  </section>
+
+  
+  {% comment %}
+  ------------------------------------------------------------------------------
+  よくある質問
+  ------------------------------------------------------------------------------
+  {% endcomment %}  
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper">
+
+        <header class="section-lp__header">
+            <h2 class="section-lp__title section-lp__title__sabir">よくある質問</h2>
+        </header>
+  
+        <div class="section-lp-qa">            
+          <ul class="qa-list qa-list__sabir">
+            <li>
+              <div class="q">支払い方法を教えてください。</div>
+              <div class="a">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。</div>
+            </li>
+            <li>
+              <div class="q">送料はいくらかかりますか？</div>
+              <div class="a">全国一律500円（但し、沖縄県は1,500円）です。<br>また、一度のご購入金額が10,000円以上の場合、送料無料となります。</div>
+            </li>
+            <li>
+              <div class="q">配送の日時指定はできますか？</div>
+              <div class="a">できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。</div>
+            </li>
+            <li>
+              <div class="q">返品・交換はできますか？</div>
+              <div class="a">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。</div>
+            </li>
+            <li>
+              <div class="q">注文後、どれくらいで届きますか？</div>
+              <div class="a">平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。</div>
+            </li>
+          </ul>        
+        </div>       
+        
+    </div>
+　</section>
+
+  
+  
+  
+  {% comment %}
+  ------------------------------------------------------------------------------
+  追尾フォーム
+  ------------------------------------------------------------------------------
+  {% endcomment %}  
+  
+  
+
+  <div class="fixed-form active">
+    <div class="fixed-form__header pc">
+      <div class="fixed-form__title">
+        {%- if product.metafields.custom._fixed-banner-title != blank -%}
+          {{ product.metafields.custom._fixed-banner-title | newline_to_br }}
+        {%- else -%}
+          {{ product.title }}
+        {%- endif -%}
+      </div>
+
+      <div class="fixed-form__price">
+        <span class="product__sale-price-label visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+        <span class="product__regular-price-label visually-hidden">{{ 'products.product.price' | t }}</span>
+        <span class="product__current-price" data-regular-price>{{ current_variant.price | money }}</span>
+
+        <span class="product__compare-price-label visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+        <s class="product__compare-price" data-compare-price>{{ current_variant.compare_at_price | money }}</s>
+
+        {% include 'product-unit-price', variant: current_variant %}
+        <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+        <meta itemprop="priceCurrency" content="{{ cart.currency.iso_code }}">
+        <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+        <span class="fixed-form__price-tax">(税込)</span>
+      </div>
+    </div>
+
+    <div class="fixed-form__content">
+      <a id="fixed-footer-btn" class="fixed-footer__btn section-btn proudct-purchase-link" href="#fixed-scroll-end">
+        <span>購入にすすむ</span>
+        <span class="fixed-footer__btn-arrow"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/grey_122_arr_24.png?v=1614858713" width="15px"></span>
+      </a>
+    </div>
+
+  </div>
+  
+
+  <style>
+    @media (max-width: 767px){
+      #bcpo .bcpo-images .bcpo-jumbo-swatches div.bcpo-image-parent{
+        width: 62px;
+      }
+      #bcpo .bcpo-jumbo-swatches label.bcpo-front-color-label, #bcpo .bcpo-jumbo-swatches input.bcpo-front-color-label, #bcpo .bcpo-jumbo-swatches label.bcpo-front-image-label, #bcpo .bcpo-jumbo-swatches input.bcpo-front-image-label{
+        height: 60px;
+      }
+    }
+  </style>
+
+  <script>
+    $('.section-pulldown__label').on('click', function(){
+      var a = $(this).closest('.section-pulldown');
+      if(a.hasClass('section-pulldown--open')){
+        a.removeClass('section-pulldown--open');
+      }else{
+        a.addClass('section-pulldown--open');
+      }
+    });
+  $(function(){
+    $('a[href^="#"]').click(function(e) {
+      var href = $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+
+      $.when(
+        $("html, body").animate({
+          scrollTop: position
+        }, 400, "swing"),
+        e.preventDefault(),
+      ).done(function() {
+        var diff = target.offset().top;
+        if (diff === position) {
+        } else {
+          $("html, body").animate({
+            scrollTop: diff
+          }, 10, "swing");
+        }
+      });
+    });
+
+    $(document).scroll(function(){
+      var scrollStart = $('body').offset().top;
+      var scrollEnd = $('#fixed-scroll-end').offset().top;
+      var distance = 0;
+      distance = $(this).scrollTop();
+      if (scrollStart <= distance) {
+        $('.fixed-form').addClass('active');
+      } else if (scrollStart >= distance) {
+        $('.fixed-form').removeClass('active');
+      }
+
+      if (scrollEnd <= distance) {
+        $('.fixed-form').addClass('none');
+      } else{
+        $('.fixed-form').removeClass('none');
+      }
+    });
+
+    Delighters.config({    
+      start: 0.9,
+    });
+
+  });
+  </script>
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  Product Data
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+  <script type="application/json" data-product-json>
+    {{ product | json }}
+  </script>
+
+  <script type="application/json" data-model-json="{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "cs": "Stránky produktu",
+    "da": "Produktsider",
+    "de": "Produktseiten",
+    "en": "Product pages",
+    "es": "Páginas de productos",
+    "fi": "Tuotesivut",
+    "fr": "Pages de produits",
+    "hi": "उत्पाद पेज",
+    "it": "Pagine di prodotto",
+    "ja": "商品ページ",
+    "ko": "제품 페이지",
+    "nb": "Produktsider",
+    "nl": "Productpagina's",
+    "pl": "Strony produktu",
+    "pt-BR": "Páginas de produtos",
+    "pt-PT": "Páginas de produtos",
+    "sv": "Produktsidor",
+    "th": "หน้าสินค้า",
+    "tr": "Ürün sayfaları",
+    "vi": "Trang sản phẩm",
+    "zh-CN": "产品页面",
+    "zh-TW": "產品頁面"
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": {
+        "cs": "Zobrazit výběr množství",
+        "da": "Vis antalsvælger",
+        "de": "Mengenauswahl anzeigen",
+        "en": "Show quantity selector",
+        "es": "Mostrar selector de cantidad",
+        "fi": "Näytä määrän valitsin",
+        "fr": "Afficher le sélecteur de quantité",
+        "hi": "मात्रा चयनकर्ता दिखाएं",
+        "it": "Mostra selettore quantità",
+        "ja": "数量セレクターを表示する",
+        "ko": "수량 선택기 표시",
+        "nb": "Vis mengdevelger",
+        "nl": "Hoeveelheidskiezer weergeven",
+        "pl": "Pokaż selektor ilości",
+        "pt-BR": "Exiba um seletor de quantidade",
+        "pt-PT": "Mostrar seletor de quantidade",
+        "sv": "Visa kvantitetsväljare",
+        "th": "แสดงตัวเลือกจำนวน",
+        "tr": "Adet seçiciyi göster",
+        "vi": "Hiển thị hộp chọn số lượng",
+        "zh-CN": "显示数量选择器",
+        "zh-TW": "顯示數量選擇器"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_labels",
+      "label": {
+        "cs": "Zobrazit popisky variant",
+        "da": "Vis variantlabels",
+        "de": "Varianten-Etiketten anzeigen",
+        "en": "Show variant labels",
+        "es": "Mostrar etiquetas de variantes",
+        "fi": "Näytä vaihtoehtoiset tarrat",
+        "fr": "Afficher le nom des variantes",
+        "hi": "वेरिएंट लेबल दिखाएं",
+        "it": "Mostra etichette varianti",
+        "ja": "バリエーションのラベルを表示する",
+        "ko": "이형 상품 레이블 표시",
+        "nb": "Vis variantetiketter",
+        "nl": "Variantlabels weergeven",
+        "pl": "Pokaż etykiety wariantów",
+        "pt-BR": "Exibir etiquetas de variantes",
+        "pt-PT": "Mostrar etiquetas de variantes",
+        "sv": "Visa variantetiketter",
+        "th": "แสดงป้ายกำกับตัวเลือกสินค้า",
+        "tr": "Varyasyon etiketlerini göster",
+        "vi": "Hiển thị nhãn mẫu mã",
+        "zh-CN": "显示多属性标签",
+        "zh-TW": "顯示子類選項標籤"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "cs": "Zobrazit dodavatele produktu",
+        "da": "Vis produktleverandør",
+        "de": "Produktanbieter anzeigen",
+        "en": "Show product vendor",
+        "es": "Mostrar proveedor del producto",
+        "fi": "Näytä tuotteen myyjä",
+        "fr": "Afficher le distributeur du produit",
+        "hi": "उत्पाद विक्रेता दिखाएं",
+        "it": "Indica fornitore prodotto",
+        "ja": "商品の販売元を表示する",
+        "ko": "제품 공급 업체 표시",
+        "nb": "Vis produktleverandør",
+        "nl": "Productleverancier weergeven",
+        "pl": "Pokaż dostawcę produktu",
+        "pt-BR": "Exiba o fornecedor do produto",
+        "pt-PT": "Mostrar fornecedor do produto",
+        "sv": "Visa produktleverantör",
+        "th": "แสดงผู้ขายสินค้า",
+        "tr": "Ürün satıcısını göster",
+        "vi": "Hiển thị nhà cung cấp sản phẩm",
+        "zh-CN": "显示产品厂商",
+        "zh-TW": "顯示產品廠商"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": {
+        "cs": "Zobrazit dynamické tlačítko pokladny",
+        "da": "Vis dynamisk betalingsknap",
+        "de": "Dynamischen Checkout Button anzeigen",
+        "en": "Show dynamic checkout button",
+        "es": "Mostrar botón de pago dinámico",
+        "fi": "Näytä dynaaminen kassapainike",
+        "fr": "Afficher le bouton de paiement dynamique",
+        "hi": "डायनेमिक चेकआउट बटन दिखाएं",
+        "it": "Mostra pulsante di check-out dinamico",
+        "ja": "動的チェックアウトボタンを表示する",
+        "ko": "동적 결제 버튼 표시",
+        "nb": "Vis dynamisk knapp for å gå til kassen",
+        "nl": "Dynamische betaalknop weergeven",
+        "pl": "Pokaż dynamiczny przycisk realizacji zakupu",
+        "pt-BR": "Exibir botão de checkout dinâmico",
+        "pt-PT": "Mostrar botão dinâmico de finalização da compra",
+        "sv": "Visa dynamiska betalningsknappar",
+        "th": "แสดงปุ่มชำระเงินแบบไดนามิก",
+        "tr": "Dinamik ödeme düğmesini göster",
+        "vi": "Hiển thị nút thanh toán động",
+        "zh-CN": "显示动态结账按钮",
+        "zh-TW": "顯示動態結帳按鈕"
+      },
+      "info": {
+        "cs": "Každý zákazník uvidí platební metodu, kterou ze všech metod dostupných v obchodě (například PayPal nebo Apple Pay) nejvíce preferuje. [Další informace](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "da": "Den enkelte kunde vil se sin foretrukne betalingsmetode blandt dem, der er tilgængelige i din butik, f.eks. PayPal eller Apple Pay. [Få mere at vide](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "de": "Jeder Kunde sieht seine bevorzugte Zahlungsmethode aus den in deinem Shop verfügbaren Zahlungsmethoden wie PayPal oder Apple Pay. [Mehr Informationen](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "es": "Cada cliente verá su forma de pago preferida entre las disponibles en tu tienda, como PayPal o Apple Pay. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "fi": "Kukin asiakas näkee ensisijaisen valintansa kauppasi tarjoamista maksutavoista, esim. PayPal tai Apple Pay. [Lisätietoja](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "fr": "Chaque client verra son moyen de paiement préféré parmi ceux qui sont proposés sur votre boutique, tels que PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "hi": "प्रत्येक ग्राहक आपके स्टोर पर उपलब्ध अपनी पसंदीदा भुगतान की विधि देखेंगे जैसे PayPal या Apple Pay. [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "it": "Ogni cliente vedrà il suo metodo di pagamento preferito tra quelli disponibili nel tuo negozio, come PayPal o Apple Pay. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "ja": "PayPalやApple Payなど、ストアで利用可能な希望の決済方法がお客様に表示されます。[詳細情報](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "ko": "각 고객은 PayPal 또는 Apple Pay와 같이 스토어에서 사용 가능한 지불 방법을 확인할 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "nb": "Hver enkelt kunde vil se sin foretrukne betalingsmåte blant de som er tilgjengelig i butikken din, som PayPal eller Apple Pay. [Finn ut mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "nl": "Elke klant ziet zijn of haar beschikbare voorkeursmethode om af te rekenen, zoals PayPal of Apple Pay. [Meer informatie](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pl": "Każdy klient zobaczy swoją preferowaną metodę płatności wśród metod dostępnych w Twoim sklepie, np. PayPal lub Apple Pay. [Dowiedz się więcej ](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pt-BR": "Cada cliente verá a forma de pagamento preferencial dele dentre as disponíveis na loja, como PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pt-PT": "Cada cliente irá ver o seu método de pagamento preferido entre os disponíveis na loja, como o PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "sv": "Varje kund kommer att se den föredragna betalningsmetoden från de som finns tillgängliga i din butik, till exempel PayPal eller Apple Pay. [Läs mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "th": "ลูกค้าแต่ละรายจะเห็นวิธีการชำระเงินที่ต้องการจากวิธีที่ใช้ได้ในร้านค้าของคุณ เช่น PayPal หรือ Apple Pay [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "tr": "Her müşteri, mağazanız sunulanlar arasından tercih ettikleri ödeme yöntemini görür (ör. PayPal veya Apple Pay). [Daha fazla bilgi edinin](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "vi": "Mỗi khách hàng sẽ thấy phương thức thanh toán ưu tiên của họ trong những phương thức thanh toán được hỗ trợ tại cửa hàng như PayPal hoặc Apple Pay. [Tìm hiểu thêm](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "zh-CN": "每位客户都可在您商店提供的付款方式中看到他们的首选付款方式，例如 PayPal 或 Apple Pay。[了解详细信息](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "zh-TW": "每位顧客都可以在您商店內開放使用的付款方式中看見他們偏好使用的方式，如 PayPal、Apple Pay 等。[深入瞭解](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": {
+        "cs": "Zobrazit tlačítka pro sdílení na sociálních sítích",
+        "da": "Vis knapper til deling på sociale medier",
+        "de": "Buttons für Social Media anzeigen",
+        "en": "Show social sharing buttons",
+        "es": "Mostrar botones para compartir en redes sociales",
+        "fi": "Näytä sosiaalisen median jakamispainikkeet",
+        "fr": "Afficher les boutons de partage sur les médias sociaux",
+        "hi": "सोशल शेयरिंग बटन दिखाएं",
+        "it": "Mostra i pulsanti per la condivisione sui social",
+        "ja": "ソーシャルメディアでの共有ボタンを表示する",
+        "ko": "소셜 공유 버튼 표시",
+        "nb": "Vis knapper for deling på sosiale medier",
+        "nl": "Knoppen voor delen via social media weergeven",
+        "pl": "Pokaż przyciski udostępniania w mediach społecznościowych",
+        "pt-BR": "Exibir botões de compartilhamento em redes sociais",
+        "pt-PT": "Mostrar botões de partilha nas redes sociais",
+        "sv": "Visa knappar för delning i sociala medier",
+        "th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
+        "tr": "Sosyal medya paylaşım düğmelerini göster",
+        "vi": "Hiển thị nút chia sẻ qua mạng xã hội",
+        "zh-CN": "显示社交分享按钮",
+        "zh-TW": "顯示社群分享按鈕"
+      },
+      "info": {
+        "cs": "Nezapomeňte povolit sdílení na sociálních sítích v obecném nastavení.",
+        "da": "Sørg for, at du har aktiveret deling på sociale medier under Generelle indstillinger",
+        "de": "Vergewissere dich, dass du in den allgemeinen Einstellungen das Teilen in sozialen Netzwerken aktiviert hast",
+        "en": "Make sure you have enabled social sharing in general settings",
+        "es": "Asegúrate de haber habilitado la opción para compartir en redes sociales en la configuración general.",
+        "fi": "Varmista, että olet ottanut sosiaalisen median jakamisen käyttöön yleisissä asetuksissa",
+        "fr": "Assurez-vous d'avoir activé le partage social dans les paramètres généraux",
+        "hi": "सुनिश्चित करें कि आपने सामान्य सेटिंग में सोशल शेयरिंग सक्षम किया है",
+        "it": "Assicurati di aver abilitato la condivisione sui social nelle impostazioni generali",
+        "ja": "一般設定でソーシャルメディアでの共有を有効にしていることを確認してください。",
+        "ko": "일반 설정에서 소셜 공유가 되었는지 확인하십시오.",
+        "nb": "Sørg for at du har aktivert sosial deling i generelle innstillinger",
+        "nl": "Zorg ervoor dat je delen via social media hebt ingeschakeld in de algemene instellingen",
+        "pl": "Upewnij się, że włączyłeś(-aś) udostępnianie w mediach społecznościowych w ustawieniach ogólnych",
+        "pt-BR": "Verifique se você habilitou o compartilhamento em redes sociais nas configurações gerais",
+        "pt-PT": "Certifique-se de que ativou a partilha nas redes sociais nas definições gerais",
+        "sv": "Se till att du har aktiverat social delning i allmänna inställningar",
+        "th": "ตรวจสอบให้แน่ใจว่าคุณได้เปิดใช้การแชร์บนโซเชียลในการตั้งค่าทั่วไป",
+        "tr": "Genel ayarlardan sosyal paylaşımı etkinleştirdiğinizden emin olun",
+        "vi": "Đảm bảo bạn đã bật chia sẻ qua mạng xã hội trong cài đặt chung",
+        "zh-CN": "确保您在“通用”设置中启用了社交分享",
+        "zh-TW": "請確定您已在一般設定內啟用社群分享功能"
+      },
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": {
+        "cs": "Multimédia",
+        "da": "Medie",
+        "de": "Medien",
+        "en": "Media",
+        "es": "Elementos multimedia",
+        "fi": "Media",
+        "fr": "Médias",
+        "hi": "मीडिया",
+        "it": "Media",
+        "ja": "メディア",
+        "ko": "미디어",
+        "nb": "Medier",
+        "nl": "Media",
+        "pl": "Multimedia",
+        "pt-BR": "Mídia",
+        "pt-PT": "Multimédia",
+        "sv": "Media",
+        "th": "สื่อ",
+        "tr": "Medya",
+        "vi": "Phương tiện",
+        "zh-CN": "媒体",
+        "zh-TW": "媒體"
+      },
+      "info": {
+        "cs": "Další informace o [typech multimédií](https://help.shopify.com/manual/products/product-media)",
+        "da": "Få mere at vide om [media types](https://help.shopify.com/manual/products/product-media)",
+        "de": "Mehr Informationen über [Medientypen ](https://help.shopify.com/manual/products/product-media)",
+        "en": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)",
+        "es": "Más información sobre [tipos de archivos multimedia](https://help.shopify.com/manual/products/product-media)",
+        "fi": "Lue lisää [mediatyypeistä](https://help.shopify.com/manual/products/product-media)",
+        "fr": "En savoir plus sur les [types de supports multimédia](https://help.shopify.com/manual/products/product-media)",
+        "hi": "[मीडिया प्रकार](https://help.shopify.com/manual/products/product-media) के बारे में और जानें",
+        "it": "Scopri di più sulle [tipologie di file multimediali](https://help.shopify.com/manual/products/product-media)",
+        "ja": "[メディアのタイプ](https://help.shopify.com/manual/products/product-media) について詳しくはこちら",
+        "ko": "[미디어 유형](https://help.shopify.com/manual/products/product-media)에 대해 자세히 알아보기",
+        "nb": "Lær mer om [medietyper](https://help.shopify.com/manual/products/product-media)",
+        "nl": "Meer informatie over [mediatypen](https://help.shopify.com/manual/products/product-media)",
+        "pl": "Dowiedz się więcej o [typach multimediów](https://help.shopify.com/manual/products/product-media)",
+        "pt-BR": "Saiba mais sobre [tipos de mídia](https://help.shopify.com/manual/products/product-media)",
+        "pt-PT": "Saiba mais sobre [media types](https://help.shopify.com/manual/products/product-media)",
+        "sv": "Läs mer om [mediatyper](https://help.shopify.com/manual/products/product-media)",
+        "th": "ดูข้อมูลเพิ่มเติมเกี่ยวกับ [ประเภทของสื่อ](https://help.shopify.com/manual/products/product-media)",
+        "tr": "[Medya türleri](https://help.shopify.com/manual/products/product-media) hakkında daha fazla bilgi edinin",
+        "vi": "Tìm hiểu thêm về [loại phương tiện](https://help.shopify.com/manual/products/product-media)",
+        "zh-CN": "详细了解[媒体类型](https://help.shopify.com/manual/products/product-media)",
+        "zh-TW": "深入瞭解 [媒體類型](https://help.shopify.com/manual/products/product-media)"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": {
+        "cs": "Povolit smyčky videa",
+        "da": "Aktivér looping af videoer",
+        "de": "Videoschleife aktivieren",
+        "en": "Enable video looping",
+        "es": "Habilitar la reproducción de video en bucle",
+        "fi": "Ota käyttöön videosilmukka",
+        "fr": "Activer le bouclage de la vidéo",
+        "hi": "वीडियो लूपिंग सक्षम करें",
+        "it": "Abilita la riproduzione in loop dei video",
+        "ja": "ビデオのループを有効にする",
+        "ko": "동영상 루프 활성화",
+        "nb": "Aktiver løkkeavspilling av video",
+        "nl": "Video-looping inschakelen",
+        "pl": "Włącz zapętlanie filmu",
+        "pt-BR": "Habilitar loop de vídeo",
+        "pt-PT": "Ativar ciclo de vídeo",
+        "sv": "Aktivera video-loopning",
+        "th": "เปิดใช้การวนซ้ำวิดีโอ",
+        "tr": "Video döngüsünü etkinleştir",
+        "vi": "Bật vòng lặp video",
+        "zh-CN": "启用视频循环",
+        "zh-TW": "啟用影片循環功能"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_variant_media",
+      "label": {
+        "cs": "Skrýt varianty multimédií v galerii",
+        "da": "Skjul variantmedie i galleriet",
+        "de": "Medienvarianten in der Galerie ausblenden",
+        "en": "Hide variant media in gallery",
+        "es": "Ocultar elementos multimedia de variantes en la galería",
+        "fi": "Piilota versioiden aineisto galleriassa",
+        "fr": "Masquer les supports multimédia des variantes dans la galerie",
+        "hi": "गैलरी में वेरिएंट मीडिया छिपाएं",
+        "it": "Nascondi le varianti dei file nella galleria",
+        "ja": "ギャラリーのバリエーションメディアを非表示にする",
+        "ko": "갤러리의 이형 상품 미디어 숨기기",
+        "nb": "Skjul variantmedier i galleriet",
+        "nl": "Verschillende media verbergen in galerie",
+        "pl": "Ukryj multimedia wariantów w galerii",
+        "pt-BR": "Ocultar mídia variante na galeria",
+        "pt-PT": "Ocultar multimédia variante na galeria",
+        "sv": "Dölj variantmedia i galleriet",
+        "th": "ซ่อนสื่อสำหรับตัวเลือกสินค้าในแกลเลอรี",
+        "tr": "Galeride varyasyon medyasını gizle",
+        "vi": "Ẩn phương tiện mẫu mã trong bộ sưu tập ảnh",
+        "zh-CN": "在图库中隐藏多属性媒体",
+        "zh-TW": "在圖庫中隱藏子類選項多媒體檔案"
+      },
+      "default": true
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,159 @@
+<div class="valuepage">
+  <header class="section-header text-center">
+    <h1 class="section-header__title h2">{{ page.title }}</h1>
+  </header>
+<div class="page-width">
+<div class="grid">
+<div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
+<div class="rte">
+<div class="valuepage_all_wrap">
+<div class="concept-wrap">
+<div class="top_heading_wrap">
+<div class="heading">
+<h3><span>"旅して働く"を<br class="sp" />もっとしやすく。</span></h3>
+</div>
+</div>
+<p class="description-text">HOLICCは、"旅して働く"を<br class="sp" />もっとしやすくするためのアイテムを<br />開発・販売するブランドです。</p>
+<p class="description-text">旅とは自分の好き(=HOLICC)を<br class="sp" />追求して移動すること。</p>
+<p class="description-text">その中で色々な人と出会い、話し、<br class="sp" />様々なものを見て、感じるということが<br />自分を変化させ、仕事にも必ず生きてくるものだと信じています。</p>
+<p class="description-text">このような新しい旅と<br class="sp" />仕事の関係があるからこそ、<br />「HOLICC」になれることを追求して<br class="sp" />移動する過程自体に価値があると信じて、<br />それを加速させるアイテムを開発し、<br class="sp" />自ら販売するブランドを作りました。</p>
+<div class="img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Medium_IMG_8656.JPG?v=1606238702" alt="OurMission" /></div>
+<div class="valuepage_heading_wrap">
+<div class="heading">
+<h2>Concept</h2>
+<h3>本気で仕事して、<br class="sp" />本気で旅して、<br class="sp" />本気で遊ぶ。</h3>
+</div>
+</div>
+<p class="description-text">働くことでしか<br class="sp" />触れることのできない世界がある。 <br />旅することでしか生まれないアイデアがある。</p>
+<p class="description-text">仕事も旅も、どちらが欠けてもたりなくて、<br class="sp" />どちらも絶対ゆずれない。 <br />楽な道のりじゃなくていい。<br class="sp" />悪路の先にある絶景を知っている。</p>
+<p class="description-text">中途半端な覚悟じゃダメで、<br class="sp" />ギリギリの中でこそたどり着ける未来がある。</p>
+<p class="description-text">場所も時間も問わない。<br class="sp" />限界を超えるから仕事も旅も面白い。</p>
+<p class="description-text">夢中になって初めて見える景色が<br class="sp" />あるんじゃないか、<br />そんな想いを込めて、<br class="sp" />「HOLICC」と名付けました。</p>
+<div class="img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Medium_IMG_8653.JPG?v=1606238703" alt="Brand Concept" /></div>
+</div>
+<div class="mission-wrap">
+<div class="valuepage_heading_wrap">
+<div class="heading">
+<h2>Our Mission</h2>
+<h3>旅と仕事の<br class="sp" />境目のない生き方を<span class="pc">、</span><br />普通の選択肢にする<span class="pc">。</span></h3>
+</div>
+</div>
+<p class="description-text">旅は人を育て、人は仕事を創る。 <br />だから、場所や時間に縛られずに働き、<br class="sp" />自由に旅もしたい。 <br />そういう新しい働き方を選ぶことが、<br class="sp" />当たり前にできる世の中にしたい。</p>
+<p class="description-text">HOLICCはこの生き方をする上で、<br />今までなかったピタリとくる<br class="sp" />アイテムを作るブランドです。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div style="background-color: #f7f7fc; margin: 0 0 60px;">
+<div class="page-width">
+<div class="grid">
+<div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
+<div class="rte">
+<div class="valuepage_all_wrap">
+<div class="item_block_holder">
+
+<div class="heading">HOLICCではこんな商品を開発・販売しています</div>
+
+
+<div class="update_block_holder">
+{% for product in collections["holicc-items"].products %}
+{% if forloop.index <= 4  %}
+<div class="update_block"><a href="{{ product.url }}" class="update_block_image image-link"><img class="add_image" src="{{ product.metafields.my_fields._main_image | img_url: "medium" }}" alt="PackBag" /></a>
+  <div class="update_block_text">
+    <p class="update_block_sub_title">{{ product.metafields.descriptors.subtitle }}</p>
+    <p class="update_block_main_title">{{ product.title }}</p>
+    <span class="update_block_prise"><span>{{ product.price  | money }}</span><i>（税込）</i></span> <a class="btn_update_push" href="{{ product.url }}">詳しくはこちら</a>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+<a class="more-interview__btn" href="https://holicc.jp/collections/holicc-items">商品一覧はこちら</a>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-width">
+<div class="grid">
+<div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
+<div class="rte">
+<div class="valuepage_all_wrap">
+<div class="after-h4">
+<h4>仕事から旅へ、旅から仕事へ という生き方の<br class="pc" />メンバーがつくるブランド</h4>
+<p>私たちは、日本の旧来の慣習に囚われない働き方を実践してきました。<br />時間や場所に縛られることなく、ワ―ケーションを初めとした新しい働き方をしています。</p>
+<p>働き方は生き方。</p>
+<p>そんな生き方に共感しているメンバーで構成されています。</p>
+<div class="description-img img">
+<div class="description-img__col">
+<div class="description-img__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_thinqlo_five-min.png?v=1636980032" /></div>
+<div class="description-img__label">社員旅行@モンゴル</div>
+</div>
+<div class="description-img__col">
+<div class="description-img__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_thinqlo_hongkong-min.png?v=1636980032" /></div>
+<div class="description-img__label">忘年会@香港</div>
+</div>
+</div>
+<h4>旅は人を育てる</h4>
+<p>行ったことのない場所へ行き、様々な経験をすることは、仕事にも人生にも必ずプラスの影響を与えると思います。</p>
+<ul>
+<li>普段接することのない人の話を聞き、新たな価値観を知る</li>
+<li>歴史に触れて、今に繋がる線に思いを巡らす</li>
+<li>困難に直面し、乗り越えるための選択を行う</li>
+<li>何かに心を動かされ、次の行動を起こす原動力を得る</li>
+</ul>
+<p>そういった一つ一つが、教科書では学べない<strong>人の本質的な面を育てていく</strong>と思っています。 <br />そして、そこに本気で踏み込んでいける人ほど、得るものが大きくなるはず。</p>
+<p>これからは個人個人の興味や感性が仕事に活かされていく時代。 <br />つまり、<strong>「旅は人を育て、人は仕事を創る」</strong>ということになると思うのです。</p>
+<p>だから私たちは「本気で仕事して、本気で旅して、本気で遊ぶ。」ということをやっています。</p>
+<div class="description-img img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Hight_IMG_8657.JPG?v=1606238701" /></div>
+<h4>「新しい働き方」なので、<br class="pc" />ピッタリなものがまだない。だからつくる。</h4>
+<p>仕事で外出し、そのまま空港へ。 <br />飛行機の飛んだ先を旅し、現地からリモートで会議に参加。そして、帰ってきてまたそのまま仕事へ。</p>
+<p>そういった旅と仕事が連続する境目のない生き方をしていると、<strong>どちらにも対応できるファッションや、移動を助けるアイテムが必要</strong>になります。 <br />仕事だけのことを考えた服だと旅はしんどいし、がっつり旅向けの格好で商談に臨むのも失礼ですよね。</p>
+<p>仕事と旅の準備を同時にするので荷物も多くなりがち。 <br class="pc" />少しでも減らしたい。 <br />しかし、<strong>今まではこのような移動や働き方があまりされてこなかったので、ピタリとくるアイテムがなかなかない</strong>のです。</p>
+<p>だから、今まで感じた不満を解消するアイテムを自分たち自身でプロデュースし、同じ思いを持つ人たちの不満を解消したいのです！</p>
+<p>ぜひ、あなたの声・不満も聞かせてください！ <br /><a href="https://www.holicc.jp/pages/contact" title="お問い合わせ" class="contact" target="_blank" rel="noopener noreferrer">問い合わせページはこちら</a></p>
+<div class="description-img img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Medium_IMG_8288.JPG?v=1606238701" /></div>
+<h4>日本人の働き方を変える</h4>
+<p>よく日本人は働きすぎと言われますよね。 <br />それは、嫌々働いている前提があったり、生産性が低かったり、負の慣習を引きずったまま働いていたりするからネガティブに捉えられているのではないでしょうか。</p>
+<p>そうではなく、<strong>自由に気が済むまで働き、全力で遊ぶ。</strong> <br />そのほうが心も体も刺激的で、良い日々を送れると思いませんか？ <br />「良く遊び、良く学べ。」という言葉が子供向けにありますが、それは大人も同じ。</p>
+<p>日本人の勤勉さを何事に対しても本気で取り組むことに使えば、風向きが変わります。 <br />「本気で仕事をして、本気で旅をして、本気で遊ぶ。」という生き方がかっこいいという世界を、「HOLICC」を通じて作っていきたいのです。</p>
+<p><strong>この新しい働き方、生き方を志したとき、普通の選択肢として選べる環境を作りたい</strong>のです。</p>
+<p>HOLICCに興味を持っていただけましたら、ぜひこの価値観から生まれたアイテムをご覧いただけますと幸いです。</p>
+<p>最後までお読みいただきありがとうございました。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="background-color: #f7f7fc;">
+<div class="grid">
+<div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
+<div class="rte">
+<div class="more-interview">
+<div class="more-interview__header">HOLICCについてもっと知りたい方は<br />こちらも合わせてお読みください</div>
+<div class="more-interview__main">
+<div class="more-interview__col more-interview__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/202108_076_1200x630_1e01a1c6-04e9-4833-a8a9-828ef2802784_1024x1024.jpg?v=1630918010" /></div>
+<div class="more-interview__col more-interview__description">
+<div class="more-interview__description-text">"旅して働く"は叶えられる。<br />自分の生き方を選択する人の背中を押したい</div>
+<div class="more-interview__description-label">- HOLICCチーフプロデューサー 齊藤 インタビュー</div>
+<a class="more-interview__btn" href="https://holicc.jp/blogs/holicc-magazine/brand-interview">インタビュー記事を読む</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>

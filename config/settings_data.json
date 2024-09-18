@@ -1,0 +1,2170 @@
+{
+  "current": {
+    "color_primary": "#000000",
+    "color_header_text": "#000000",
+    "color_primary_heading_text": "#000000",
+    "color_primary_body_text": "#43434e",
+    "color_footer_text": "#f7f7fc",
+    "color_button_text": "#ffffff",
+    "color_header_bg": "rgba(0,0,0,0)",
+    "color_footer_bg": "#43434e",
+    "color_main_bg": "#ffffff",
+    "color_secondary_bg": "#ffffff",
+    "color_product_cards": "#fff",
+    "color_form_elements": "#f7f7fc",
+    "color_cart_flag": "#eb4f47",
+    "type_base_size": "62.5%",
+    "type_header_font": "noto_sans_japanese_n4",
+    "type_base_font": "noto_sans_japanese_n4",
+    "show_cart_drawer": false,
+    "show_cart_note": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https:\/\/twitter.com\/holicc_jp",
+    "social_instagram_link": "https:\/\/www.instagram.com\/holicc_jp",
+    "social_tumblr_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UC3nIg8uxCebedOB1TVVGziw",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/75397c6a3f60809c86271d3439762845.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/HOLICC__1.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#f7f7fc",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1990C6",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#ff6d6d",
+    "logo_max_height": 15,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "icon": "bag",
+          "logo": "shopify:\/\/shop_images\/holicc_logo_black_1.png",
+          "logo_max_height": 25,
+          "enable_transparent": true,
+          "transparent_logo": "shopify:\/\/shop_images\/holicc_logo_white_3.png",
+          "transparent_text_color": "#ffffff",
+          "divedmenu": "1",
+          "primary_navigation": "main-menu",
+          "secondary_navigation": "header-submenu",
+          "show_social_icons": false,
+          "show_announcement": false,
+          "home_page_only": false,
+          "announcement_text": "西武渋谷店にてPOP-UPストアを開催中！",
+          "announcement_link": "https:\/\/holicc.jp\/pages\/popup-seibushibuya-240402",
+          "announcement_icon": "none",
+          "announcement_color_bg": "#43434e",
+          "announcement_color_text": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1486649858082": {
+            "type": "menu",
+            "settings": {
+              "link_list": "1"
+            }
+          },
+          "f899a7e9-3388-40e3-b680-a9f8d6afe3a3": {
+            "type": "menu",
+            "settings": {
+              "link_list": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "1486649858082",
+          "f899a7e9-3388-40e3-b680-a9f8d6afe3a3"
+        ],
+        "settings": {
+          "show_social_icons": true,
+          "show_payment_icons": false,
+          "enable_parallax": false,
+          "show_newsletter": true,
+          "newsletter_heading": "",
+          "newsletter_subheading": "<p>MAIL MAGAZINE<\/p>"
+        }
+      },
+      "1476381658595": {
+        "type": "hero",
+        "custom_css": [
+          ".hero__inner {padding: 60px 0;}",
+          "@media only screen and (min-width: 750px) {.hero__inner {padding: 120px 0; }}"
+        ],
+        "settings": {
+          "hero_size": "medium",
+          "alignment": "center center",
+          "title": "旅して働くを、もっとしやすく。",
+          "text": "<p>旅は人を育て、人は仕事を創る。だから、場所や時間に縛られずに働き、自由に旅もしたい。そういう新しい働き方を選ぶことが普通にできる世の中にしたい。HOLICCはこの生き方をする上で、今までなかったピタリとくるアイテムを作るブランドです。<\/p>",
+          "text_size": "medium",
+          "use_second_button": true,
+          "button_label": "HOLICC の価値観をもっと知る",
+          "button_link": "shopify:\/\/pages\/value",
+          "show_overlay": false,
+          "overlay_color": "#000000",
+          "overlay_text": "#f6f6f9",
+          "overlay_opacity": "0.5"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "products": "3",
+          "rows": "6",
+          "product_tags_enable": false,
+          "product_sorting_enable": false,
+          "collection_hero_image": false,
+          "collection_hero_image_parallax": false,
+          "grid_style": "collage",
+          "show_spacing": false,
+          "show_vendor": false
+        }
+      },
+      "1478026923193": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "size": "large",
+          "background_color": "#ffffff",
+          "image": "shopify:\/\/shop_images\/201109_synchro00032b_166e24da-82cb-45bb-bf1d-644ccf61f16f.jpg",
+          "image_crop": "none",
+          "alignment": "bottom center",
+          "title": "荷物を減らしたほうが、楽しみは増える。",
+          "text": "<p>PackBagは、衣類の圧縮とショルダーバッグという2つの機能で荷物を減らし、軽やかな移動と充実の旅を実現させます。<\/p>",
+          "use_second_button": false,
+          "button_label": "詳しく見る",
+          "button_link": "shopify:\/\/products\/packbag",
+          "desktop_layout": "left",
+          "mobile_layout": "top"
+        }
+      },
+      "1478027260401": {
+        "type": "quotes",
+        "blocks": {
+          "1478027260401-0": {
+            "type": "quote",
+            "settings": {
+              "heading": "",
+              "quote": "<p>あなたのストアの幸せなお客様を紹介するために、カスタマーレビューとお客様の声を追加してください。<\/p>",
+              "author": "筆者の名前"
+            }
+          },
+          "1478027389453": {
+            "type": "quote",
+            "settings": {
+              "heading": "",
+              "quote": "<p>あなたのストアの幸せなお客様を紹介するために、カスタマーレビューとお客様の声を追加してください。<\/p>",
+              "author": "筆者の名前"
+            }
+          }
+        },
+        "block_order": [
+          "1478027260401-0",
+          "1478027389453"
+        ],
+        "disabled": true,
+        "settings": {
+          "color_bg": "#000000",
+          "color_text": "#ffffff",
+          "autoplay_speed": "6000"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "enable_video_looping": false,
+          "hide_variant_media": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "grid_style": "collage",
+          "articles": "3",
+          "rows": "4",
+          "blog_show_date": true
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "1486649146314": {
+            "type": "image",
+            "settings": {
+              "alignment": "center right",
+              "title": "本気で仕事して、<br>本気で旅して、<br>本気で遊ぶ。",
+              "button": "表紙",
+              "cta": "もっと見る",
+              "cta_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1486649146314"
+        ],
+        "disabled": true,
+        "settings": {
+          "slider_height": "full",
+          "center_cta": false,
+          "show_overlay": true,
+          "overlay_color": "#454648",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": 25
+        }
+      },
+      "1486649413883": {
+        "type": "gallery",
+        "blocks": {
+          "1486649413883-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/af4Xmxh2pGPZlAa1605341355_1605341802.jpg",
+              "alignment": "center center",
+              "icon": "none",
+              "cta_label": "圧縮バッグとして",
+              "link": ""
+            }
+          },
+          "1486649413883-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/201109_synchro00061.jpg",
+              "alignment": "center center",
+              "icon": "none",
+              "cta_label": "ショルダーバッグとして",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1486649413883-0",
+          "1486649413883-1"
+        ],
+        "disabled": true,
+        "settings": {
+          "section_height": "medium",
+          "show_overlay": true,
+          "overlay_color": "#000000",
+          "overlay_text": "#faf9f6",
+          "overlay_opacity": "0.2"
+        }
+      },
+      "1486649522802": {
+        "type": "highlight",
+        "disabled": true,
+        "settings": {
+          "border_color": "#43434e",
+          "content_alignment": "top",
+          "image": "shopify:\/\/shop_images\/HOLICC_4.png",
+          "image_position": "front",
+          "heading": "Makuakeにてたくさんの応援をいただきました！",
+          "text": "応援購入サービスMakuakeにてクラウドファンディングにチャレンジし、目標数がわずか1時間で完売に！",
+          "use_second_button": true,
+          "button_text": "Makuakeぺージを見る",
+          "button_link": "https:\/\/www.makuake.com\/project\/packbag\/"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "image_parallax": true,
+          "show_date": true,
+          "show_author": false,
+          "show_share_buttons": true
+        }
+      },
+      "1492806970384": {
+        "type": "custom-content",
+        "blocks": {
+          "1492806970384-0": {
+            "type": "text",
+            "settings": {
+              "heading_text": "想像しうるなかで最も機能性の高い「シルナイロン コーデュラ®」を採用",
+              "heading_color": "#000000",
+              "heading_style": "h3",
+              "paragraph_text": "<p>米軍も採用するほど強靭なインヴィスタ社のコーデュラ®ナイロン。この軽量版である<strong>CORDURA®Ultlalight<\/strong>(コーデュラ®ウルトラライト)に、長期撥水加工である<strong>シリコンコーティング<\/strong>を施したものが<strong>「シルナイロン コーデュラ®」<\/strong>です。これにより、「強靭」「軽量」「長期撥水」を実現。ハードな旅にも軽やかな移動にも求められる要件を満たしました。<\/p>",
+              "paragraph_color": "#43434e",
+              "paragraph_size": "1",
+              "width": "100%",
+              "alignment": "center",
+              "align_text": "center"
+            }
+          },
+          "477b3e09-85bb-44c4-b492-34704392d0ad": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HOLICC_6_b.png",
+              "width": "66%",
+              "alignment": "center"
+            }
+          },
+          "286be350-4ccb-4b0c-b927-9b663883ee24": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PB183737c.jpg",
+              "width": "33%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1492806970384-0",
+          "477b3e09-85bb-44c4-b492-34704392d0ad",
+          "286be350-4ccb-4b0c-b927-9b663883ee24"
+        ],
+        "disabled": true,
+        "settings": {
+          "heading_text": "こだわりの高級生地を採用",
+          "heading_color": "#000000",
+          "background_color": "rgba(0,0,0,0)",
+          "top_margin": true,
+          "bottom_margin": false
+        }
+      },
+      "1605199591e67317d8": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "size": "medium",
+          "background_color": "rgba(0,0,0,0)",
+          "image": "shopify:\/\/shop_images\/HOLICC_4.png",
+          "image_crop": "none",
+          "alignment": "center center",
+          "title": "Makuakeにてたくさんの応援をいただきました！",
+          "text": "<p>応援購入サービスMakuakeにてクラウドファンディングにチャレンジし、わずか<strong>1時間で目標を達成！<\/strong><\/p>",
+          "use_second_button": true,
+          "button_label": "Makuakeページを見る",
+          "button_link": "https:\/\/www.makuake.com\/project\/packbag\/",
+          "desktop_layout": "right",
+          "mobile_layout": "top"
+        }
+      },
+      "160532421508e4d80a": {
+        "type": "custom-content",
+        "blocks": {
+          "160532421508e4d80a-0": {
+            "type": "text",
+            "settings": {
+              "heading_text": "圧縮バッグとして",
+              "heading_color": "#000000",
+              "heading_style": "h3",
+              "paragraph_text": "<p>かさばる衣類を最大50%以上も圧縮。空気ではなくファスナーで閉めるので、体重も必要ないし服もシワになりにくいです。<\/p>",
+              "paragraph_color": "#43434e",
+              "paragraph_size": "1",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "center"
+            }
+          },
+          "74d612b9-1de4-4680-95d7-1ad3d189e758": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/af4Xmxh2pGPZlAa1605341355_1605341802b.jpg",
+              "width": "25%",
+              "alignment": "center"
+            }
+          },
+          "160532421508e4d80a-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC06079b.jpg",
+              "width": "25%",
+              "alignment": "center"
+            }
+          },
+          "64765715-d780-4f93-99de-f10336ce3d64": {
+            "type": "text",
+            "settings": {
+              "heading_text": "ショルダーバッグとして",
+              "heading_color": "#000000",
+              "heading_style": "h3",
+              "paragraph_text": "<p>ストラップを付ければ、ショルダーバッグやトートバッグに変身。もう現地移動用のバッグを別で持っていかなくてOK！<\/p>",
+              "paragraph_color": "#43434e",
+              "paragraph_size": "1",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "center"
+            }
+          },
+          "50648b6a-bca3-4af3-9b23-65a7e4845cba": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/201109_synchro00061b.jpg",
+              "width": "25%",
+              "alignment": "center"
+            }
+          },
+          "d580351f-69f5-4313-9922-c4a226647831": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Medium_201109_synchro00057b.jpg",
+              "width": "25%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "160532421508e4d80a-0",
+          "74d612b9-1de4-4680-95d7-1ad3d189e758",
+          "160532421508e4d80a-1",
+          "64765715-d780-4f93-99de-f10336ce3d64",
+          "50648b6a-bca3-4af3-9b23-65a7e4845cba",
+          "d580351f-69f5-4313-9922-c4a226647831"
+        ],
+        "disabled": true,
+        "settings": {
+          "heading_text": "2つの機能で荷物を少なく",
+          "heading_color": "#000000",
+          "background_color": "#f7f7fc",
+          "top_margin": true,
+          "bottom_margin": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "あなたへのおすすめ",
+          "show_spacing": false,
+          "show_vendor": true
+        }
+      },
+      "1605356817d425c2fb": {
+        "type": "hero",
+        "disabled": true,
+        "settings": {
+          "hero_size": "small",
+          "image": "shopify:\/\/shop_images\/DSC06858.jpg",
+          "alignment": "top right",
+          "title": "荷物の圧縮機能とショルダーバッグを兼ね備えた「PackBag」",
+          "text": "",
+          "text_size": "medium",
+          "use_second_button": false,
+          "button_label": "",
+          "button_link": "",
+          "show_overlay": true,
+          "overlay_color": "#242424",
+          "overlay_text": "#ffffff",
+          "overlay_opacity": "0.5"
+        }
+      },
+      "160536237738fee04a": {
+        "type": "custom-content",
+        "blocks": {
+          "160536237738fee04a-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo_line.png",
+              "width": "33%",
+              "alignment": "center"
+            }
+          },
+          "160536237738fee04a-0": {
+            "type": "text",
+            "settings": {
+              "heading_text": "HOLICCと友達になりましょう！",
+              "heading_color": "#242424",
+              "heading_style": "h4",
+              "paragraph_text": "<p>新商品発売や、モニター募集、LINEアカウント限定のお得なクーポン情報などをお届けします。ぜひ、HOLICCとつながってください！<\/p>",
+              "paragraph_color": "#4a4a4a",
+              "paragraph_size": "1",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "center"
+            }
+          },
+          "6f415613-2cdd-43c4-9fd6-a2cc113e82a6": {
+            "type": "html",
+            "settings": {
+              "code": "<div>\n <button>HOLICCと友達になる<\/button>\n<\/div>",
+              "width": "50%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "160536237738fee04a-1",
+          "160536237738fee04a-0",
+          "6f415613-2cdd-43c4-9fd6-a2cc113e82a6"
+        ],
+        "disabled": true,
+        "settings": {
+          "heading_text": "",
+          "heading_color": "#242424",
+          "background_color": "#ebebf5",
+          "top_margin": false,
+          "bottom_margin": false
+        }
+      },
+      "16053638690860ec6f": {
+        "type": "featured-product",
+        "disabled": true,
+        "settings": {
+          "featured_product": "",
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "enable_video_looping": false,
+          "layout": "square",
+          "media_size": "cover",
+          "background_color": "rgba(0,0,0,0)"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": true
+        }
+      },
+      "1612242834d3e303d8": {
+        "type": "custom-content-no-wrapper",
+        "blocks": {
+          "f9d166b5-6e29-42de-b16f-fdb50d469be2": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"action-inducation-box\">\n  <div class=\"action-inducation-box__wrapper\">\n    <div class=\"action-inducation-box__title\">\n      荷物を減らしたほうが、楽しみは増える\n    <\/div>\n    <div class=\"action-inducation-box__action\">\n      <a href=\"https:\/\/holicc.jp\/products\/packbag\" class=\"action-inducation-box__btn btn btn--secondary\"> PackBagの詳細はこちら <\/a>\n    <\/div>\n  <\/div>\n<\/div>\n\n<style>\n.action-inducation-box{\n  background-image: url(\"https:\/\/cdn.shopify.com\/s\/files\/1\/0474\/9662\/6339\/files\/201109_synchro00087_f8df348d-4169-4435-a726-4366c6bbb165.jpg?v=1612244306\");\n  background-size: cover;\n}\n.action-inducation-box__wrapper{\n  padding: 90px 30px;\n  text-align: center;\n}\n.action-inducation-box__title{\n  color: #fff;\n  font-size: 21px;\n  font-weight: bold;\n  margin-bottom: 30px;\n}\n.action-inducation-box__action{\n  \n}\n.action-inducation-box__btn{\n  background-color: #fff;\n  border: none;\n  font-size: 18px;\n}\n@media only screen and (min-width: 750px){\n  .action-inducation-box__title{\n    font-size: 32px;\n  }\n  \n}\n<\/style>",
+              "width": "100%",
+              "alignment": "center"
+            }
+          },
+          "98b80a09-0e5c-4166-84cf-ff0a651d7680": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "code": "<div><p>独自のカスタムHTMLコンテンツを書きます。<\/p><\/div>",
+              "width": "50%",
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "f9d166b5-6e29-42de-b16f-fdb50d469be2",
+          "98b80a09-0e5c-4166-84cf-ff0a651d7680"
+        ],
+        "disabled": true,
+        "settings": {
+          "heading_text": "",
+          "heading_color": "#242424",
+          "background_color": "",
+          "top_margin": true,
+          "bottom_margin": true
+        }
+      },
+      "16148141259c2566b0": {
+        "type": "custom-content-no-wrapper",
+        "blocks": {
+          "ba969ffe-18b1-45f4-8934-8c99d8795e03": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"padding:30px 15px;width:100%;\">\n<a class=\"section-header text-center holicc-generator-eyecatch holicc-generator-eyecatch-top holicc-generator-eyecatch--toppage\" href=\"https:\/\/holicc.jp\/pages\/worldmap-register\">\n<img class=\"img-sp-none\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0474\/9662\/6339\/files\/generator-new.jpg?v=1682165560\">\n<img class=\"img-pc-none\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0474\/9662\/6339\/files\/generator-new-sp.jpg?v=1682165559\">\n    <div class=\"holicc-generator-eyecatch__subtitle\"><\/div>\n<div class=\"section-header__title h2\"><div class=\"holicc-generator-eyecatch__title\"><\/div><\/div>\n  <\/a>\n<\/div>",
+              "width": "100%",
+              "alignment": "center"
+            }
+          },
+          "5a6f7d75-2cb8-47dc-993d-5b8923e40400": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "heading_text": "あなたのブランドについて語る",
+              "heading_color": "#242424",
+              "heading_style": "h3",
+              "paragraph_text": "<p>このテキストを使用して、あなたのブランドに関する情報をお客様と共有します。商品を説明したり、告知の共有をしたり、あるいはストアのお客様を歓迎します。<\/p>",
+              "paragraph_color": "#4a4a4a",
+              "paragraph_size": "1",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "left"
+            }
+          }
+        },
+        "block_order": [
+          "ba969ffe-18b1-45f4-8934-8c99d8795e03",
+          "5a6f7d75-2cb8-47dc-993d-5b8923e40400"
+        ],
+        "settings": {
+          "heading_text": "",
+          "heading_color": "#242424",
+          "background_color": "",
+          "top_margin": true,
+          "bottom_margin": true
+        }
+      },
+      "16178639905bd697db": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "size": "medium",
+          "background_color": "#f7f7fc",
+          "image": "shopify:\/\/shop_images\/DSC1445v2_1_-min.jpg",
+          "image_crop": "none",
+          "alignment": "bottom center",
+          "title": "PackBag",
+          "text": "<p>2つの役割を兼ね備えた新発想のアイテム。<\/p><p>衣類などをコンパクトに圧縮して荷物を減らすことができるので、バッグinバッグとしてスマートな移動を実現。また、ストラップを付ければショルダーバッグやトートバッグに変身します。<\/p><p>高性能生地「シルナイロン コーデュラ®」使用のため、丈夫で軽く、長期撥水性も。YKKダブルファスナーを採用するなど、細部にまでこだわり抜いたアイテム。<\/p><p>2つの役割とどんなシーンにも合うミニマルデザインで、旅と仕事の境目のない生き方の相棒となる存在です。<\/p><p><\/p>",
+          "use_second_button": true,
+          "button_label": "PackBagの詳細はこちら",
+          "button_link": "shopify:\/\/products\/packbag",
+          "desktop_layout": "right",
+          "mobile_layout": "top"
+        }
+      },
+      "16178669986b85533f": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "size": "medium",
+          "background_color": "#f7f7fc",
+          "image": "shopify:\/\/shop_images\/0316002_1_-min.jpg",
+          "image_crop": "none",
+          "alignment": "center center",
+          "title": "NeoPeshtamal（ネオペシテマル）",
+          "text": "<p>トルコで古くから使われるタオルの起源「ペシテマル」 を、今の私たちの生活様式に合わせて再定義したアイテム。<\/p><p>高い吸水性と薄くて乾きやすいという特長に加え、光触媒技術による抗菌・消臭効果、コンパクトに折り畳んで専用ポーチに入れられる携帯性などを兼ね備えています。高品質マイクロファイバーをスエード調に加工し、タオルに必須の肌触りもクリア。耐久性も十分です。<\/p><p>ジムやサウナ、自転車通勤など汗をかくスポーツシーンはもちろん、旅行や出張にもおすすめで、1枚は持っておきたいアイテムです。<\/p><p><\/p>",
+          "use_second_button": true,
+          "button_label": "ネオペシテマルの詳細はこちら",
+          "button_link": "shopify:\/\/products\/neopeshtamal",
+          "desktop_layout": "left",
+          "mobile_layout": "top"
+        }
+      },
+      "1617869718822d0495": {
+        "type": "newsletter",
+        "disabled": true,
+        "settings": {
+          "heading": "HOLICC SHOPからのお知らせを受け取る",
+          "subheading": "<p>新商品やお得な情報をお届けします。<\/p>",
+          "success_message": "ご登録ありがとうございます。引き続き、お買い物をお楽しみください。",
+          "text_color": "#43434e",
+          "background_color": "#ffffff"
+        }
+      },
+      "1619577326dd838032": {
+        "type": "featured-blog",
+        "custom_css": [
+          "@media only screen and (min-width: 750px) {.featured-blog__heading {margin-bottom: 30px; } .featured-blog__view-all {margin-top: 30px; }}",
+          "@media only screen and (max-width: 750px) {.card__info {padding-bottom: 40px; }}"
+        ],
+        "settings": {
+          "title": "HOLICC MAGAZINE",
+          "blog": "holicc-magazine",
+          "post_limit": 3,
+          "grid_style": "collage",
+          "blog_show_date": true,
+          "blog_show_author": false,
+          "blog_show_image": true,
+          "blog_show_excerpt": false,
+          "show_view_all": true,
+          "use_second_button": true,
+          "display_tag": false
+        }
+      },
+      "product-neopeshtamal-template": {
+        "type": "product-neopeshtamal-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "enable_video_looping": false,
+          "hide_variant_media": true
+        }
+      },
+      "product-packbag-template": {
+        "type": "product-packbag-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "enable_video_looping": false,
+          "hide_variant_media": true
+        }
+      },
+      "1628226817e63e12fc": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "size": "medium",
+          "background_color": "#f7f7fc",
+          "image": "shopify:\/\/shop_images\/cvarea.jpg",
+          "image_crop": "none",
+          "alignment": "center center",
+          "title": "work to sporT",
+          "text": "<p>綿のような見た目・肌触りなのに吸水速乾の機能性を持つ、スポーツでも普段でも、さらに仕事でも着れる新しいTシャツです。<br\/><br\/>スポーツ用Tシャツ特有の光沢感がなく普段でも着やすい綿のような生地ながらも、スポーツに適した「吸水速乾、UVカット、ストレッチ性」を担保。<br\/><br\/>その上で、白Tシャツには重要な「透けにくさ」と、仕事でも着られるくらいの「形の綺麗さ」を徹底しました。<\/p><p><\/p>",
+          "use_second_button": true,
+          "button_label": "work to sporTの詳細はこちら",
+          "button_link": "shopify:\/\/products\/work-to-sport",
+          "desktop_layout": "right",
+          "mobile_layout": "top"
+        }
+      },
+      "163178742283822e34": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "size": "large",
+          "background_color": "#f7f7fc",
+          "image": "shopify:\/\/shop_images\/PXL_20210914_035037859.PORTRAITs.jpg",
+          "image_crop": "none",
+          "alignment": "center center",
+          "title": "work to sporT 2",
+          "text": "<p>前作ご購入者からいただいた声を参考にデザインの微修正を行ったモデル。<\/p><p>バインダーネックの幅を広くし、首後ろのリフレクターハンガーループを削除。より普段から着やすくなるようにブラッシュアップしています。<\/p><p>好評の生地は変更なし。吸水速乾でありながら、綿ライクな見た目・肌触りで、スポーツでも普段でも仕事でも着れる新しいTシャツです。<\/p><p><\/p>",
+          "use_second_button": true,
+          "button_label": "work to sporT2の詳細はこちら",
+          "button_link": "shopify:\/\/products\/work-to-sport2",
+          "desktop_layout": "left",
+          "mobile_layout": "top"
+        }
+      },
+      "16467094465de59476": {
+        "type": "featured-collection",
+        "custom_css": [
+          "@media only screen and (max-width: 768px) {.featured-collection .card-list__column {grid-gap: 25px 15px; }}",
+          ".card__info {\/* padding: 15px; *\/ padding: 10px 26px 32px 26px;}",
+          "@media only screen and (min-width: 750px) {.card__name {margin: 0px; } .featured-collection {padding-top: 0px; }}"
+        ],
+        "settings": {
+          "collection": "holicc-items",
+          "show_spacing": false,
+          "title": "PRODUCTS",
+          "show_vendor": false,
+          "show_view_all": false,
+          "use_second_button": false,
+          "grid_style": "collage",
+          "products": 3,
+          "rows": 3
+        }
+      },
+      "3529eb78-4dfe-4473-a137-dc0ee400ca65": {
+        "type": "image-slider",
+        "blocks": {
+          "7b5c04d9-0ed2-46c7-8a83-7010279471b0": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/d-pc01-min.jpg",
+              "spimage": "shopify:\/\/shop_images\/top-sp1-min.jpg",
+              "link": "shopify:\/\/pages\/value"
+            }
+          },
+          "3529eb78-4dfe-4473-a137-dc0ee400ca65-16753091883351e01a-0": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/One-pc-min-m.jpg",
+              "spimage": "shopify:\/\/shop_images\/One-sp2-min_1.jpg",
+              "link": "shopify:\/\/products\/one"
+            }
+          },
+          "da89cacf-5852-4dc0-92a5-8ef0ca00e718": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PackBag_S_pc-min.jpg",
+              "spimage": "shopify:\/\/shop_images\/PackBag_S_sp-min.jpg",
+              "link": "shopify:\/\/products\/packbagplus-single"
+            }
+          },
+          "59c4d78d-7e03-4381-8c85-4fabc9000e85": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PackBag_L_pc-min.jpg",
+              "spimage": "shopify:\/\/shop_images\/PackBag_L_sp-min.jpg",
+              "link": "shopify:\/\/products\/packbagplus-single"
+            }
+          },
+          "e5a87ab9-c8eb-41da-80c8-f591f56fd4a6": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Giopants-pc-2-min.jpg",
+              "spimage": "shopify:\/\/shop_images\/Giopants-sp-2-min_1.jpg",
+              "link": "shopify:\/\/products\/giopants"
+            }
+          },
+          "d973cb29-15e7-493d-a82c-988ac9d9c8ed": {
+            "type": "feature",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/work_to_sporT_U_-pc-min_1.jpg",
+              "spimage": "shopify:\/\/shop_images\/work_to_sporT_U_-sp-min_1.jpg",
+              "link": "shopify:\/\/products\/work-to-sport-long-uneck"
+            }
+          },
+          "3529eb78-4dfe-4473-a137-dc0ee400ca65-16753091883351e01a-1": {
+            "type": "feature",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/work_to_spotT_long-pc-m.jpg",
+              "spimage": "shopify:\/\/shop_images\/work_to_sporT_-sp-min_97637094-42ce-4985-b4ba-88a48506b912.jpg",
+              "link": "shopify:\/\/products\/work-to-sport-long-mockneck"
+            }
+          },
+          "e05e30e4-3422-4083-b9f0-4e3382afe524": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/work_to_spotT2-pc-min.jpg",
+              "spimage": "shopify:\/\/shop_images\/work_to_spotT2-sp-min_1.jpg",
+              "link": "shopify:\/\/products\/work-to-sport2"
+            }
+          },
+          "415db90b-27ad-44f8-b3c5-8cbcbb469f40": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Tpolo-pc-min.jpg",
+              "spimage": "shopify:\/\/shop_images\/Tpolo-sp-min_2.jpg",
+              "link": "shopify:\/\/products\/tpolo"
+            }
+          }
+        },
+        "block_order": [
+          "7b5c04d9-0ed2-46c7-8a83-7010279471b0",
+          "3529eb78-4dfe-4473-a137-dc0ee400ca65-16753091883351e01a-0",
+          "da89cacf-5852-4dc0-92a5-8ef0ca00e718",
+          "59c4d78d-7e03-4381-8c85-4fabc9000e85",
+          "e5a87ab9-c8eb-41da-80c8-f591f56fd4a6",
+          "d973cb29-15e7-493d-a82c-988ac9d9c8ed",
+          "3529eb78-4dfe-4473-a137-dc0ee400ca65-16753091883351e01a-1",
+          "e05e30e4-3422-4083-b9f0-4e3382afe524",
+          "415db90b-27ad-44f8-b3c5-8cbcbb469f40"
+        ],
+        "settings": {
+          "speed": "2000",
+          "delay": "3000"
+        }
+      },
+      "product-packbag-plus-single-template": {
+        "type": "product-packbag-plus-single-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "enable_video_looping": false,
+          "hide_variant_media": true
+        }
+      },
+      "article-holicc-magazine-template": {
+        "type": "article-holicc-magazine-template",
+        "custom_css": [
+
+        ],
+        "settings": {
+          "image_parallax": false,
+          "show_date": true,
+          "show_author": false,
+          "show_share_buttons": true
+        }
+      },
+      "featured_blog_8fYxzB": {
+        "type": "featured-blog",
+        "custom_css": [
+          "@media only screen and (min-width: 750px) {.featured-blog__heading {margin-bottom: 30px; } .featured-blog__view-all {margin-top: 30px; }}"
+        ],
+        "settings": {
+          "title": "NEWS",
+          "blog": "news-1",
+          "post_limit": 3,
+          "grid_style": "collage",
+          "blog_show_date": true,
+          "blog_show_author": false,
+          "blog_show_image": false,
+          "blog_show_excerpt": false,
+          "show_view_all": true,
+          "use_second_button": true,
+          "display_tag": true
+        }
+      },
+      "blog-holicc-magazin-template": {
+        "type": "blog-holicc-magazin-template",
+        "settings": {
+          "grid_style": "collage",
+          "articles": "2",
+          "rows": "8",
+          "blog_show_date": true
+        }
+      },
+      "product-one-template": {
+        "type": "product-one-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "enable_video_looping": false,
+          "hide_variant_media": true
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "3529eb78-4dfe-4473-a137-dc0ee400ca65",
+      "1476381658595",
+      "1605356817d425c2fb",
+      "1478026923193",
+      "1605199591e67317d8",
+      "16467094465de59476",
+      "1486649413883",
+      "160532421508e4d80a",
+      "1478027260401",
+      "1492806970384",
+      "1486649522802",
+      "160536237738fee04a",
+      "16053638690860ec6f",
+      "1612242834d3e303d8",
+      "16178639905bd697db",
+      "16178669986b85533f",
+      "1628226817e63e12fc",
+      "163178742283822e34",
+      "featured_blog_8fYxzB",
+      "1619577326dd838032",
+      "16148141259c2566b0",
+      "1617869718822d0495"
+    ],
+    "blocks": {
+      "16914052697720796151": {
+        "type": "shopify:\/\/apps\/pafit-tag-management-for-gtm\/blocks\/app-embed-block\/c09261bd-bf96-406e-8774-7a278f755fff",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6279071938380501511": {
+        "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "5017882195547572635": {
+        "type": "shopify:\/\/apps\/sc-easy-redirects\/blocks\/app\/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6897675550240258559": {
+        "type": "shopify:\/\/apps\/promolayer\/blocks\/app-embed\/e4a9128f-b151-4feb-ad9e-ef8fbb63bf07",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Earthy": {
+      "checkout_sidebar_background_color": "#f3f4f3",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#3c5629",
+      "checkout_button_color": "#3c5629",
+      "checkout_error_color": "#a95232",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "overlay_opacity": 30
+          }
+        },
+        "feature-row-0": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "use_second_button": true,
+            "desktop_layout": "left"
+          }
+        },
+        "video": {
+          "type": "video",
+          "settings": {
+            "overlay_opacity": 25
+          }
+        },
+        "rich-text": {
+          "type": "rich-text",
+          "settings": {
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "gallery-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "gallery-1": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "gallery-2": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "gallery-0",
+            "gallery-1",
+            "gallery-2"
+          ],
+          "settings": {
+            "overlay_opacity": "0.2"
+          }
+        },
+        "feature-row-1": {
+          "type": "feature-row",
+          "settings": {
+            "background_color": "#f3f4f3",
+            "use_second_button": true
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "featured-slide-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#a0ad90"
+              }
+            },
+            "featured-slide-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#b7c0ac"
+              }
+            },
+            "featured-slide-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#d3dbca"
+              }
+            }
+          },
+          "block_order": [
+            "featured-slide-0",
+            "featured-slide-1",
+            "featured-slide-2"
+          ],
+          "settings": {
+            "cover_title_desktop_position": "center",
+            "show_overlay": false,
+            "overlay_opacity": "0.25"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "media_size": "fill"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large",
+            "show_overlay": true,
+            "overlay_opacity": "0.4"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "menu",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "footer-0"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "show_newsletter": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "feature-row-0",
+        "video",
+        "rich-text",
+        "gallery",
+        "feature-row-1",
+        "featured-slider",
+        "featured-product",
+        "hero"
+      ]
+    },
+    "Warm": {
+      "color_primary": "#eb4f47",
+      "color_header_text": "#e1c9b4",
+      "color_primary_heading_text": "#4a4a4a",
+      "color_primary_body_text": "#4a4a4a",
+      "color_footer_text": "#4a4a4a",
+      "color_button_text": "#ffffff",
+      "color_header_bg": "#fff",
+      "color_footer_bg": "#eae7e0",
+      "color_main_bg": "#faf9f6",
+      "color_secondary_bg": "#f4f1ec",
+      "color_product_cards": "#fff",
+      "color_form_elements": "#fff",
+      "color_cart_flag": "#eb4f47",
+      "type_base_size": "62.5%",
+      "type_header_font": "monotype_baskerville_n4",
+      "type_base_font": "avenir_next_n4",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "logo_max_height": 15,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "bag",
+            "logo_max_height": 15,
+            "enable_transparent": true,
+            "transparent_text_color": "#ffffff",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": false,
+            "announcement_color_bg": "#eb4f47"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486649858082": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486649858082"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true
+          }
+        },
+        "1476381402840": {
+          "type": "video",
+          "settings": {
+          }
+        },
+        "1476381658595": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "image": "",
+            "alignment": "top left",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "6",
+            "product_tags_enable": false,
+            "product_sorting_enable": false,
+            "collection_hero_image": false,
+            "collection_hero_image_parallax": false,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "1478026923193": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#faf9f6",
+            "image_crop": "circle",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "1478027260401": {
+          "type": "quotes",
+          "blocks": {
+            "1478027260401-0": {
+              "type": "quote",
+              "settings": {
+              }
+            },
+            "1478027389453": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1478027260401-0",
+            "1478027389453"
+          ],
+          "settings": {
+            "color_bg": "#000000",
+            "color_text": "#ffffff",
+            "autoplay_speed": "6000"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "hide_variant_media": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486649146314": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "1486649185448": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "1486649208703": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "1486649267624": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1486649146314",
+            "1486649185448",
+            "1486649208703",
+            "1486649267624"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#313131",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": 30
+          }
+        },
+        "1486649413883": {
+          "type": "gallery",
+          "blocks": {
+            "1486649413883-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "1486649413883-1": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1486649413883-0",
+            "1486649413883-1"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#3b3b3b",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.4"
+          }
+        },
+        "1486649522802": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#cbc8c1",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": false
+          }
+        },
+        "1486649604878": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486649604878-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#9d988b"
+              }
+            },
+            "1486649604878-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#cdcdcd"
+              }
+            },
+            "1486649604878-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#a7a59e"
+              }
+            },
+            "1486649769533": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#383a3c"
+              }
+            }
+          },
+          "block_order": [
+            "1486649604878-0",
+            "1486649604878-1",
+            "1486649604878-2",
+            "1486649769533"
+          ],
+          "settings": {
+            "use_second_button": false,
+            "text_color": "#ffffff",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "#404040",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.2"
+          }
+        },
+        "1486649811524": {
+          "type": "featured-product",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "layout": "square",
+            "media_size": "cover",
+            "background_color": "transparent"
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": true,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492806970384": {
+          "type": "custom-content",
+          "blocks": {
+            "1492806970384-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h4",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492806970384-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "1478026923193",
+        "1476381402840",
+        "1476381658595",
+        "1486649413883",
+        "1478027260401",
+        "1492806970384",
+        "1486649522802",
+        "1486649604878",
+        "1486649811524"
+      ]
+    },
+    "Light": {
+      "color_primary": "#dfa160",
+      "color_header_text": "#dfa160",
+      "color_primary_heading_text": "#000000",
+      "color_primary_body_text": "#4a4a4a",
+      "color_footer_text": "#ffffff",
+      "color_button_text": "#ffffff",
+      "color_header_bg": "#fff",
+      "color_footer_bg": "#dfa160",
+      "color_main_bg": "#ffffff",
+      "color_secondary_bg": "#f7f7f7",
+      "color_product_cards": "#ebebeb",
+      "color_form_elements": "#f1f1f1",
+      "color_cart_flag": "#b76b50",
+      "type_base_size": "62.5%",
+      "type_header_font": "open_sans_n7",
+      "type_base_font": "open_sans_n4",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "transparent_logo": "",
+      "logo_max_height": 15,
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486583739899": {
+              "type": "video",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1486583739899"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#ffffff",
+            "overlay_text": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "bag",
+            "logo_max_height": 15,
+            "enable_transparent": true,
+            "transparent_text_color": "#dfa160",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": true,
+            "announcement_color_bg": "#4a4a4a"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486586799558": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486586799558"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#fafafa",
+            "image_crop": "square",
+            "alignment": "center center",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "1486502632685-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "checkmark",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486502632685-0"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486503036275-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1486503036275-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1486503036275-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1487016418120": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": false,
+                "slide_image": "",
+                "slide_title": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486503036275-0",
+            "1486503036275-2",
+            "1486503036275-1",
+            "1487016418120"
+          ],
+          "settings": {
+            "use_second_button": true,
+            "text_color": "#000000",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_text": "#000000",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "1486583009346": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#ffffff",
+            "image_crop": "none",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "About us",
+            "desktop_layout": "right",
+            "mobile_layout": "bottom"
+          }
+        },
+        "1486584613697": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "alignment": "center center",
+            "text": "",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": true,
+            "overlay_color": "#ffffff",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0"
+          }
+        },
+        "1486584983006": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#dfa160",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": false,
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "6",
+            "product_tags_enable": false,
+            "product_sorting_enable": true,
+            "collection_hero_image": true,
+            "collection_hero_image_parallax": true,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "show_share_buttons": true,
+            "hide_variant_media": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": true,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492008725684": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "x-large",
+            "alignment": "top center",
+            "title": "",
+            "text": "",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "Read our blog",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "1492807242211": {
+          "type": "custom-content",
+          "blocks": {
+            "1492807242211-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492807242211-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "feature-row",
+        "1486584613697",
+        "1486583009346",
+        "gallery",
+        "1492807242211",
+        "1486584983006",
+        "featured-slider",
+        "1492008725684"
+      ]
+    },
+    "Cold": {
+      "color_primary": "#00b490",
+      "color_header_text": "#00b490",
+      "color_primary_heading_text": "#ffffff",
+      "color_primary_body_text": "#a9a9a9",
+      "color_footer_text": "#000000",
+      "color_button_text": "#000000",
+      "color_header_bg": "#191c1b",
+      "color_footer_bg": "#00b490",
+      "color_main_bg": "#000000",
+      "color_secondary_bg": "#191c1b",
+      "color_product_cards": "#191c1b",
+      "color_form_elements": "#292c2b",
+      "color_cart_flag": "#ffffff",
+      "type_base_size": "62.5%",
+      "type_header_font": "titillium_web_n7",
+      "type_base_font": "lato_n4",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "transparent_logo": "",
+      "logo_max_height": 15,
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486663529263": {
+              "type": "video",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1486663529263"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": 60
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "cart",
+            "logo_max_height": 15,
+            "enable_transparent": true,
+            "transparent_text_color": "#00b490",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": true,
+            "announcement_color_bg": "#00b490"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486664283354": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486664283354"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true,
+            "newsletter_heading": "Sign up for updates"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#191c1b",
+            "image_crop": "circle",
+            "alignment": "center center",
+            "use_second_button": false,
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "1486502632685-0": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            },
+            "1486502639654": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            },
+            "1486502643820": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            }
+          },
+          "block_order": [
+            "1486502632685-0",
+            "1486502639654",
+            "1486502643820"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486503036275-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#464f4e",
+                "show_image": true,
+                "slide_button_text": "View"
+              }
+            },
+            "1486503036275-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#464f4e",
+                "show_image": true,
+                "slide_button_text": "View"
+              }
+            }
+          },
+          "block_order": [
+            "1486503036275-0",
+            "1486503036275-1"
+          ],
+          "settings": {
+            "use_second_button": true,
+            "text_color": "#ffffff",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "show_view_all": true
+          }
+        },
+        "1486664864970": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "alignment": "top center",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": true,
+            "overlay_color": "#00b490",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0"
+          }
+        },
+        "1486665151632": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#00b490",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": true
+          }
+        },
+        "1486665428106": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "",
+            "image_crop": "none",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "right",
+            "mobile_layout": "bottom"
+          }
+        },
+        "1486665657092": {
+          "type": "gallery",
+          "blocks": {
+            "1486665657092-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "none",
+                "cta_label": "",
+                "link": ""
+              }
+            },
+            "1486665657092-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "none",
+                "cta_label": "",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486665657092-0",
+            "1486665657092-1"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.3"
+          }
+        },
+        "1486665735205": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "medium",
+            "alignment": "center center",
+            "title": "",
+            "text_size": "large",
+            "use_second_button": true,
+            "button_label": "about us",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "show_share_buttons": true,
+            "hide_variant_media": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "4",
+            "product_tags_enable": false,
+            "product_sorting_enable": false,
+            "collection_hero_image": false,
+            "collection_hero_image_parallax": false,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": false,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492804742195": {
+          "type": "custom-content",
+          "blocks": {
+            "1492804742195-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492804742195-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "#00b490",
+            "top_margin": true,
+            "bottom_margin": true
+          }
+        },
+        "1492805123317": {
+          "type": "custom-content",
+          "blocks": {
+            "1492805123317-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#ffffff",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492805123317-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "feature-row",
+        "1492804742195",
+        "1486664864970",
+        "gallery",
+        "1492805123317",
+        "1486665151632",
+        "1486665428106",
+        "1486665657092",
+        "1486665735205",
+        "featured-slider",
+        "featured-collection"
+      ]
+    }
+  }
+}

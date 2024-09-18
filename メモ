@@ -1,0 +1,34 @@
+[ストアへの接続(構築前に行う)]
+shopify theme dev --store ○○.myshopify.com
+
+例:ストアURLが、「hogehoge.myshopify.com」の場合
+shopify theme dev --store hogehoge
+
+[接続ストアの確認]
+shopify theme info
+
+[開発環境]
+shopify theme dev --poll
+
+[Github]
+リモートリポジトリ
+○Github名○
+
+[リモートリポジトリの確認]
+git remote -v
+○○
+○○
+
+[リモートリポジトリへのプッシュ]
+git push origin main
+
+[リモートリポジトリからのプル]
+git pull origin main
+
+[その他]
+git branch → master だった場合
+以下のコマンドで master を main に修正
+git branch -m master main
+
+git pull origin mainでエラーが出た場合
+git config pull.rebase false

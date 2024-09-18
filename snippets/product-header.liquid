@@ -1,0 +1,109 @@
+  <section class="section-lp section-lp--top-section">
+    <div class="section-lp__wrapper">
+        <div class="section-lp-product">
+          <!-- ==== ギャラリー ==== -->
+          <div class="product-gallery">
+            <div
+                 style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                 class="swiper product-main-swiper"
+                 >
+              <div class="swiper-wrapper">
+                {% for media in product.media %}
+                {% unless variant_media_ids contains media.id and section.settings.hide_variant_media %}
+                <div class="swiper-slide">
+                  {% capture data_image %}
+                  data-parent-fit="cover"
+                  {% endcapture %}
+                  {% include 'product-swiper-preview-image' with media, featured_media: false, gallery_type: 'submedia', data_image: data_image %}
+                </div>
+                {% endunless %}
+                {% endfor %}
+              </div>
+              {% if product.images.size > 1 %}
+              <div class="product-main-swiper-button-next swiper-button-next"></div>
+              <div class="product-main-swiper-button-prev swiper-button-prev"></div>
+              {% else %}
+              {% endif %}
+            </div>
+            <div thumbsSlider="" class="swiper product-thumb-swiper">
+              <div class="swiper-wrapper">
+                {% if product.images.size > 1 %}
+                {% for media in product.media %}
+                {% unless variant_media_ids contains media.id and section.settings.hide_variant_media %}
+                <div class="swiper-slide">
+                  {% capture data_image %}
+                  data-parent-fit="cover"
+                  {% endcapture %}
+                  {% include 'product-swiper-preview-image' with media, featured_media: false, gallery_type: 'submedia', data_image: data_image %}
+                </div>
+                {% endunless %}
+                {% endfor %}
+                {% else %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          
+          <!-- ==== 商品詳細 ==== -->
+          <div class="product-detail">
+            <h1 class="section-product__title">              
+              <span>{{ product.title }}</span>
+            </h1>
+            <div class="section-product__pricebox">
+              <div class="section-product__price">
+                <span class="product__sale-price-label visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+                <span class="product__regular-price-label visually-hidden">{{ 'products.product.price' | t }}</span>
+                <span class="product__current-price" data-regular-price>{{ current_variant.price | money }}</span>
+                <span class="product__compare-price-label visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                <s class="product__compare-price" data-compare-price>{{ current_variant.compare_at_price | money }}</s>
+                {% include 'product-unit-price', variant: current_variant %}
+                <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+                <meta itemprop="priceCurrency" content="{{ cart.currency.iso_code }}">
+                <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+                <small>(税込)</small>
+              </div>
+            </div>
+
+            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+            <div class="section-box__content-right-bottom">
+              <div class="section-product__detail">
+                <div class="section-product__detail-text section-product__detail-text--emphasis">
+                  <span class="section-product__detail-icon section-product__detail-icon--amazon">
+                    <img height="20px" src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/credit-card-regular_26eb9760-6699-4baa-9cf3-bd9073588d07.svg?v=1626230440">
+                  </span>
+                  Amazon Pay 対応
+                </div>
+              </div>
+              <div class="section-product__description">
+                {{ product.description }}
+              </div>
+            </div>
+          </div>
+        </div>        
+    </div>
+</section>
+  <script>
+    {% if product.images.size > 1 %}
+    var productThumbSwiper = new Swiper(".product-thumb-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 6,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var productMainSwiper = new Swiper(".product-main-swiper", {
+      speed: 100,
+      loop: true,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".product-main-swiper-button-next",
+        prevEl: ".product-main-swiper-button-prev",
+      },
+      thumbs: {
+        swiper: productThumbSwiper,
+      },
+    });
+    {% else %}
+    {% endif %}
+
+</script>

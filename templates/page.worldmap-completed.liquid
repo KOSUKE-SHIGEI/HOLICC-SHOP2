@@ -1,0 +1,42 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div class="page-width">
+  <header class="section-header text-center">
+    <h1 class="section-header__title h2">{{ page.title }}</h1>
+  </header>
+  <div class="grid">
+    <div class="grid__item medium-up--four-fifths medium-up--push-one-tenth">
+      <div class="rte">
+        {{ page.content }}
+      </div>
+
+      {% comment %}
+      HOLICCの商品紹介
+      {% endcomment %}
+      <div class="update_block_holder">
+        {% assign uniqueProductIdsString = cart.items | map: 'product_id'| uniq | join: ', ' %}
+        {% for product in collections["holicc-items"].products %}
+        <div class="update_block"><a href="{{ product.url }}" class="update_block_image image-link"><img class="add_image" src="{{ product.metafields.my_fields._main_image | img_url: "medium" }}" alt="PackBag" /></a>
+          <div class="update_block_text">
+            <p class="update_block_sub_title">{{ product.metafields.descriptors.subtitle }}</p>
+            <p class="update_block_main_title">{{ product.title }}</p>
+            <span class="update_block_prise"><span>{{ product.price  | money }}</span><i>（税込）</i></span> <a class="btn_update_push" href="{{ product.url }}">詳しくはこちら</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="worldmap-complete"></div>
+<style>
+  .rte h4{
+    font-size: 1.6rem;
+  }
+  @media only screen and (min-width: 750px){
+  .rte h4{
+    font-size: 2.0rem;
+  }
+    
+  }
+</style>

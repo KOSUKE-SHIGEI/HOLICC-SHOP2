@@ -1,0 +1,1851 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign current_variant_sale = false -%}
+{% if current_variant.compare_at_price > current_variant.price %}
+{%- assign current_variant_sale = true -%}
+{% endif %}
+{% assign featured_media = current_variant.featured_media | default: product.featured_media %}
+<div class="product-template" data-section-id="{{ section.id }}" data-section-type="product-template" data-variant-id="{{ current_variant.id }}">
+  <meta itemprop="name" content="{{ product.title }}">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ featured_media | img_url: 'grande' }}">
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  商品詳細
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  {% include 'product-header', product: product %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">「Tポロ」とは</h2>
+      </header>
+      <div class="section-lp__description">「カジュアルな着やすさ」と「キチンと感」を両立した新しいスタイルのポロシャツ</div>
+      <div class="section-lp-product-description">
+        <div class="description__items">
+          <div class="description__area__item">
+            <p>Tシャツのような軽い着心地の生地</p>
+            <img class="description__area__item__img" src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_about_fabric.png?v=1656673191">
+          </div>
+          <div class="description__area__item">
+            <p>ビジネスシーンでも締まるデザイン</p>
+            <img class="description__area__item__img" src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_about_design.png?v=1656673192">
+          </div>
+
+          <div class="description__area__item__cross">
+            <span class="cross"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">Tポロの特徴</h2>
+      </header>
+
+      <div class="section-lp__sub-header" style="background-image: url(https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene-header_tpolo_1.jpg?v=1656645511);">
+        <div class="section-lp__sub-header-heading">
+          fabric
+        </div>
+        <div class="section-lp__sub-header-title">
+          100種から選び抜いた生地
+        </div>
+      </div>
+
+      <div class="section-lp__tpolo-feature">
+        <div class="section-lp__tpolo-featureTop">
+          <h3 class="section-lp__description"><b>綿のような肌触りの良さと、<br class="sp">吸水速乾の機能性を両立</b></h3>
+          <div class="section-lp__tpolo-featureTop-body">
+            <figure class="section-lp__tpolo-featureTop-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-fabric_01.png?v=1656673239" alt="綿のような肌触りの良さと、吸水速乾の機能性を両立"></figure>
+            <div class="section-lp__tpolo-featureTop-content">
+              <p class="section-lp__tpolo-featureTop-text">「綿のような見た目・着心地の良さ」と「スポーツTシャツのような機能性」を両立した生地で、どんなシーンでも着やすく快適に過ごすことができます。<br>
+                普段綿100％しか着ないという方も綿と間違えてしまうほどですが、実はポリエステル製。<br>
+                汗をしっかり吸収しすぐに乾くという高い吸水速乾性で、嫌なべたつきが残りにくく、暑い夏もサラっと軽い着心地が続きます。<br>
+                洗濯して脱水が終わると、ほぼ乾いている衝撃。もちろん翌日また着ていくことができます。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-lp__tpolo-featurePoints">
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">洗っても毛玉ができにくい</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-fabric_02.png?v=1656673240" alt="洗っても毛玉ができにくい"></figure>
+              <p class="section-lp__tpolo-feature-text">抗ピリング素材のため、摩擦による毛玉ができにくいです。繰り返し洗濯をしてもヨレにくく、さらに滑らかな肌触りを維持し、綺麗な状態で長く着られます。</p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">これ1枚で着ても<span class="pc">、</span><br class="sp">透けにくい</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-fabric_03.png?v=1656673240" alt="これ1枚で着ても、透けにくい"></figure>
+              <p class="section-lp__tpolo-feature-text">白い服で気になる「透ける」という点。Tポロは、約100種から選び抜いた、自然光と室内光の両方で透けにくい生地を採用。白を選んでも1枚で安心して着用頂けます。</p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">ストレッチ素材で動きやすい</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-fabric_04.png?v=1656673239" alt="ストレッチ素材で動きやすい"></figure>
+              <p class="section-lp__tpolo-feature-text">動きの邪魔をしない程度にストレッチ性があります。自転車通勤やちょっとした運動も、着替えずにそのまま快適にできます。</p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">シワになりづらく<span class="pc">、</span><br class="sp">アイロン不要</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-fabric_05.png?v=1656673239" alt="シワになりづらく、アイロン不要"></figure>
+              <p class="section-lp__tpolo-feature-text">一般的な綿のシャツは洗濯をするとシワになることも多いですが、Tポロは“綿のような”ポリエステル素材のためシワになりづらく、お手入れが楽でアイロンも不要です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-lp__sub-header" style="background-image: url(https://cdn.shopify.com/s/files/1/0474/9662/6339/files/scene-header_tpolo_2.jpg?v=1656645511);">
+        <div class="section-lp__sub-header-heading">
+          design
+        </div>
+        <div class="section-lp__sub-header-title">
+          キチンと感のあるデザイン
+        </div>
+      </div>
+
+      <div class="section-lp__tpolo-feature">
+        <div class="section-lp__tpolo-featureTop">
+          <h3 class="section-lp__description"><b>広がりすぎない、上品な印象の立体的で小ぶりな襟</b></h3>
+          <div class="section-lp__tpolo-featureTop-body">
+            <figure class="section-lp__tpolo-featureTop-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-design_01.png?v=1656673334" alt="ボタンを外しても広がりすぎない、上品な印象の立体的で小ぶりな襟"></figure>
+            <div class="section-lp__tpolo-featureTop-content">
+              <p class="section-lp__tpolo-featureTop-text">キチンとした印象を与えるために重要な襟のデザインは、Tポロの中でももっともこだわりを込めた箇所の一つです。<br>
+                ビジネスシーンでも好印象の美しい襟にするため、Yシャツのように襟に高さを出す「台襟つき」を採用しました。<br>
+                これにより、首回りに立体感がでるため、ビジネスシーンでも着られるキチンと感を演出。<br>
+                また、品良くオシャレに見えるよう襟は小さく。ボタンをはずしても外に広がりすぎないため、仕事の時はボタンを1つ、プライベートでは2つ外して着用するのもおすすめです。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-lp__tpolo-featurePoints">
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">バルカポケットが胸元を立体的に</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-design_02.png?v=1656673334" alt="バルカポケットが胸元を立体的に"></figure>
+              <p class="section-lp__tpolo-feature-text">内から外に向かい斜めに上がるバルカポケットが胸に立体感を生みスタイル良く見せます。すっきりした印象になるようポケットは内袋式ですが、正面から見た際のアクセントに。</p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">絞り目でキチンとした印象の袖口</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-design_03.png?v=1656673334" alt="絞り目でキチンとした印象の袖口"></figure>
+              <p class="section-lp__tpolo-feature-text">吊り革を持つときなど、腕を上げる動きで気になる袖口は、少し絞り目にして、脇が見えづらく、きちんとした印象に仕上げました。</p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">動きやすく美しい<span class="pc">、</span><br class="sp">サイドスリット</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-design_04.png?v=1656673334" alt="動きやすく美しい、サイドスリット"></figure>
+              <p class="section-lp__tpolo-feature-text">体型や体勢に対して柔軟に裾が動くよう、サイドスリットを入れています。また、シルエットが美しく見えるよう後側が若干長いテールカットに仕上げました。</p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">HOLICCロゴをワンポイントに</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_featute-design_05.png?v=1656673334" alt="HOLICCロゴをワンポイントに"></figure>
+              <p class="section-lp__tpolo-feature-text">左袖の先にブランド名「HOLICC」が刺繍で入っており、ワンポイントになっています。ネイビー、ブラックには白色で、ホワイトには黒色で刺繍されています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  利用シーン
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">利用シーン</h2>
+      </header>
+
+      <div class="section-lp__description"><b>会議や通勤などビジネスシーンでも、もちろんプライベートでもオールマイティに活躍します。</b></div>
+
+      <div class="section-lp-scene">
+
+
+        <div class="scene-box scene-box--one-row">
+
+          <article class="scene">
+            <h3 class="scene__title">
+              通勤で
+            </h3>
+            <div class="scene__img">
+              <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_scene_01.png?v=1656673358" alt="通勤で">
+            </div>
+            <div class="scene__description">
+              Tシャツのような着心地の吸水速乾生地だから、汗をかく夏場の通勤でも快適。
+            </div>
+          </article>
+
+          <article class="scene">
+            <h3 class="scene__title">
+              テレワークで
+            </h3>
+            <div class="scene__img">
+              <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_scene_02.png?v=1656673358" alt="テレワークで">
+            </div>
+            <div class="scene__description">
+              テレワークでの商談も、襟付きできちんとした印象に。
+            </div>
+          </article>
+
+          <article class="scene">
+            <h3 class="scene__title">
+              旅行で
+            </h3>
+            <div class="scene__img">
+              <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_scene_03.png?v=1656673358" alt="旅行で">
+            </div>
+            <div class="scene__description">
+              吸水速乾だから、旅先で洗濯してもすぐ乾くため、荷物を減らせます。
+            </div>
+          </article>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  開発ストーリー
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">開発ストーリー</h2>
+      </header>
+
+      <div class="section-lp__description"><b>ちゃんとした印象なのに、着やすいシャツを。<br>「Tポロ」ができるまで</b></div>
+
+      <div class="section-lp-story">
+        <div class="story-description">
+          <p>自宅や旅先から働く方が増え、仕事時のファッションも多様性が増す一方、リモートワークでも商談等きちんと感が必要な場面がある方や、そもそも出勤が必要な方も多いのではないでしょうか。<br>
+            そんなときも着られるような、襟付きできちんと感があって、でも堅苦しくなくて着心地のよいシャツはなかなかありません。そこで、この2つを両立できるものを作ろうと開発を始めました。
+          </p>
+
+          <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_story.png?v=1656673358" alt="開発ストーリー">
+
+          <p>一般的なポロシャツは鹿の子生地が多いですが、それよりも良い肌触りと機能性を求め、私たちの人気商品「work to sporTシリーズ」で使用し大好評の生地を採用。<br>
+            デザイン面では、ビジネスシーンに相応しい装いになるよう、通常の襟より手間もコストもかかるが立体的で美しくYシャツの襟と同じ仕様の「台襟つき」デザインや、クラシコイタリア仕様のスーツから着想を得たバルカポケットを採用し、袖口も少し絞り目にしてきちんとした印象へ。しかもこれを日本の職人による丁寧な縫製で仕上げます。<br>
+            こうして、“綿Tのような着心地で、ちゃんと見えするシャツ”Tポロが完成しました。</p>
+        </div>
+
+
+
+        <div class="profile profile-gray">
+            {% include 'product-section-content-about-holicc' %}
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  サイズ・仕様
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">サイズ・仕様</h2>
+      </header>
+
+      <div class="section-lp-size">
+        <div class="box">
+          <div class="box__img">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_size.png?v=1656673384" alt="サイズ・仕様">
+          </div>
+          <div class="box__txt">
+            <table class="product-size-table">
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">サイズ</th>
+                <th class="product-size-table__th">参考身長</th>
+                <th class="product-size-table__th max-55">身幅</th>
+                <th class="product-size-table__th max-55">肩幅</th>
+                <th class="product-size-table__th max-55">身丈</th>
+                <th class="product-size-table__th max-55">そで丈</th>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">S</th>
+                <td class="product-size-table__td">160-170</td>
+                <td class="product-size-table__td">47</td>
+                <td class="product-size-table__td">41</td>
+                <td class="product-size-table__td">64</td>
+                <td class="product-size-table__td">21</td>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">M</th>
+                <td class="product-size-table__td">165-175</td>
+                <td class="product-size-table__td">50</td>
+                <td class="product-size-table__td">43</td>
+                <td class="product-size-table__td">67</td>
+                <td class="product-size-table__td">22</td>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">L</th>
+                <td class="product-size-table__td">170-180</td>
+                <td class="product-size-table__td">53</td>
+                <td class="product-size-table__td">45</td>
+                <td class="product-size-table__td">70</td>
+                <td class="product-size-table__td">23</td>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">XL</th>
+                <td class="product-size-table__td">175-185</td>
+                <td class="product-size-table__td">56</td>
+                <td class="product-size-table__td">47</td>
+                <td class="product-size-table__td">73</td>
+                <td class="product-size-table__td">24</td>
+              </tr>
+            </table>
+            <br>
+            <div class="">
+              ・work to sporTシリーズと寸法は同じです<br>
+              ・Tシャツではやや大き目がお好みの方も、ポロシャツはジャスト寄りのサイズを選んだ方がきれいに見える傾向があります<br>
+              例）173cmやせ型の方であればMサイズをおすすめします
+            </div>
+            <br>
+            <div class="">
+              素材：ポリエステル75% 複合繊維(ポリエステル)25％<br>
+              生産地：日本
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-lp-sizseReview section-box__wrapper page-width--no-gutter">
+        <div class="section-box section-box--review bg-white">
+          <header class="section-box__header">
+            <h3 class="section-box__title section-box__title--icon"><span>みんなのサイズ感レビュー</span></h3>
+          </header>
+          <div class="section-box__slider sizeReviewSlider">
+            <div class="swiper js-sizeReviewSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_size-review_01.png?v=1656673384"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">176cm / 65kg</div>
+                    <p class="sizeReviewSlider__text">MはジャストサイズでLよりスタイリッシュに見えます。スマートなコーデや上にジャケットを羽織る時等におすすめです。Lは少しゆとりがあるのに全体的にダボっとした印象がなくビジネスウェアとして活用できます。テレワークなどの長時間作業でもストレスフリーの着心地です。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_size_review_02.jpg?v=1656753150"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">175cm / 64kg</div>
+                    <p class="sizeReviewSlider__text">Mはジャストサイズでしたが、ショートパンツと合わせるならトップスは大き目の方がバランスが取れるのでLの方がよいですね。通勤もないのでLを選びます。<br>スラックスにタックインして通勤するのであれば、Mの方がきれいに見えそうです。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_size_review_03.jpg?v=1657590808"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">170cm / 70kg</div>
+                    <p class="sizeReviewSlider__text">Lが自分にはちょうど良くて、Mだとピタッとした感じで着れなくはないという感じでした。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_size_review_04.jpg?v=1657590808"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">169cm / 59kg</div>
+                    <p class="sizeReviewSlider__text">僕ならMサイズを選びます。<br>ジャストサイズで着るのが気持ち良い素材感だったので、オーバー気味で着るのはもったいないと思いました。<br>襟がしっかりしてるので、ヘタらなそう（形が崩れなさそう）でヘビロテしても安心そうでした！</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Tpolo-5.jpg?v=1697006612"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">183cm / 80kg</div>
+                    <p class="sizeReviewSlider__text">XLの方が合ってそうでした。スポーツをしていて胸板や腕が太いため、Lはピッタリしていました。<br>ただ、生地が軽くサラサラしているので着心地は良く、きつくは感じませんでした。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev slider-button-prev slider-button-prev--sizeReview js-sizeReviewSlider-button-prev"></div>
+            <div class="swiper-button-next slider-button-next slider-button-next--sizeReview js-sizeReviewSlider-button-next"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-lp-modelComment section-lp__wrapper">
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">Tポロモデル・ノームさんのコメント</h2>
+      </header>
+
+      <div class="section-lp-modelComment__body modelComment">
+        <div class="box modelComment__body">
+          <div class="modelComment__img">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_model-comment.png?v=1656673384" alt="ノームさん">
+          </div>
+          <!-- <div class="box__txt">
+          </div> -->
+          <div class="modelComment__main">
+            <div class="modelComment__head">1枚あると重宝すること間違いなし</div>
+            <div class="modelComment__text">ビジネスシーンの服はカッチリ見せるためやや着心地が硬く締め付けられる印象が個人的にはあるのですがHOLICCさんのポロシャツはその真逆で驚きました。軽くて通気性も良いのにしっかりとポロシャツが与える印象を崩さない。（胸ポケットも内側に縫われてますが全く違和感を感じません）仕事でもプライベートでも着れるデザインなので1枚あると重宝すること間違いなしです！</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  商品購入フォーム
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+
+  <section class="section-cta section-lp" id="fixed-scroll-end">
+    <div class="section-cta__wrapper section-lp__wrapper">
+      <div class="section-cta__product">
+        <div class="section-cta__product-meta-wrapper">
+          <div class="section-cta__product-meta">
+            <div class="section-cta__product-meta-caption">
+              <div class="section-cta__product-meta-title">
+                {{ product.title }}
+              </div>
+              <div class="section-cta__product-meta-price">
+                <span class="section-cta__product-meta-price-number product__current-price money" data-regular-price>{{ current_variant.price | money }}</span>
+                <span class="section-cta__product-meta-price-tax">(税込)</span>
+              </div>
+            </div>
+            <div class="section-cta__product-meta-subcaption">size：S/M/L/XL | color：<span class="circle circle--white"></span><span class="circle circle--navy"></span><span class="circle circle--black"></span></div>
+          </div>
+          <div class="section-cta__product-image">
+            <div class="">
+              <img id="section-cta__product-image-main" class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_cta-product_default.png?v=1636671226">
+            </div>
+          </div>
+        </div>
+        <div class="section-cta__product-meta2">
+          <div class="section-cta__product-tags">
+            <div class="section-cta__product-tag section-cta__product-tag--delivery">
+              <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_shipping.png?v=1635217307">
+              {% if current_variant.price >= 1000000 %}
+              送料無料
+              {% else if %}
+              1万円未満のご購入は送料¥500(沖縄県は¥1500)
+              {% endif %}
+            </div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_box.png?v=1635217307">通常1営業日で発送</div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_payment.png?v=1635217307">AmazonPay 対応</div>
+          </div>
+          <div class="section-cta__line">
+            <div class="section-cta__line-wrapper">
+              <div class="section-cta__line-text">
+                <div class="section-cta__line-caption">友だち追加&30秒アンケートで<br>お得な<span class="section-cta__line-caption--emp">500円クーポンGET</span></div>
+              </div>
+              <a class="section-cta__line-btn" href="https://line.me/R/ti/p/%40027gciii" target="_blank">LINE友だち追加</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta__form">
+        {% include 'product-form-cta' %}
+        <div class="section-cta__annotation">
+          {% if product.metafields.my_fields.is_gift_wrapping %}
+          <div class="section-pulldown">
+            <div class="section-pulldown__wrapper">
+              <div class="section-pulldown__label">
+                ギフトラッピングをご希望の方へ
+              </div>
+              <div class="section-pulldown__content">
+                この商品はギフトラッピング可能です。ご希望の場合は、本商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
+              </div>
+            </div>
+          </div>
+          {% else %}
+          ※この商品はギフトラッピング対象外です
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="variant-images" style="display: none;">
+    {% for variant in product.variants %}
+    <div class="" data-id="{{ variant.id }}" data-image="{{ variant.metafields.my_fields._image }}"></div>
+    {% endfor %}
+  </div>
+
+  <script>
+    var productThumbSwiper = new Swiper(".product-thumb-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 6,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var productMainSwiper = new Swiper(".product-main-swiper", {
+      speed: 100,
+      loop: true,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".product-main-swiper-button-next",
+        prevEl: ".product-main-swiper-button-prev",
+      },
+      thumbs: {
+        swiper: productThumbSwiper,
+      },
+    });
+    $('.section-pulldown__label').on('click', function () {
+      var a = $(this).closest('.section-pulldown');
+      if (a.hasClass('section-pulldown--open')) {
+        a.removeClass('section-pulldown--open');
+      } else {
+        a.addClass('section-pulldown--open');
+      }
+    });
+
+    $(document).on('click', '#NullsGiftWrapTitle', function () {
+      var a = $('#NullsgiftWrap');
+      if (a.prop('checked')) {
+        a.prop('checked', false);
+      } else {
+        a.prop('checked', true);
+      }
+    });
+    $(document).on('click', '.bcpo-front-image-label', function () {
+      setTimeout(function () {
+        var id = $('#bcpo-select').val();
+        var image = $('#variant-images [data-id=' + id + ']').data('image');
+        $('#section-cta__product-image-main').prop('src', image);
+      }, 1);
+    });
+  </script>
+
+
+  <section class="section-lp ">
+    <div class="wrapper" style="max-width: 980px; margin: 0 auto;">
+      {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  よくある質問
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">よくある質問</h2>
+      </header>
+
+      <div class="section-lp-qa">
+        <ul class="qa-list">
+          <li>
+            <div class="q">支払い方法を教えてください。</div>
+            <div class="a">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。</div>
+          </li>
+          <li>
+            <div class="q">送料はいくらかかりますか？</div>
+            <div class="a">全国一律500円（但し、沖縄県は1,500円）です。<br>また、一度のご購入金額が10,000円以上の場合、送料無料となります。</div>
+          </li>
+          <li>
+            <div class="q">配送の日時指定はできますか？</div>
+            <div class="a">できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。</div>
+          </li>
+          <li>
+            <div class="q">返品・交換はできますか？</div>
+            <div class="a">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。</div>
+          </li>
+          <li>
+            <div class="q">注文後、どれくらいで届きますか？</div>
+            <div class="a">平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    　
+  </section>
+
+
+  <div class="fixed-form active">
+    <div class="fixed-form__header pc">
+      <div class="fixed-form__title">
+       {%- if product.metafields.custom._fixed-banner-title != blank -%}
+          {{ product.metafields.custom._fixed-banner-title | newline_to_br }}
+        {%- else -%}
+          {{ product.title }}
+        {%- endif -%}
+      </div>
+
+      <div class="fixed-form__price">
+        <span class="product__sale-price-label visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+        <span class="product__regular-price-label visually-hidden">{{ 'products.product.price' | t }}</span>
+        <span class="product__current-price" data-regular-price>{{ current_variant.price | money }}</span>
+
+        <span class="product__compare-price-label visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+        <s class="product__compare-price" data-compare-price>{{ current_variant.compare_at_price | money }}</s>
+
+        {% include 'product-unit-price', variant: current_variant %}
+        <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+        <meta itemprop="priceCurrency" content="{{ cart.currency.iso_code }}">
+        <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+        <span class="fixed-form__price-tax">(税込)</span>
+      </div>
+    </div>
+
+    <div class="fixed-form__content">
+      <a id="fixed-footer-btn" class="fixed-footer__btn section-btn proudct-purchase-link" href="#fixed-scroll-end">
+        <span>購入にすすむ</span>
+        <span class="fixed-footer__btn-arrow"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/grey_122_arr_24.png?v=1614858713" width="15px"></span>
+      </a>
+    </div>
+  </div>
+
+
+  <style>
+    figure {
+      margin: 0;
+    }
+
+    .section-lp-features--pulldown .feature__head__title {
+      background-size: contain;
+      background-repeat: no-repeat;
+      line-height: 2 !important;
+      padding-left: 50px;
+    }
+
+    .section-lp-features--pulldown .box-col-2 {
+      display: block;
+    }
+
+    .section-lp-features--pulldown .box-col-2 .feature .feature__content .feature__content__txt {
+      width: 100%;
+    }
+
+    .section-lp-features--pulldown .feature__content {
+      display: none !important;
+    }
+
+    .section-lp-features--pulldown .feature.pulldown--open .feature__content {
+      display: block !important;
+    }
+
+    @media (max-width: 768px) {
+
+      .section-lp-features .box-col-2 .feature:first-child,
+      .section-lp-features .box-col-2 .feature:last-child {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .section-lp-features .box-col-2 .feature .feature__content .feature__content__txt {
+        margin-bottom: 30px;
+      }
+
+      .section-lp-features--pulldown .box-col-2 .feature {
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .section-lp-features .box-col-2 {
+        margin-top: 0;
+      }
+
+      .section-lp-features .box-col-2 .feature .feature__head .feature__head__title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .section-lp-features--pulldown .feature__head__title {
+        padding-left: 60px;
+      }
+
+      .section-lp-features .feature .feature__head.feature__head--pulldown {
+        justify-content: center;
+      }
+
+      .section-lp-features--pulldown .box-col-2 {
+        display: flex;
+      }
+
+      .section-lp-features--pulldown .box-col-2 .feature {
+        width: 50%;
+      }
+
+      .section-lp-features--pulldown .feature__content {
+        display: block !important;
+      }
+    }
+
+    .bndlr-products-container .bndlr-bundle-title {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-bundle-description {
+      width: 100%;
+    }
+
+    .bndlr-products-container .bndlr-old-price.bndlr-money {
+      display: none;
+      text-decoration: none !important;
+    }
+
+    .bndlr-products-container .bndlr-product {
+      border: none;
+    }
+
+    .bndlr-products-container .bndlr-total-price {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-new-price {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-product:not(:last-of-type)::after {
+      background: #fff;
+      color: #000;
+    }
+
+    .bndlr-products-container .bndlr-bundle-checkout-warning {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-add-to-cart {
+      align-items: center;
+      background-color: #000;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-size: 1.8rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: 2px;
+      line-height: 2.2;
+      padding: 10px 30px;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      text-transform: inherit;
+      vertical-align: middle;
+      width: 100%;
+      vertical-align: middle;
+      z-index: 2;
+    }
+
+    @media (min-width: 769px) {
+      .section_description .warranty .box .img_area {
+        padding: 0 !important;
+      }
+    }
+
+    .description__items {
+      display: flex;
+      margin-bottom: 40px;
+      position: relative;
+      gap: 40px;
+    }
+
+    .description__area__item {
+      width: 50%;
+    }
+
+    .description__area__item p {
+      text-align: center;
+      color: #000000;
+      background: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      padding: 10px 0;
+      letter-spacing: 0.1em;
+    }
+
+    .description__area__item__cross {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 40px;
+      font-weight: 200;
+      transform: translate(-50%, -50%);
+    }
+
+    .cross {
+      display: inline-block;
+      vertical-align: middle;
+      color: #333;
+      line-height: 1;
+      width: 80px;
+      height: 0.05em;
+      background: currentColor;
+      border-radius: 0.1em;
+      position: relative;
+      transform: rotate(45deg);
+    }
+
+    .cross::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: inherit;
+      transform: rotate(90deg);
+    }
+
+    .description__area__item__img {
+      width: 100%;
+    }
+
+    .description__area__item__text-sp {
+      display: none;
+    }
+
+    .description__area__video {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .description__items {
+        margin-bottom: 30px;
+        gap: 20px;
+      }
+
+      .description__area__item p {
+        font-size: 14px;
+        letter-spacing: 0;
+      }
+
+      .description__area__item__text-pc {
+        display: none;
+      }
+
+      .description__area__item__text-sp {
+        display: block;
+      }
+
+      .cross {
+        width: 50px;
+        height: 0.03em;
+      }
+    }
+
+
+    /* Tポロ */
+    /* slider */
+    .section-box__slider {
+      position: relative;
+    }
+
+    .slider-button-prev,
+    .slider-button-next {
+      width: 40px;
+      height: 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+    }
+
+    .slider-button-prev {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/arrow-left.png?v=1656645511');
+      left: auto;
+      right: calc(100% + 16px);
+    }
+
+    .slider-button-next {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/arrow-right.png?v=1656645511');
+      right: auto;
+      left: calc(100% + 16px);
+    }
+
+    .slider-button-prev::after,
+    .slider-button-next::after {
+      content: none;
+    }
+
+    /* Tポロ */
+    .section-lp .section-lp__wrapper--wide {
+      max-width: 1240px;
+    }
+
+    .section-lp .section-lp__description {
+      font-size: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-box {
+      padding: 48px 80px 80px 80px;
+    }
+
+    .section-box__title--icon>span {
+      display: inline-block;
+      padding-right: 63px;
+      padding-left: 63px;
+      position: relative;
+    }
+
+    .section-box__title--icon>span::before,
+    .section-box__title--icon>span::after {
+      content: '';
+      width: 30px;
+      height: 43px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+    }
+
+    .section-box__title--icon>span::before {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_icon_left.png?v=1656645511');
+      left: 0;
+    }
+
+    .section-box__title--icon>span::after {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_icon_right.png?v=1656645511');
+      right: 0;
+    }
+
+    .section-box__footer--review {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    /* ご愛着いただいています */
+    .reviewItem__stars span {
+      color: #ffbf00;
+      font-weight: 400;
+      font-size: 18px;
+      display: inline-block;
+      padding: 0;
+    }
+
+    .reviewItem__name {
+      margin-left: 20px;
+      color: #333333;
+      font-size: 18px;
+    }
+
+    .reviewItem__title {
+      margin-top: 12px;
+      margin-bottom: 0;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.68181818;
+    }
+
+    .reviewItem__text {
+      margin-top: 17px;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    .t-polo-btn {
+      background: #fff;
+      text-decoration: none;
+      border: solid 2px #696971;
+      border-radius: 10px;
+      padding: 20px 40px;
+      color: #000;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .t-polo-btn>span {
+      background: url(https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_cart_newWindow_bk.png?v=1613114711) center right 3px no-repeat;
+      background-size: contain;
+      padding-right: 50px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Tポロの特徴 */
+    .section-lp__tpolo-feature {
+      margin-bottom: 112px;
+    }
+
+    .section-lp__tpolo-feature:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-lp__tpolo-featureTop-body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .section-lp__tpolo-featureTop-img {
+      flex: 0 1 61%;
+      margin: 0;
+      position: relative;
+    }
+
+    .section-lp__tpolo-featureTop-img::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 66.66666667%;
+    }
+
+    .section-lp__tpolo-featureTop-img>img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-lp__tpolo-featureTop-content {
+      margin-left: 47px;
+      flex: 0 0 421px;
+      font-size: 20px;
+      color: #43434E;
+      line-height: 2;
+    }
+
+    .section-lp__tpolo-featurePoints {
+      margin-top: 80px;
+      display: grid;
+      flex-wrap: wrap;
+      gap: 88px 4%;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .section-lp__tpolo-featurePoint {
+      flex: 0 1 550px;
+    }
+
+    .section-lp__tpolo-featurePoint:nth-child(n + 3) {
+      margin-top: 88px;
+    }
+
+    .section-lp__tpolo-featureTitle {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+
+    .section-lp__tpolo-feature-body {
+      margin-top: 30px;
+    }
+
+    .section-lp__tpolo-feature-img {
+      position: relative;
+    }
+
+    .section-lp__tpolo-feature-img::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 66.72727273%;
+
+    }
+
+    .section-lp__tpolo-feature-img>img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-lp__tpolo-feature-text {
+      margin-top: 33px;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    .profile__tpolo-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 449px){
+    .max-55{
+      width: 65px;
+    }
+  }
+
+    /* サイズ感レビュー */
+    .section-lp-sizseReview {
+      margin-top: 70px;
+    }
+
+    .sizeReviewSlider {}
+
+    .sizeReviewSlider__item {}
+
+    .sizeReviewSlider__img {}
+
+    .sizeReviewSlider__img {
+      position: relative;
+    }
+
+    .sizeReviewSlider__img::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 66.66666667%;
+    }
+
+    .sizeReviewSlider__img>img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sizeReviewSlider__body {
+      margin-top: 20px;
+
+    }
+
+    .sizeReviewSlider__meta {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .sizeReviewSlider__text {
+      margin-top: 16px;
+      font-size: 18px;
+    }
+
+    .slider-button-prev--sizeReview {
+      left: -16px;
+      right: auto;
+    }
+
+    .slider-button-next--sizeReview {
+      left: auto;
+      right: -16px;
+    }
+
+
+
+    /* モデルさんコメント */
+    .section-lp-modelComment {
+      margin-top: 60px;
+    }
+
+    .section-lp .section-lp-modelComment {
+      margin-top: 60px;
+    }
+
+    .modelComment {}
+
+    .modelComment__body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .modelComment__img {
+      flex: 0 0 50%;
+    }
+
+    .modelComment__main {
+      flex: 0 0 50%;
+      padding-left: 60px;
+    }
+
+    .modelComment__head {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .modelComment__text {
+      margin-top: 26px;
+      font-size: 20px;
+    }
+
+    /* utility */
+    .bg-white {
+      background-color: #fff !important;
+    }
+
+    .profile-gray {
+      background-color: #F7F7FC !important;
+    }
+
+    .circle--navy {
+      background-color: #0E365B;
+    }
+
+    @media (max-width: 768px) {
+      .slider-button-prev {
+        left: -10px;
+        right: auto;
+      }
+
+      .slider-button-next {
+        left: auto;
+        right: -10px;
+      }
+
+      .description__items {
+        flex-direction: column;
+        gap: 6rem;
+      }
+
+      .description__area__item {
+        width: 100%;
+      }
+
+      .section-box {
+        padding: 24px 15px;
+      }
+
+      .section-box__header {
+        margin-bottom: 2rem;
+      }
+
+      .section-box__title--icon {
+        font-size: 1.9rem;
+      }
+
+      .section-box__title--icon>span {
+        padding-left: 2.1rem;
+        padding-right: 2.1rem;
+        letter-spacing: 0.1em;
+      }
+
+      .section-box__title--icon>span::before,
+      .section-box__title--icon>span::after {
+        width: 1.9rem;
+        height: 2.8rem;
+      }
+
+      .reviewItem__name {
+        font-size: 1.6rem;
+      }
+
+      .reviewItem__title {
+        font-size: 1.8rem;
+      }
+
+      .reviewItem__text {
+        font-size: 1.6rem;
+      }
+
+      .t-polo-btn {
+        padding: 5vw;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 4vw;
+        display: block;
+      }
+
+      .t-polo-btn>a {
+        padding-right: 9vw;
+      }
+
+      .section-lp .section-lp__description {
+        text-align: left;
+        font-size: 2rem;
+        line-height: 1.75;
+        margin-bottom: 20px;
+      }
+
+      .section-lp__tpolo-feature {
+        margin-bottom: 4.3rem;
+      }
+
+      .section-lp__tpolo-featureTop-body {
+        display: block;
+      }
+
+      .section-lp__tpolo-featureTop-content {
+        margin-left: 0;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+      }
+
+      .section-lp__tpolo-featurePoints {
+        gap: 2.8rem 4%;
+      }
+
+      .section-lp__tpolo-featurePoint {
+        flex-basis: 48%;
+      }
+
+      .section-lp__tpolo-featurePoint:nth-child(2n) {
+        margin-left: 4%;
+      }
+
+      .section-lp__tpolo-featurePoint:nth-child(n + 3) {
+        margin-top: 2.8rem;
+      }
+
+      .section-lp__tpolo-featureTitle {
+        font-size: 1.8rem;
+      }
+
+      .section-lp__tpolo-feature-body {
+        margin-top: 1rem;
+      }
+
+      .section-lp__tpolo-feature-text {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+      }
+
+      .sizeReviewSlider__body {
+        margin-top: 1.8rem;
+      }
+
+      .sizeReviewSlider__meta {
+        font-size: 1.8rem;
+      }
+
+      .sizeReviewSlider__text {
+        font-size: 14px;
+      }
+
+      .slider-button-prev--sizeReview,
+      .slider-button-next--sizeReview {
+        top: 32.53333333vw;
+        margin-top: 0;
+      }
+
+      .modelComment__body {
+        display: block;
+
+      }
+
+      .modelComment__main {
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+
+      .modelComment__head {
+        font-size: 1.8rem;
+      }
+
+      .modelComment__text {
+        margin-top: 1.6rem;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <script>
+    var sectionBoxSceneSlider = new Swiper(".section-box-scene-swiper", {
+      breakpoints: {
+        769: {
+          slidesPerView: 3,
+        },
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".section-box-scene-swiper-button-next",
+        prevEl: ".section-box-scene-swiper-button-prev",
+      },
+      pagination: {
+        el: '.section-box-scene-swiper-pagination',
+        type: 'bullets',
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 100,
+      watchSlidesProgress: true,
+    });
+    let reviewSwiper = new Swiper('.js-reviewSlider', {
+      loop: true,
+      speed: 600,
+      slidesPerView: 'auto',
+      direction: 'horizontal',
+      effect: 'slide',
+
+      breakpoints: {
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 25
+        },
+      },
+
+      navigation: {
+        prevEl: '.js-reviewSlider-button-prev',
+        nextEl: '.js-reviewSlider-button-next',
+      },
+    });
+    let sizeReviewSlider = new Swiper('.js-sizeReviewSlider', {
+      loop: true,
+      speed: 600,
+      slidesPerView: 'auto',
+      direction: 'horizontal',
+      effect: 'slide',
+
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 50
+        },
+      },
+
+      navigation: {
+        prevEl: '.js-sizeReviewSlider-button-prev',
+        nextEl: '.js-sizeReviewSlider-button-next',
+      },
+    });
+    $(document).on('click', '#NullsGiftWrapTitle', function () {
+      var a = $('#NullsgiftWrap');
+      if (a.prop('checked')) {
+        a.prop('checked', false);
+      } else {
+        a.prop('checked', true);
+      }
+    });
+    $(function () {
+      $('a[href^="#"]').click(function (e) {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+
+        $.when(
+          $("html, body").animate({
+            scrollTop: position
+          }, 400, "swing"),
+          e.preventDefault(),
+        ).done(function () {
+          var diff = target.offset().top;
+          if (diff === position) {
+          } else {
+            $("html, body").animate({
+              scrollTop: diff
+            }, 10, "swing");
+          }
+        });
+      });
+
+      $(document).scroll(function () {
+        var scrollStart = $('body').offset().top;
+        var scrollEnd = $('#fixed-scroll-end').offset().top;
+        var distance = 0;
+        distance = $(this).scrollTop();
+        if (scrollStart <= distance) {
+          $('.fixed-footer').addClass('active');
+        } else if (scrollStart >= distance) {
+          $('.fixed-footer').removeClass('active');
+        }
+
+        if (scrollEnd <= distance) {
+          $('.fixed-footer').addClass('none');
+        } else {
+          $('.fixed-footer').removeClass('none');
+        }
+      });
+
+      $('.feature__head--pulldown').on('click', function () {
+        var a = $(this).parent('.feature ')
+        if (a.hasClass('pulldown--open')) {
+          a.removeClass('pulldown--open');
+        } else {
+          a.addClass('pulldown--open');
+        }
+      });
+
+    });
+  </script>
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  Product Data
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+  <script type="application/json" data-product-json>
+    {{ product | json }}
+  </script>
+
+  <script type="application/json" data-model-json="{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+</div>
+
+
+
+{% schema %}
+{
+"name": {
+"cs": "Stránky produktu",
+"da": "Produktsider",
+"de": "Produktseiten",
+"en": "Product pages",
+"es": "Páginas de productos",
+"fi": "Tuotesivut",
+"fr": "Pages de produits",
+"hi": "उत्पाद पेज",
+"it": "Pagine di prodotto",
+"ja": "商品ページ",
+"ko": "제품 페이지",
+"nb": "Produktsider",
+"nl": "Productpagina's",
+"pl": "Strony produktu",
+"pt-BR": "Páginas de produtos",
+"pt-PT": "Páginas de produtos",
+"sv": "Produktsidor",
+"th": "หน้าสินค้า",
+"tr": "Ürün sayfaları",
+"vi": "Trang sản phẩm",
+"zh-CN": "产品页面",
+"zh-TW": "產品頁面"
+},
+"settings": [
+{
+"type": "checkbox",
+"id": "show_quantity_selector",
+"label": {
+"cs": "Zobrazit výběr množství",
+"da": "Vis antalsvælger",
+"de": "Mengenauswahl anzeigen",
+"en": "Show quantity selector",
+"es": "Mostrar selector de cantidad",
+"fi": "Näytä määrän valitsin",
+"fr": "Afficher le sélecteur de quantité",
+"hi": "मात्रा चयनकर्ता दिखाएं",
+"it": "Mostra selettore quantità",
+"ja": "数量セレクターを表示する",
+"ko": "수량 선택기 표시",
+"nb": "Vis mengdevelger",
+"nl": "Hoeveelheidskiezer weergeven",
+"pl": "Pokaż selektor ilości",
+"pt-BR": "Exiba um seletor de quantidade",
+"pt-PT": "Mostrar seletor de quantidade",
+"sv": "Visa kvantitetsväljare",
+"th": "แสดงตัวเลือกจำนวน",
+"tr": "Adet seçiciyi göster",
+"vi": "Hiển thị hộp chọn số lượng",
+"zh-CN": "显示数量选择器",
+"zh-TW": "顯示數量選擇器"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "show_variant_labels",
+"label": {
+"cs": "Zobrazit popisky variant",
+"da": "Vis variantlabels",
+"de": "Varianten-Etiketten anzeigen",
+"en": "Show variant labels",
+"es": "Mostrar etiquetas de variantes",
+"fi": "Näytä vaihtoehtoiset tarrat",
+"fr": "Afficher le nom des variantes",
+"hi": "वेरिएंट लेबल दिखाएं",
+"it": "Mostra etichette varianti",
+"ja": "バリエーションのラベルを表示する",
+"ko": "이형 상품 레이블 표시",
+"nb": "Vis variantetiketter",
+"nl": "Variantlabels weergeven",
+"pl": "Pokaż etykiety wariantów",
+"pt-BR": "Exibir etiquetas de variantes",
+"pt-PT": "Mostrar etiquetas de variantes",
+"sv": "Visa variantetiketter",
+"th": "แสดงป้ายกำกับตัวเลือกสินค้า",
+"tr": "Varyasyon etiketlerini göster",
+"vi": "Hiển thị nhãn mẫu mã",
+"zh-CN": "显示多属性标签",
+"zh-TW": "顯示子類選項標籤"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_vendor",
+"label": {
+"cs": "Zobrazit dodavatele produktu",
+"da": "Vis produktleverandør",
+"de": "Produktanbieter anzeigen",
+"en": "Show product vendor",
+"es": "Mostrar proveedor del producto",
+"fi": "Näytä tuotteen myyjä",
+"fr": "Afficher le distributeur du produit",
+"hi": "उत्पाद विक्रेता दिखाएं",
+"it": "Indica fornitore prodotto",
+"ja": "商品の販売元を表示する",
+"ko": "제품 공급 업체 표시",
+"nb": "Vis produktleverandør",
+"nl": "Productleverancier weergeven",
+"pl": "Pokaż dostawcę produktu",
+"pt-BR": "Exiba o fornecedor do produto",
+"pt-PT": "Mostrar fornecedor do produto",
+"sv": "Visa produktleverantör",
+"th": "แสดงผู้ขายสินค้า",
+"tr": "Ürün satıcısını göster",
+"vi": "Hiển thị nhà cung cấp sản phẩm",
+"zh-CN": "显示产品厂商",
+"zh-TW": "顯示產品廠商"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "enable_payment_button",
+"label": {
+"cs": "Zobrazit dynamické tlačítko pokladny",
+"da": "Vis dynamisk betalingsknap",
+"de": "Dynamischen Checkout Button anzeigen",
+"en": "Show dynamic checkout button",
+"es": "Mostrar botón de pago dinámico",
+"fi": "Näytä dynaaminen kassapainike",
+"fr": "Afficher le bouton de paiement dynamique",
+"hi": "डायनेमिक चेकआउट बटन दिखाएं",
+"it": "Mostra pulsante di check-out dinamico",
+"ja": "動的チェックアウトボタンを表示する",
+"ko": "동적 결제 버튼 표시",
+"nb": "Vis dynamisk knapp for å gå til kassen",
+"nl": "Dynamische betaalknop weergeven",
+"pl": "Pokaż dynamiczny przycisk realizacji zakupu",
+"pt-BR": "Exibir botão de checkout dinâmico",
+"pt-PT": "Mostrar botão dinâmico de finalização da compra",
+"sv": "Visa dynamiska betalningsknappar",
+"th": "แสดงปุ่มชำระเงินแบบไดนามิก",
+"tr": "Dinamik ödeme düğmesini göster",
+"vi": "Hiển thị nút thanh toán động",
+"zh-CN": "显示动态结账按钮",
+"zh-TW": "顯示動態結帳按鈕"
+},
+"info": {
+"cs": "Každý zákazník uvidí platební metodu, kterou ze všech metod dostupných v obchodě (například PayPal nebo Apple Pay) nejvíce preferuje. [Další informace](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"da": "Den enkelte kunde vil se sin foretrukne betalingsmetode blandt dem, der er tilgængelige i din butik, f.eks. PayPal eller Apple Pay. [Få mere at vide](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"de": "Jeder Kunde sieht seine bevorzugte Zahlungsmethode aus den in deinem Shop verfügbaren Zahlungsmethoden wie PayPal oder Apple Pay. [Mehr Informationen](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"es": "Cada cliente verá su forma de pago preferida entre las disponibles en tu tienda, como PayPal o Apple Pay. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"fi": "Kukin asiakas näkee ensisijaisen valintansa kauppasi tarjoamista maksutavoista, esim. PayPal tai Apple Pay. [Lisätietoja](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"fr": "Chaque client verra son moyen de paiement préféré parmi ceux qui sont proposés sur votre boutique, tels que PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"hi": "प्रत्येक ग्राहक आपके स्टोर पर उपलब्ध अपनी पसंदीदा भुगतान की विधि देखेंगे जैसे PayPal या Apple Pay. [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"it": "Ogni cliente vedrà il suo metodo di pagamento preferito tra quelli disponibili nel tuo negozio, come PayPal o Apple Pay. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"ja": "PayPalやApple Payなど、ストアで利用可能な希望の決済方法がお客様に表示されます。[詳細情報](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"ko": "각 고객은 PayPal 또는 Apple Pay와 같이 스토어에서 사용 가능한 지불 방법을 확인할 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"nb": "Hver enkelt kunde vil se sin foretrukne betalingsmåte blant de som er tilgjengelig i butikken din, som PayPal eller Apple Pay. [Finn ut mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"nl": "Elke klant ziet zijn of haar beschikbare voorkeursmethode om af te rekenen, zoals PayPal of Apple Pay. [Meer informatie](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pl": "Każdy klient zobaczy swoją preferowaną metodę płatności wśród metod dostępnych w Twoim sklepie, np. PayPal lub Apple Pay. [Dowiedz się więcej ](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pt-BR": "Cada cliente verá a forma de pagamento preferencial dele dentre as disponíveis na loja, como PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pt-PT": "Cada cliente irá ver o seu método de pagamento preferido entre os disponíveis na loja, como o PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"sv": "Varje kund kommer att se den föredragna betalningsmetoden från de som finns tillgängliga i din butik, till exempel PayPal eller Apple Pay. [Läs mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"th": "ลูกค้าแต่ละรายจะเห็นวิธีการชำระเงินที่ต้องการจากวิธีที่ใช้ได้ในร้านค้าของคุณ เช่น PayPal หรือ Apple Pay [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"tr": "Her müşteri, mağazanız sunulanlar arasından tercih ettikleri ödeme yöntemini görür (ör. PayPal veya Apple Pay). [Daha fazla bilgi edinin](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"vi": "Mỗi khách hàng sẽ thấy phương thức thanh toán ưu tiên của họ trong những phương thức thanh toán được hỗ trợ tại cửa hàng như PayPal hoặc Apple Pay. [Tìm hiểu thêm](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"zh-CN": "每位客户都可在您商店提供的付款方式中看到他们的首选付款方式，例如 PayPal 或 Apple Pay。[了解详细信息](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"zh-TW": "每位顧客都可以在您商店內開放使用的付款方式中看見他們偏好使用的方式，如 PayPal、Apple Pay 等。[深入瞭解](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_share_buttons",
+"label": {
+"cs": "Zobrazit tlačítka pro sdílení na sociálních sítích",
+"da": "Vis knapper til deling på sociale medier",
+"de": "Buttons für Social Media anzeigen",
+"en": "Show social sharing buttons",
+"es": "Mostrar botones para compartir en redes sociales",
+"fi": "Näytä sosiaalisen median jakamispainikkeet",
+"fr": "Afficher les boutons de partage sur les médias sociaux",
+"hi": "सोशल शेयरिंग बटन दिखाएं",
+"it": "Mostra i pulsanti per la condivisione sui social",
+"ja": "ソーシャルメディアでの共有ボタンを表示する",
+"ko": "소셜 공유 버튼 표시",
+"nb": "Vis knapper for deling på sosiale medier",
+"nl": "Knoppen voor delen via social media weergeven",
+"pl": "Pokaż przyciski udostępniania w mediach społecznościowych",
+"pt-BR": "Exibir botões de compartilhamento em redes sociais",
+"pt-PT": "Mostrar botões de partilha nas redes sociais",
+"sv": "Visa knappar för delning i sociala medier",
+"th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
+"tr": "Sosyal medya paylaşım düğmelerini göster",
+"vi": "Hiển thị nút chia sẻ qua mạng xã hội",
+"zh-CN": "显示社交分享按钮",
+"zh-TW": "顯示社群分享按鈕"
+},
+"info": {
+"cs": "Nezapomeňte povolit sdílení na sociálních sítích v obecném nastavení.",
+"da": "Sørg for, at du har aktiveret deling på sociale medier under Generelle indstillinger",
+"de": "Vergewissere dich, dass du in den allgemeinen Einstellungen das Teilen in sozialen Netzwerken aktiviert hast",
+"en": "Make sure you have enabled social sharing in general settings",
+"es": "Asegúrate de haber habilitado la opción para compartir en redes sociales en la configuración general.",
+"fi": "Varmista, että olet ottanut sosiaalisen median jakamisen käyttöön yleisissä asetuksissa",
+"fr": "Assurez-vous d'avoir activé le partage social dans les paramètres généraux",
+"hi": "सुनिश्चित करें कि आपने सामान्य सेटिंग में सोशल शेयरिंग सक्षम किया है",
+"it": "Assicurati di aver abilitato la condivisione sui social nelle impostazioni generali",
+"ja": "一般設定でソーシャルメディアでの共有を有効にしていることを確認してください。",
+"ko": "일반 설정에서 소셜 공유가 되었는지 확인하십시오.",
+"nb": "Sørg for at du har aktivert sosial deling i generelle innstillinger",
+"nl": "Zorg ervoor dat je delen via social media hebt ingeschakeld in de algemene instellingen",
+"pl": "Upewnij się, że włączyłeś(-aś) udostępnianie w mediach społecznościowych w ustawieniach ogólnych",
+"pt-BR": "Verifique se você habilitou o compartilhamento em redes sociais nas configurações gerais",
+"pt-PT": "Certifique-se de que ativou a partilha nas redes sociais nas definições gerais",
+"sv": "Se till att du har aktiverat social delning i allmänna inställningar",
+"th": "ตรวจสอบให้แน่ใจว่าคุณได้เปิดใช้การแชร์บนโซเชียลในการตั้งค่าทั่วไป",
+"tr": "Genel ayarlardan sosyal paylaşımı etkinleştirdiğinizden emin olun",
+"vi": "Đảm bảo bạn đã bật chia sẻ qua mạng xã hội trong cài đặt chung",
+"zh-CN": "确保您在“通用”设置中启用了社交分享",
+"zh-TW": "請確定您已在一般設定內啟用社群分享功能"
+},
+"default": true
+},
+{
+"type": "header",
+"content": {
+"cs": "Multimédia",
+"da": "Medie",
+"de": "Medien",
+"en": "Media",
+"es": "Elementos multimedia",
+"fi": "Media",
+"fr": "Médias",
+"hi": "मीडिया",
+"it": "Media",
+"ja": "メディア",
+"ko": "미디어",
+"nb": "Medier",
+"nl": "Media",
+"pl": "Multimedia",
+"pt-BR": "Mídia",
+"pt-PT": "Multimédia",
+"sv": "Media",
+"th": "สื่อ",
+"tr": "Medya",
+"vi": "Phương tiện",
+"zh-CN": "媒体",
+"zh-TW": "媒體"
+},
+"info": {
+"cs": "Další informace o [typech multimédií](https://help.shopify.com/manual/products/product-media)",
+"da": "Få mere at vide om [media types](https://help.shopify.com/manual/products/product-media)",
+"de": "Mehr Informationen über [Medientypen ](https://help.shopify.com/manual/products/product-media)",
+"en": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)",
+"es": "Más información sobre [tipos de archivos multimedia](https://help.shopify.com/manual/products/product-media)",
+"fi": "Lue lisää [mediatyypeistä](https://help.shopify.com/manual/products/product-media)",
+"fr": "En savoir plus sur les [types de supports multimédia](https://help.shopify.com/manual/products/product-media)",
+"hi": "[मीडिया प्रकार](https://help.shopify.com/manual/products/product-media) के बारे में और जानें",
+"it": "Scopri di più sulle [tipologie di file multimediali](https://help.shopify.com/manual/products/product-media)",
+"ja": "[メディアのタイプ](https://help.shopify.com/manual/products/product-media) について詳しくはこちら",
+"ko": "[미디어 유형](https://help.shopify.com/manual/products/product-media)에 대해 자세히 알아보기",
+"nb": "Lær mer om [medietyper](https://help.shopify.com/manual/products/product-media)",
+"nl": "Meer informatie over [mediatypen](https://help.shopify.com/manual/products/product-media)",
+"pl": "Dowiedz się więcej o [typach multimediów](https://help.shopify.com/manual/products/product-media)",
+"pt-BR": "Saiba mais sobre [tipos de mídia](https://help.shopify.com/manual/products/product-media)",
+"pt-PT": "Saiba mais sobre [media types](https://help.shopify.com/manual/products/product-media)",
+"sv": "Läs mer om [mediatyper](https://help.shopify.com/manual/products/product-media)",
+"th": "ดูข้อมูลเพิ่มเติมเกี่ยวกับ [ประเภทของสื่อ](https://help.shopify.com/manual/products/product-media)",
+"tr": "[Medya türleri](https://help.shopify.com/manual/products/product-media) hakkında daha fazla bilgi edinin",
+"vi": "Tìm hiểu thêm về [loại phương tiện](https://help.shopify.com/manual/products/product-media)",
+"zh-CN": "详细了解[媒体类型](https://help.shopify.com/manual/products/product-media)",
+"zh-TW": "深入瞭解 [媒體類型](https://help.shopify.com/manual/products/product-media)"
+}
+},
+{
+"type": "checkbox",
+"id": "enable_video_looping",
+"label": {
+"cs": "Povolit smyčky videa",
+"da": "Aktivér looping af videoer",
+"de": "Videoschleife aktivieren",
+"en": "Enable video looping",
+"es": "Habilitar la reproducción de video en bucle",
+"fi": "Ota käyttöön videosilmukka",
+"fr": "Activer le bouclage de la vidéo",
+"hi": "वीडियो लूपिंग सक्षम करें",
+"it": "Abilita la riproduzione in loop dei video",
+"ja": "ビデオのループを有効にする",
+"ko": "동영상 루프 활성화",
+"nb": "Aktiver løkkeavspilling av video",
+"nl": "Video-looping inschakelen",
+"pl": "Włącz zapętlanie filmu",
+"pt-BR": "Habilitar loop de vídeo",
+"pt-PT": "Ativar ciclo de vídeo",
+"sv": "Aktivera video-loopning",
+"th": "เปิดใช้การวนซ้ำวิดีโอ",
+"tr": "Video döngüsünü etkinleştir",
+"vi": "Bật vòng lặp video",
+"zh-CN": "启用视频循环",
+"zh-TW": "啟用影片循環功能"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "hide_variant_media",
+"label": {
+"cs": "Skrýt varianty multimédií v galerii",
+"da": "Skjul variantmedie i galleriet",
+"de": "Medienvarianten in der Galerie ausblenden",
+"en": "Hide variant media in gallery",
+"es": "Ocultar elementos multimedia de variantes en la galería",
+"fi": "Piilota versioiden aineisto galleriassa",
+"fr": "Masquer les supports multimédia des variantes dans la galerie",
+"hi": "गैलरी में वेरिएंट मीडिया छिपाएं",
+"it": "Nascondi le varianti dei file nella galleria",
+"ja": "ギャラリーのバリエーションメディアを非表示にする",
+"ko": "갤러리의 이형 상품 미디어 숨기기",
+"nb": "Skjul variantmedier i galleriet",
+"nl": "Verschillende media verbergen in galerie",
+"pl": "Ukryj multimedia wariantów w galerii",
+"pt-BR": "Ocultar mídia variante na galeria",
+"pt-PT": "Ocultar multimédia variante na galeria",
+"sv": "Dölj variantmedia i galleriet",
+"th": "ซ่อนสื่อสำหรับตัวเลือกสินค้าในแกลเลอรี",
+"tr": "Galeride varyasyon medyasını gizle",
+"vi": "Ẩn phương tiện mẫu mã trong bộ sưu tập ảnh",
+"zh-CN": "在图库中隐藏多属性媒体",
+"zh-TW": "在圖庫中隱藏子類選項多媒體檔案"
+},
+"default": true
+}
+]
+}
+{% endschema %}

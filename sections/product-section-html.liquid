@@ -1,0 +1,38 @@
+<div>
+  {% if section.settings.code != blank %}
+  {{ section.settings.code }}
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "ja": "HTMLセクション"
+  },
+  "class": "sample_section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "code",
+      "label": {
+        "ja": "本文"
+      },
+      "default": {
+        "ja": "HTMLを記述してください."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "ja": "HTMLセクション"
+      },
+      "category": {
+        "ja": "_商品セクション"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,163 @@
+<section
+  class="
+    home-section
+    clearfix
+  "
+  {% if section.settings.autoplay_enable %}
+    data-autoplay="{{ section.settings.autoplay_interval | times: 1000 }}"
+  {% endif %}
+  {% if section.settings.parallax %}
+    data-parallax
+  {% endif %}
+  data-full-width="{{ section.settings.full-width }}"
+>
+
+  <div
+    class="slideshow--viewport swiper"
+    data-slideshow-viewport
+    id="slider{{ section.id }}"
+  >
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% assign image = block.settings.image %}
+        {% assign link = block.settings.link %}
+        <div
+          class="swiper-slide slide-item"
+          {{ block.shopify_attributes }}
+        >
+          {%- case block.type -%}
+            {% comment %}
+            //=============================================
+            // feature -- 画像
+            //=============================================
+            {% endcomment %}
+            {%- when 'feature' -%}
+              <div class="image-wrap">
+                {% if block.settings.link != blank %}
+                  <a class="slideshow-link" href="{{ block.settings.link }}">
+                {% endif %}
+                <picture>
+                  <source media="(max-width:768px)" srcset="{{ block.settings.spimage | image_url: width: 600 }}">
+                  <img src="{{ block.settings.image | image_url: width: 2000 }}" alt="">
+                </picture>
+                {% if block.settings.link != blank %}
+                  </a>
+                {% endif %}
+              </div>
+          {%- endcase -%}
+        </div>
+      {% endfor %}
+        <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  #slider{{ section.id }} .slick-prev,#slider{{ section.id }} .slick-next{
+    z-index: 5;
+  }
+  #slider{{ section.id }} .slick-slide{
+    position: relative;
+    padding: 0 10px;
+  }
+
+  #slider{{ section.id }} .swiper-pagination-bullet{
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+  }
+
+  .image-wrap img{
+    width: 100%;
+  }
+
+</style>
+
+<script defer>
+  window.addEventListener('load',function(){
+    //  init Slider
+    // ----------------------------------------
+    const swiper = new Swiper('#slider{{ section.id }}', {
+      speed: {{ section.settings.speed }},
+      autoplay: {
+        delay: {{ section.settings.delay }},
+      },
+      loop: true,
+      loopedSlides: 30,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+    });
+
+  })
+
+</script>
+
+{% schema %}
+{
+  "name": "Slideshow MV",
+  "class": "shopify-section--slideshow",
+  "max_blocks": 30,
+  "settings": [
+    {
+      "type": "text",
+      "id": "speed",
+      "label": "Slide Speed",
+      "default": "1000"
+    },
+    {
+      "type": "text",
+      "id": "delay",
+      "label": "Autoplay Delay",
+      "default": "3000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "spimage",
+          "label": "Image(SP)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Slide link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image Slider",
+      "name": "Slideshow MV",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

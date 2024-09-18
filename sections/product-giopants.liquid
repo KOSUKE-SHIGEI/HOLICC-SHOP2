@@ -1,0 +1,2369 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign current_variant_sale = false -%}
+{% if current_variant.compare_at_price > current_variant.price %}
+{%- assign current_variant_sale = true -%}
+{% endif %}
+{% assign featured_media = current_variant.featured_media | default: product.featured_media %}
+<div class="product-template" data-section-id="{{ section.id }}" data-section-type="product-template" data-variant-id="{{ current_variant.id }}">
+  <meta itemprop="name" content="{{ product.title }}">
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ featured_media | img_url: 'grande' }}">
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  商品詳細
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  {% include 'product-header_giopants', product: product %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">「Giopants」とは</h2>
+      </header>
+      <div class="section-lp__description">快適でスタイリッシュ、旅も仕事もピッタリなパンツ。</div>
+      <div class="section-lp-product-description">
+        <div class="description__items">
+          <div class="description__area__item">
+            <p>旅行時にほしい機能を細部まで</p>
+            <img class="description__area__item__img" src="{{ 'img_giop_summary_01.jpg' | file_url }}">
+          </div>
+          <div class="description__area__item">
+            <p>シンプルかつおしゃれに見える設計</p>
+            <img class="description__area__item__img" src="{{ 'img_giop_summary_02.jpg' | file_url }}">
+          </div>
+          <div class="description__area__item__cross">
+            <span class="cross"></span>
+          </div>
+        </div>
+        <div class="section-lp-sizseReview section-box__wrapper page-width--no-gutter top-with">
+          <p class="w-long-m-season">
+            ビジネスシーンに馴染むシンプルな見た目に詰め込まれた、旅慣れした開発者たちのこだわり。吸水速乾はもちろん、ストレッチ、ポケッタブル、ウエスト調整機能、ポケット設計に至るまで、全ての要素に旅行時に欲しい機能が。生地は上品に見えるマットで適度に厚みのある素材。春から秋にかけてお楽しみいただけます。
+          </p>
+            <style>
+              .top-with{
+                max-width: 880px!important;
+                margin: 0 auto;
+              }
+              .w-long-m-season{
+                margin-top: 48px;
+                flex: 0 0 421px;
+                font-size: 18px;
+                color: #43434E;
+                line-height: 2;
+                letter-spacing: 0.1em;
+              }
+              .description__area__season__img_sp{
+                display: none;
+              }
+              @media (max-width: 768px){
+                .w-long-m-season{
+                margin-top: 24px;
+                margin-left: 0;
+                margin-top: 2rem;
+                font-size: 1.6rem;
+                }
+                .description__area__season__img{
+                  display: none;
+                }
+                .description__area__season__img_sp{
+                display: block;
+              }
+              }
+            </style>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">Giopantsの特徴</h2>
+      </header>
+
+      <div class="section-lp__sub-header" style="background-image: url({{ 'gray-gradation.png' | file_url }});">
+        <div class="section-lp__sub-header-heading">
+          fabric
+        </div>
+        <div class="section-lp__sub-header-title fs-18">
+          着心地と便利さを、環境に配慮した素材で
+        </div>
+      </div>
+
+      <div class="section-lp__tpolo-feature">
+        <div class="section-lp__tpolo-featureTop">
+          <h3 class="section-lp__description"><b>着心地と便利さを兼ね備えた環境配慮素材</b></h3>
+          <div class="section-lp__tpolo-featureTop-body">
+            <figure class="section-lp__tpolo-featureTop-img"><img src="{{ 'img_giop_featute-fabric_01-min.jpg' | file_url }}" alt="着心地と便利さを兼ね備えた環境配慮素材"></figure>
+            <div class="section-lp__tpolo-featureTop-content">
+              <p class="section-lp__tpolo-featureTop-text">
+                生地として使用しているソロテックス
+                <sup>&reg;</sup>(SOLOTEX<sup>&reg;</sup>)は、環境配慮素材でありながら、高機能でなめらかな素材です。ソフトで伸縮性が高く、移動時も快適。一方で洗濯を繰り返しても形崩れしづらく、乾きやすい。汚れが気になった夜に洗濯、乾燥させて翌日履けば、旅行時の荷物を減らすことができます。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-lp__tpolo-featurePoints">
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">動きやすいストレッチ性</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="{{ 'img_giop_featute-fabric_02-min.jpg' | file_url }}" alt="動きやすいストレッチ性"></figure>
+              <p class="section-lp__tpolo-feature-text">伸縮性が高いため、細身のデザインでありながら体型を選ばず綺麗にフィットします。どんなシーンも動きやすくストレスゼロ。シワになりにくく、お手入れも簡単です。
+              </p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">吸水速乾でサラっと快適</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <div class="giopants_video"><video width="550" height="367"  src="{{ 'mov_giop_feature-fabric_03.mp4' | file_url }}"  playsinline autoplay muted loop></video>
+              </div>
+              <p class="section-lp__tpolo-feature-text">ベタつきやすい暑さや湿気の中でも、さらさらした着心地。濡れても乾きが早いため、雨の日も安心。洗濯後もすぐ乾くので、旅行用パンツとしても最適です。
+              </p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">履いてる時も運ぶ時も軽やかに</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="{{ 'img_giop_featute-fabric_04-min.jpg' | file_url }}" alt="履いてる時も運ぶ時も軽やかに"></figure>
+              <p class="section-lp__tpolo-feature-text">適度な厚みがありつつも軽量。履いているときはごわつかないから動きやすい、持ち運び時はコンパクトで荷物を減らして身軽に。
+              </p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">高級感のあるマットな質感</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="{{ 'img_giop_featute-fabric_05-min.jpg' | file_url }}" alt="高級感のあるマットな質感"></figure>
+              <p class="section-lp__tpolo-feature-text">光沢感を抑えたマットな質感をセレクト。吸水速乾や軽量生地の服に多いテロテロ感がなく、上品で落ち着いた印象の生地のため、商談時でもご使用いただけます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--
+      <div class="section-lp__user-voice">
+        <h3>USER VOICE<span></span></h3>
+
+        <div class="section-lp__user-voice-content">
+          <div class="section-lp__user-voice-item">
+            <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_wtstlong_icon_uservoice.png?v=1666668854" alt="アイロンをかけなくてもシワにならず、素材や形も理想的でした。">
+            <div class="section-lp__user-voice-item-text">アイロンをかけなくてもシワにならず、素材や形も理想的でした。</div>
+          </div>
+          <div class="section-lp__user-voice-item">
+            <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_wtstlong_icon_uservoice.png?v=1666668854" alt="乾くのが早いので、夜にホテルの洗濯機で洗った後には脱水だけで翌朝には乾いています。">
+            <div class="section-lp__user-voice-item-text">乾くのが早いので、夜にホテルの洗濯機で洗った後には脱水だけで翌朝には乾いています。</div>
+          </div>
+          <div class="section-lp__user-voice-item">
+            <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_wtstlong_icon_uservoice.png?v=1666668854" alt="ほぼ毎日着ていますが、生地がしっかりしていて着崩れしにくいです。">
+            <div class="section-lp__user-voice-item-text">ほぼ毎日着ていますが、生地がしっかりしていて着崩れしにくいです。</div>
+          </div>
+          <div class="section-lp__user-voice-item">
+            <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_wtstlong_icon_uservoice.png?v=1666668854" alt="">
+            <div class="section-lp__user-voice-item-text">袖を通した瞬間肌触りの良さに驚きました。リピ確定です。</div>
+          </div>
+
+        </div>
+
+      </div>
+-->
+      <style>
+        .section-lp__user-voice{
+          margin: 0 0 120px;
+        }
+        .section-lp__user-voice h3{
+          color:#CACAE1;
+          display: flex;
+          white-space: nowrap;
+        }
+        .section-lp__user-voice h3 span{
+          width: 100%;
+          position: relative;
+        }
+        .section-lp__user-voice h3 span::after{
+          content: '';
+          width: 97%;
+          height: 3px;
+          display: inline-block;
+          background-color: #CACAE1;
+          opacity: 0.8;
+          position: absolute;
+          bottom: 50%;
+          right: 0;
+        }
+        .section-lp__user-voice-content{
+          display:grid ;
+          gap: 24px ;
+          grid-template-columns: repeat( 2 ,1fr ) ;
+        }
+        .section-lp__user-voice-item{
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 600;
+          color: #43434E;
+          line-height: 2;
+          padding: 16px;
+          background: #F7F7FC;
+          gap: 8px;
+        }
+        .section-lp__user-voice-item img{
+          width :50px;
+        }
+        @media (max-width: 768px){
+          .section-lp__user-voice{
+          margin: 0 0 80px;
+        }
+          .section-lp__user-voice-content{
+            grid-template-columns: repeat( 1 ,1fr ) ;
+            gap: 18px;
+          }
+          .section-lp__user-voice-item{
+            font-size: 16px;
+          }
+        }
+      </style>
+
+      <div class="section-lp__sub-header" style="background-image: url({{ 'gray-gradation.png' | file_url }});">
+        <div class="section-lp__sub-header-heading">
+          design
+        </div>
+        <div class="section-lp__sub-header-title fs-18">
+          スタイリッシュ＆スマート
+        </div>
+      </div>
+
+      <style>
+        @media (max-width: 768px){
+          .fs-18{
+            font-size: 18px !important;
+          }
+        }
+      </style>
+
+      <div class="section-lp__tpolo-feature">
+        <div class="section-lp__tpolo-featureTop">
+          <h3 class="section-lp__description"><b>美しさと利便性を追求、どんなシーンでも履ける1本</b></h3>
+          <div class="section-lp__tpolo-featureTop-body">
+            <figure class="section-lp__tpolo-featureTop-img"><img src="{{ 'img_giop_featute-design_01-min.jpg' | file_url }}" alt="ボタンを外しても広がりすぎない、上品な印象の立体的で小ぶりな襟"></figure>
+            <div class="section-lp__tpolo-featureTop-content">
+              <p class="section-lp__tpolo-featureTop-text">季節や場面を問わず、どんな体型の方もスタイリッシュに履ける、やや長め丈のテーパード型。すっきりとした印象に見える若干細めの設計で、ビジネスシーンにもマッチします。<br>
+                見た目はシンプルですが、大きめポケットやファスナーポケットが付いており、旅行時にほしい機能も完備。ウエストは着脱しやすく、ずり落ちないよう調整できる独自構造の「トンネルゴムアジャスター」仕様。シンプルな中に、さまざまなこだわりが詰まっています。
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-lp__tpolo-featurePoints">
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">脱ぎ着しやすく調整しやすいウエスト</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="{{ 'img_giop_featute-design_02-min.jpg' | file_url }}" alt="脱ぎ着しやすく調整しやすいウエスト"></figure>
+              <p class="section-lp__tpolo-feature-text">トイレなどで、いちいち紐を結ぶ手間がないゴム仕様。細身の方や重たい荷物を入れた際にずり落ちないように、ボタンでサイズを調整することもできます。
+              </p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">ポケッタブル仕様でコンパクトに収納</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <div class="giopants_video"><video width="550" height="367"  src="{{ 'mov_giop_feature-design_03.mp4' | file_url }}"  playsinline autoplay muted loop></video>
+              </div>
+              <p class="section-lp__tpolo-feature-text">ポケットの内側にぎゅっと収納、小さく持ち運べるポケッタブル仕様。汚れが気になる面に触れない形にまとめられるため、他の荷物と一緒に入れる際も安心です。
+              </p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">シーンを問わない万能シルエット</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="{{ 'img_giop_featute-design_04-min.jpg' | file_url }}" alt="シーンを問わない万能シルエット"></figure>
+              <p class="section-lp__tpolo-feature-text">どんな方でもスタイルアップする、少し細めなテーパード型。履いた時にシルエットが美しく、ビジネスシーンやレストランでの食事などにもピッタリです。
+              </p>
+            </div>
+          </div>
+          <div class="section-lp__tpolo-featurePoint">
+            <h3 class="section-lp__tpolo-featureTitle">大きめポケット&ファスナーポケット</h3>
+            <div class="section-lp__tpolo-feature-body">
+              <figure class="section-lp__tpolo-feature-img"><img src="{{ 'img_giop_featute-design_05-min.jpg' | file_url }}" alt="大きめポケット&ファスナーポケット"></figure>
+              <p class="section-lp__tpolo-feature-text">少ない荷物なら手ぶらで出かけられる大きめポケットが全部で4つ。パスポートや鍵など大事なものをしまうファスナーポケットは、取り出しやすい左前に。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  利用シーン
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">利用シーン</h2>
+      </header>
+
+      <div class="section-lp__description"><b>ビジネスでの会議や商談、旅行時のさまざまなシーンも、どんな日もマッチ</b></div>
+
+      <div class="section-lp-scene">
+
+
+        <div class="scene-box scene-box--one-row">
+
+          <article class="scene">
+            <h3 class="scene__title">
+              仕事で
+            </h3>
+            <div class="scene__img">
+              <img class="lazyload" data-src="{{ 'img_giop_scene_01-min.jpg' | file_url }}" alt="仕事で">
+            </div>
+            <div class="scene__description">
+              細身のデザイン×マットな質感がジャケットスタイルも自然に。
+            </div>
+          </article>
+
+          <article class="scene">
+            <h3 class="scene__title">
+              旅行で
+            </h3>
+            <div class="scene__img">
+              <img class="lazyload" data-src="{{ 'img_giop_scene_02-min.jpg' | file_url }}" alt="旅行で">
+            </div>
+            <div class="scene__description">
+              洗濯してもすぐ乾く。かさばるパンツの量が減ると、荷物もコンパクト。
+            </div>
+          </article>
+
+          <article class="scene">
+            <h3 class="scene__title">
+              普段使いに
+            </h3>
+            <div class="scene__img">
+              <img class="lazyload" data-src="{{ 'img_giop_scene_03-min.jpg' | file_url }}" alt="ふだん使いに">
+            </div>
+            <div class="scene__description">
+              トップスを選ばないシンプルデザイン。動きやすく扱いやすい毎日使える1本。
+            </div>
+          </article>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  開発ストーリー
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">開発ストーリー</h2>
+      </header>
+
+      <div class="section-lp__description"><b>仕事しながら旅をする究極の1本を<br>「Giopants」ができるまで</b></div>
+
+      <div class="section-lp-story">
+        <div class="giopants-story-description">
+          <p>
+            旅行に欠かせない動きやすい快適さ。仕事の場やレストランにも履いていけるキチンと見え。どちらも叶う1本があればいいのに。旅先で常々感じていたモヤモヤを解決するために「旅パンツ」の開発は始まりました。
+          </p>
+
+          <img class="lazyload" data-src="{{ 'img_giop_story-min.jpg' | file_url }}" alt="開発ストーリー">
+
+          <p>
+            目指したのは、毎朝のコーディネートでも、旅支度でも、何も考えずに最優先で選ぶようなパンツ。だからサラッとした肌触りで薄くて軽量。毎日着たくなる着心地の良さと、どんな服装も合わせやすいスタイリッシュなデザインにこだわりました。<br>
+            さらにHOLICCならではの旅視点をプラス。ぐるりと包んで小さなパッカブルサイズにできる仕様で、持ち運びやすく、汚れた時も取り扱いやすい、利便性を考えたパンツが完成しました。
+          </p>
+        </div>
+
+        <div class="profile profile-gray">
+            {% include 'product-section-content-about-holicc' %}
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  サイズ・仕様
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">サイズ・仕様</h2>
+      </header>
+
+      <div class="section-lp-size">
+        <div class="box">
+          <div class="box__img box__img__500">
+            <img class="lazyload img__500" data-src="{{ 'img_giop_size-min.jpg' | file_url }} alt="サイズ・仕様">
+          </div>
+          <div class="box__txt box__txt__700 resp-table-wrapper">
+            <table class="product-size-table resp-table">
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th" style="white-space: nowrap;">サイズ </th>
+                <th class="product-size-table__th" style="white-space: nowrap;">❶<br class="br-sp">ウエスト</th>
+                <th class="product-size-table__th" style="white-space: nowrap;">❷<br class="br-sp">ウエスト<br>最大値</th>
+                <th class="product-size-table__th" style="white-space: nowrap;">❸<br class="br-sp">ヒップ</th>
+                <th class="product-size-table__th" style="white-space: nowrap;">❹<br class="br-sp">もも周り</th>
+                <th class="product-size-table__th" style="white-space: nowrap;">❺<br class="br-sp">股上</th>
+                <th class="product-size-table__th" style="white-space: nowrap;">❻<br class="br-sp">股下</th>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">S</th>
+                <td class="product-size-table__td">67</td>
+                <td class="product-size-table__td">94</td>
+                <td class="product-size-table__td">98</td>
+                <td class="product-size-table__td">60</td>
+                <td class="product-size-table__td">23</td>
+                <td class="product-size-table__td">69.5</td>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">M</th>
+                <td class="product-size-table__td">69</td>
+                <td class="product-size-table__td">96</td>
+                <td class="product-size-table__td">100</td>
+                <td class="product-size-table__td">61</td>
+                <td class="product-size-table__td">24</td>
+                <td class="product-size-table__td">71.5</td>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">L</th>
+                <td class="product-size-table__td">73</td>
+                <td class="product-size-table__td">100</td>
+                <td class="product-size-table__td">104</td>
+                <td class="product-size-table__td">63</td>
+                <td class="product-size-table__td">25</td>
+                <td class="product-size-table__td">73.5</td>
+              </tr>
+              <tr class="product-size-table__tr">
+                <th class="product-size-table__th">XL</th>
+                <td class="product-size-table__td">77</td>
+                <td class="product-size-table__td">104</td>
+                <td class="product-size-table__td">108</td>
+                <td class="product-size-table__td">65</td>
+                <td class="product-size-table__td">26</td>
+                <td class="product-size-table__td">75.5</td>
+              </tr>
+            </table>
+            <br>
+            <div class="resp-text">
+              ※もも周りを細めにしています。ご自身のももの最も太い付け根付近より最低2cm以上大きいサイズを推奨しております<br>
+            </div>
+            <br>
+            <div class="resp-text">
+              素材：複合繊維（ポリエステル）100％<br>
+              生産地：ベトナム、中国
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-lp-sizseReview section-box__wrapper page-width--no-gutter">
+        <div class="section-box section-box--review bg-white">
+          <header class="section-box__header">
+            <h3 class="section-box__title section-box__title--icon"><span>みんなのサイズ感レビュー</span></h3>
+          </header>
+          <div class="section-box__slider sizeReviewSlider">
+            <div class="swiper js-sizeReviewSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="{{ 'img_giop_size_02-min.jpg' | file_url }}"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">175cm / 63kg</div>
+                    <p class="sizeReviewSlider__text">Lサイズでちょうど良かったです。特別なウエスト調整がとても機能性を感じさせ、絞っても窮屈ではなかったです。また、ストレッチするので長時間脚を組んでいても快適でした。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/600x600.jpg?v=1724741004"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">161cm</div>
+                    <p class="sizeReviewSlider__text">Mサイズでちょうどよかったです。伸縮性があって着やすく、しゃがんでも苦でなかったです。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/89-min.jpg?v=1688565915"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">178cm / 72kg</div>
+                    <p class="sizeReviewSlider__text">学生時代に運動をしていて、下半身が大きめなのでXLを選択。サイズ感はちょうどよい感じでした。ラインが綺麗で、ゴワつきなくふんわりした履き心地がとても気に入りました。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="{{ 'img_giop_size_03-min.jpg' | file_url }}"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">175cm / 65kg</div>
+                    <p class="sizeReviewSlider__text">Lがちょうどでした。足首までぴったり隠れる長さ。太ももは2cmほど摘まめる（つまり4cm分）程度と細めでしたが、ストレッチ性もあるので全くきついとは感じませんでした。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Giopants-4.jpg?v=1697006611"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">181cm / 75kg</div>
+                    <p class="sizeReviewSlider__text">XLでちょうどよかった。通気性があり、また生地の伸縮性が良いため歩きやすく、階段などもスムーズで着心地がよかった。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Giopants-5.jpg?v=1697006612"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">183cm / 80kg</div>
+                    <p class="sizeReviewSlider__text">スポーツ体型なのですが、XLサイズで問題なかったです。とても軽いし、洗ってハンガーにそのまま干しておけばシワにならないのがとても良いです。</p>
+                  </div>
+                </div>
+                <div class="swiper-slide sizeReviewSlider__item">
+                  <figure class="sizeReviewSlider__img"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/Giopants-6.jpg?v=1697006611"></figure>
+                  <div class="sizeReviewSlider__body">
+                    <div class="sizeReviewSlider__meta">172cm / 51kg</div>
+                    <p class="sizeReviewSlider__text">自分自身が細身ですが、ボタンでウエストを調整できるので安心しました。丈もぴったりでした。履き心地が良く見た目もすっきりしているので、仕事でも旅行でも利用したいです。</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-button-prev slider-button-prev slider-button-prev--sizeReview js-sizeReviewSlider-button-prev"></div>
+            <div class="swiper-button-next slider-button-next slider-button-next--sizeReview js-sizeReviewSlider-button-next"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+    <div class="section-lp-modelComment section-lp__wrapper">
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">Tポロモデル・ノームさんのコメント</h2>
+      </header>
+
+      <div class="section-lp-modelComment__body modelComment">
+        <div class="box modelComment__body">
+          <div class="modelComment__img">
+            <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_model-comment.png?v=1656673384" alt="ノームさん">
+          </div>
+          <div class="box__txt">
+          </div>
+          <div class="modelComment__main">
+            <div class="modelComment__head">1枚あると重宝すること間違いなし</div>
+            <div class="modelComment__text">ビジネスシーンの服はカッチリ見せるためやや着心地が硬く締め付けられる印象が個人的にはあるのですがHOLICCさんのポロシャツはその真逆で驚きました。軽くて通気性も良いのにしっかりとポロシャツが与える印象を崩さない。（胸ポケットも内側に縫われてますが全く違和感を感じません）仕事でもプライベートでも着れるデザインなので1枚あると重宝すること間違いなしです！</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  -->
+  </section>
+  <style>
+  .resp-table {
+  width: 100%;
+}
+  .resp-text{
+    word-wrap: break-word;
+  }
+ @media only screen and (min-width: 769px) {
+   .br-sp{
+     display:none;
+   }
+  .img__500 {
+    width:500px !important;
+    height:320px !important;
+  }
+   .box__img__500 {
+  width: 500px !important;
+  height: 320px !important;
+  max-width: 100%;
+  overflow: hidden;
+}
+.box__txt__700 {
+  width: 700px !important;
+  max-width: 100%;
+  overflow: hidden;
+}
+}
+ @media only screen and (max-width: 768px) {
+  .img__500 {
+    width:600px !important;
+    height; auto;
+  }
+  .product-size-table__th {
+   font-size:24px !important;
+  padding: 2px !important;
+ }
+ .product-size-table__td {
+   font-size:24px !important;
+  padding: 2px !important;
+ }
+
+}
+
+    @media only screen and (min-width: 1281px) {
+  .resp-table-wrapper {
+  }
+  .resp-table {
+    transform: scale(0.92);
+    transform-origin: left top;
+    min-width: 100%;
+    margin-bottom: -30px;
+  }
+}
+@media only screen and (min-width: 1091px) and (max-width: 1280px) {
+  .resp-table-wrapper {
+  }
+  .resp-table {
+    transform: scale(0.80);
+    transform-origin: left top;
+    min-width: 100%;
+    margin-bottom: -60px;
+  }
+  }
+@media only screen and (min-width: 961px) and (max-width: 1090px) {
+  .resp-table-wrapper {
+  }
+    .product-size-table__th {
+   font-size:26px !important;
+  padding: 2px !important;
+ }
+ .product-size-table__td {
+   font-size:26px !important;
+  padding: 2px !important;
+ }
+  .resp-table {
+    transform: scale(0.60);
+    transform-origin: left top;
+    min-width: 100%;
+    margin-bottom: -120px;
+  }
+  }
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  .resp-table-wrapper {
+  }
+      .product-size-table__th {
+   font-size:26px !important;
+  padding: 2px !important;
+ }
+ .product-size-table__td {
+   font-size:26px !important;
+  padding: 2px !important;
+ }
+  .resp-table {
+    transform: scale(0.45);
+    transform-origin: left top;
+    min-width: 222%;
+    margin-bottom: -150px;
+  }
+}
+    @media only screen and (min-width: 441px) and (max-width: 767px) {
+  .resp-table-wrapper {
+  }
+  .resp-table {
+    transform: scale(0.65);
+    transform-origin: left top;
+    min-width: 153%;
+    margin-bottom: -80px;
+  }
+}
+    @media only screen and (max-width: 440px) {
+  .resp-table-wrapper {
+  }
+  .resp-table {
+    transform: scale(0.50);
+    transform-origin: left top;
+      min-width: 200%;
+    margin-bottom: -150px;
+  }
+}
+  </style>
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  先行予約受付中
+  ------------------------------------------------------------------------------
+  <div style="justify-content: center;  align-items: center; width:100%; display:flex; margin-top: 60px; padding: 0px 20px;">
+    <div class="box-campaign box-container">
+        <h3 class="campaign-top">6/30まで、先行予約<br class="br-sp">注文受付中</h3>
+        <p class="campaign-text">定価18,000円のところ、早割で20%割引の14,400円にて予約注文を受付中です！ </p>
+    <div class="triangle3">
+  </div>
+  {% endcomment %}
+ </div>
+
+ </div>
+
+<style>
+  @media (max-width: 768px) {
+.box-campaign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  border: 1px solid #707070;
+  background-color: #F7F7FC;
+  width:  960px;
+  height: 185px;
+}
+.triangle3{
+  position: absolute;
+  top: 172px;
+  left: 46%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 35px solid black;
+  color: #43434E;
+}
+.campaign-top {
+  margin: 0;
+  text-align: center;
+  color: #AD5353;
+  font-size:22px;
+}
+.campaign-text {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+}
+}
+  @media  (min-width: 769px) and (max-width: 4096px) {
+.box-campaign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #F7F7FC;
+  width:  960px;
+  height: 185px;
+}
+
+.triangle3{
+  position: absolute;
+  top: 167px;
+  left: 46%;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 52px solid black;
+  color: #43434E;
+}
+.campaign-top {
+  margin: 0;
+  text-align: center;
+  color: #AD5353;
+}
+.campaign-text {
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+}
+.box-container {
+  position: relative;
+}
+
+</style>
+
+
+{% comment %}
+  ------------------------------------------------------------------------------
+  商品購入フォーム
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+
+  <section class="section-cta section-lp" id="fixed-scroll-end">
+    <div class="section-cta__wrapper section-lp__wrapper mw-1000">
+      <div class="section-cta__product">
+        <div class="section-cta__product-meta-wrapper">
+          <div class="section-cta__product-meta">
+            <div class="section-cta__product-meta-caption">
+              <div class="section-cta__product-meta-title w-long-title">
+                {{ product.title }}
+              </div>
+
+              <style>
+                .mw-1000{
+                  max-width: 1000px !important;
+                }
+                .section-cta__product{
+                  width: 60%;
+                }
+                .w-long-title{
+                  font-size: 28px;
+                }
+                @media (max-width: 768px) {
+                  .section-cta__product{
+                  width: 100%;
+                }
+                  .w-long-title{
+                    font-size: 20px;
+                  }
+                }
+              </style>
+
+              <div class="section-cta__product-meta-price">
+                <span class="section-cta__product-meta-price-number product__current-price money" data-regular-price>{{ current_variant.price | money }}</span>
+                <span class="section-cta__product-meta-price-tax">(税込)</span>
+              </div>
+            </div>
+              <div class="section-cta__product-meta-subcaption"><span style="position: relative;top: -2px;">size：S/M/L/XL | color：</span><span class="circle--color circle--black"></span><span class="circle--color circle--dark-navy"></span><span class="circle--color circle--navy"></span><span class="circle--color circle--earth-gray"></span><span class="circle--color circle--beige"></span></div>
+          </div>
+          <div class="section-cta__product-image">
+            <div class="">
+              <img id="section-cta__product-image-main" class="lazyload" data-src="https://holicc.jp/cdn/shop/files/img_giop_cta_01-min.jpg?v=17172392617126577896">
+              <!-- <img id="section-cta__product-image-main" class="lazyload" data-src="{{ 'img_giop_cta_01-min.jpg' | file_url }}"> -->
+            </div>
+          </div>
+        </div>
+        <div class="section-cta__product-meta2">
+          <div class="section-cta__product-tags">
+            <div class="section-cta__product-tag section-cta__product-tag--delivery">
+              <img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_shipping.png?v=1635217307">
+              {% if current_variant.price >= 1000000 %}
+              送料無料
+              {% else if %}
+              1万円未満のご購入は送料¥500(沖縄県は¥1500)
+              {% endif %}
+            </div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_box.png?v=1635217307">通常1営業日で発送</div>
+            <div class="section-cta__product-tag"><img src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/icon_payment.png?v=1635217307">AmazonPay 対応</div>
+          </div>
+
+          <div class="section-cta__line">
+            <div class="section-cta__line-wrapper">
+              <div class="section-cta__line-text">
+                <div class="section-cta__line-caption">友だち追加&30秒アンケートで<br>お得な<span class="section-cta__line-caption--emp">500円クーポンGET</span></div>
+              </div>
+              <a class="section-cta__line-btn" href="https://line.me/R/ti/p/%40027gciii" target="_blank">LINE友だち追加</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cta__form">
+        {% include 'product-form-cta' %}
+
+
+        <!--
+        <a class="section-cta__u" href="/products/work-to-sport-long-mockneck">
+
+          <img class="type-icon" src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_wtstlong_link-to-mock.jpg?v=1666842900" alt="モックネックはこちらから">
+          <div class="section-cta__content">
+            <span>モックネック</span>は<br>
+            こちらから
+          </div>
+
+          <img class="type-arrow" src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_wtstlong_icon_link-arrow.png?v=1666839026" alt="モックネックはこちらから">
+        </a>
+-->
+        <style>
+          .section-cta__u{
+            padding: 16px 50px 16px 16px;
+            border: 0.5px solid #AFAFAF;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            position: relative;
+            margin-top: 20px;
+
+          }
+          .type-icon{
+            width: 153px;
+            border-radius: 8px;
+          }
+          .section-cta__content{
+            font-size: 16px;
+            color: #707070;
+          }
+          .section-cta__content span{
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .type-arrow{
+            width: 30px !important;
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0%, -50%);
+          }
+
+          @media (max-width: 768px) {
+            .type-icon{
+            width: 125px;
+          }
+            .section-cta__content span{
+              font-size: 16px;
+            }
+            .type-arrow{
+              width: 25px;
+            }
+          }
+        </style>
+
+        <div class="section-cta__annotation">
+          {% if product.metafields.my_fields.is_gift_wrapping %}
+          <div class="section-pulldown">
+            <div class="section-pulldown__wrapper">
+              <div class="section-pulldown__label">
+                ギフトラッピングをご希望の方へ
+              </div>
+              <div class="section-pulldown__content">
+                この商品はギフトラッピング可能です。ご希望の場合は、本商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
+              </div>
+            </div>
+          </div>
+          {% else %}
+          ※この商品はギフトラッピング対象外です
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="variant-images" style="display: none;">
+    {% for variant in product.variants %}
+    <div class="" data-id="{{ variant.id }}" data-image="{{ variant.metafields.my_fields._image }}"></div>
+    {% endfor %}
+  </div>
+
+  <script>
+    var productThumbSwiper = new Swiper(".product-thumb-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 6,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var productMainSwiper = new Swiper(".product-main-swiper", {
+      speed: 100,
+      loop: true,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".product-main-swiper-button-next",
+        prevEl: ".product-main-swiper-button-prev",
+      },
+      thumbs: {
+        swiper: productThumbSwiper,
+      },
+    });
+    $('.section-pulldown__label').on('click', function () {
+      var a = $(this).closest('.section-pulldown');
+      if (a.hasClass('section-pulldown--open')) {
+        a.removeClass('section-pulldown--open');
+      } else {
+        a.addClass('section-pulldown--open');
+      }
+    });
+
+    $(document).on('click', '#NullsGiftWrapTitle', function () {
+      var a = $('#NullsgiftWrap');
+      if (a.prop('checked')) {
+        a.prop('checked', false);
+      } else {
+        a.prop('checked', true);
+      }
+    });
+    $(document).on('click', '.bcpo-front-image-label', function () {
+      setTimeout(function () {
+        var id = $('#bcpo-select').val();
+        var image = $('#variant-images [data-id=' + id + ']').data('image');
+        $('#section-cta__product-image-main').prop('src', image);
+      }, 1);
+    });
+  </script>
+
+
+  <section class="section-lp ">
+    <div class="wrapper" style="max-width: 980px; margin: 0 auto;">
+      {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+    </div>
+  </section>
+
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  よくある質問
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp" style="background: #F7F7FC;">
+    <div class="section-lp__wrapper">
+
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">よくある質問</h2>
+      </header>
+
+      <div class="section-lp-qa">
+        <ul class="qa-list">
+          <li>
+            <div class="q">支払い方法を教えてください。</div>
+            <div class="a">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。</div>
+          </li>
+          <li>
+            <div class="q">送料はいくらかかりますか？</div>
+            <div class="a">全国一律500円（但し、沖縄県は1,500円）です。<br>また、一度のご購入金額が10,000円以上の場合、送料無料となります。</div>
+          </li>
+          <li>
+            <div class="q">配送の日時指定はできますか？</div>
+            <div class="a">できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。</div>
+          </li>
+          <li>
+            <div class="q">返品・交換はできますか？</div>
+            <div class="a">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。</div>
+          </li>
+          <li>
+            <div class="q">注文後、どれくらいで届きますか？</div>
+            <div class="a">平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    　
+  </section>
+
+
+  <div class="fixed-form active">
+    <div class="fixed-form__header pc">
+      <div class="fixed-form__title">
+         {%- if product.metafields.custom._fixed-banner-title != blank -%}
+          {{ product.metafields.custom._fixed-banner-title | newline_to_br }}
+        {%- else -%}
+          {{ product.title }}
+        {%- endif -%}
+      </div>
+
+      <div class="fixed-form__price">
+        <span class="product__sale-price-label visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+        <span class="product__regular-price-label visually-hidden">{{ 'products.product.price' | t }}</span>
+        <span class="product__current-price" data-regular-price>{{ current_variant.price | money }}</span>
+
+        <span class="product__compare-price-label visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+        <s class="product__compare-price" data-compare-price>{{ current_variant.compare_at_price | money }}</s>
+
+        {% include 'product-unit-price', variant: current_variant %}
+        <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+        <meta itemprop="priceCurrency" content="{{ cart.currency.iso_code }}">
+        <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+        <span class="fixed-form__price-tax">(税込)</span>
+      </div>
+    </div>
+
+    <div class="fixed-form__content">
+      <a id="fixed-footer-btn" class="fixed-footer__btn section-btn proudct-purchase-link" href="#fixed-scroll-end">
+        <span>購入にすすむ</span>
+        <span class="fixed-footer__btn-arrow"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/grey_122_arr_24.png?v=1614858713" width="15px"></span>
+      </a>
+    </div>
+  </div>
+
+
+  <style>
+    figure {
+      margin: 0;
+    }
+
+    .section-lp-features--pulldown .feature__head__title {
+      background-size: contain;
+      background-repeat: no-repeat;
+      line-height: 2 !important;
+      padding-left: 50px;
+    }
+
+    .section-lp-features--pulldown .box-col-2 {
+      display: block;
+    }
+
+    .section-lp-features--pulldown .box-col-2 .feature .feature__content .feature__content__txt {
+      width: 100%;
+    }
+
+    .section-lp-features--pulldown .feature__content {
+      display: none !important;
+    }
+
+    .section-lp-features--pulldown .feature.pulldown--open .feature__content {
+      display: block !important;
+    }
+
+    @media (max-width: 768px) {
+
+      .section-lp-features .box-col-2 .feature:first-child,
+      .section-lp-features .box-col-2 .feature:last-child {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .section-lp-features .box-col-2 .feature .feature__content .feature__content__txt {
+        margin-bottom: 30px;
+      }
+
+      .section-lp-features--pulldown .box-col-2 .feature {
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .section-lp-features .box-col-2 {
+        margin-top: 0;
+      }
+
+      .section-lp-features .box-col-2 .feature .feature__head .feature__head__title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .section-lp-features--pulldown .feature__head__title {
+        padding-left: 60px;
+      }
+
+      .section-lp-features .feature .feature__head.feature__head--pulldown {
+        justify-content: center;
+      }
+
+      .section-lp-features--pulldown .box-col-2 {
+        display: flex;
+      }
+
+      .section-lp-features--pulldown .box-col-2 .feature {
+        width: 50%;
+      }
+
+      .section-lp-features--pulldown .feature__content {
+        display: block !important;
+      }
+    }
+
+    .bndlr-products-container .bndlr-bundle-title {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-bundle-description {
+      width: 100%;
+    }
+
+    .bndlr-products-container .bndlr-old-price.bndlr-money {
+      display: none;
+      text-decoration: none !important;
+    }
+
+    .bndlr-products-container .bndlr-product {
+      border: none;
+    }
+
+    .bndlr-products-container .bndlr-total-price {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-new-price {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-product:not(:last-of-type)::after {
+      background: #fff;
+      color: #000;
+    }
+
+    .bndlr-products-container .bndlr-bundle-checkout-warning {
+      display: none;
+    }
+
+    .bndlr-products-container .bndlr-add-to-cart {
+      align-items: center;
+      background-color: #000;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-size: 1.8rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: 2px;
+      line-height: 2.2;
+      padding: 10px 30px;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      text-transform: inherit;
+      vertical-align: middle;
+      width: 100%;
+      vertical-align: middle;
+      z-index: 2;
+    }
+
+    @media (min-width: 769px) {
+      .section_description .warranty .box .img_area {
+        padding: 0 !important;
+      }
+    }
+
+    .description__items {
+      display: flex;
+      margin-bottom: 40px;
+      position: relative;
+      gap: 40px;
+    }
+
+    .description__area__item {
+      width: 50%;
+    }
+
+    .description__area__item p {
+      text-align: center;
+      color: #000000;
+      background: #fff;
+      font-size: 19px;
+      font-weight: 700;
+      margin: 0;
+      padding: 10px 0;
+      letter-spacing: 0.1em;
+    }
+
+    .description__area__item__cross {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 40px;
+      font-weight: 200;
+      transform: translate(-50%, -50%);
+    }
+
+    .cross {
+      display: inline-block;
+      vertical-align: middle;
+      color: #333;
+      line-height: 1;
+      width: 80px;
+      height: 0.05em;
+      background: currentColor;
+      border-radius: 0.1em;
+      position: relative;
+      transform: rotate(45deg);
+    }
+
+    .cross::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: inherit;
+      transform: rotate(90deg);
+    }
+
+    .description__area__item__img {
+      width: 100%;
+    }
+
+    .description__area__item__text-sp {
+      display: none;
+    }
+
+    .description__area__video {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .description__items {
+        margin-bottom: 30px;
+        gap: 20px;
+      }
+
+      .description__area__item p {
+        font-size: 14px;
+        letter-spacing: 0;
+      }
+
+      .description__area__item__text-pc {
+        display: none;
+      }
+
+      .description__area__item__text-sp {
+        display: block;
+      }
+
+      .cross {
+        width: 50px;
+        height: 0.03em;
+      }
+    }
+
+
+    /* Tポロ */
+    /* slider */
+    .section-box__slider {
+      position: relative;
+    }
+
+    .slider-button-prev,
+    .slider-button-next {
+      width: 40px;
+      height: 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+    }
+
+    .slider-button-prev {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/arrow-left.png?v=1656645511');
+      left: auto;
+      right: calc(100% + 16px);
+    }
+
+    .slider-button-next {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/arrow-right.png?v=1656645511');
+      right: auto;
+      left: calc(100% + 16px);
+    }
+
+    .slider-button-prev::after,
+    .slider-button-next::after {
+      content: none;
+    }
+
+    /* Tポロ */
+    .section-lp .section-lp__wrapper--wide {
+      max-width: 1240px;
+    }
+
+    .section-lp .section-lp__description {
+      font-size: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-box {
+      padding: 40px 80px;
+    }
+
+    .section-box__title--icon>span {
+      display: inline-block;
+      padding-right: 63px;
+      padding-left: 63px;
+      position: relative;
+    }
+
+    .section-box__title--icon>span::before,
+    .section-box__title--icon>span::after {
+      content: '';
+      width: 30px;
+      height: 43px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+    }
+
+    .section-box__title--icon>span::before {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_icon_left.png?v=1656645511');
+      left: 0;
+    }
+
+    .section-box__title--icon>span::after {
+      background-image: url('https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_tpolo_icon_right.png?v=1656645511');
+      right: 0;
+    }
+
+    .section-box__footer--review {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    /* ご愛着いただいています */
+    .reviewItem__stars span {
+      color: #ffbf00;
+      font-weight: 400;
+      font-size: 18px;
+      display: inline-block;
+      padding: 0;
+    }
+
+    .reviewItem__name {
+      margin-left: 20px;
+      color: #333333;
+      font-size: 18px;
+    }
+
+    .reviewItem__title {
+      margin-top: 12px;
+      margin-bottom: 0;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.68181818;
+    }
+
+    .reviewItem__text {
+      margin-top: 17px;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+    .t-polo-btn {
+      background: #fff;
+      text-decoration: none;
+      border: solid 2px #696971;
+      border-radius: 10px;
+      padding: 20px 40px;
+      color: #000;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .t-polo-btn>span {
+      background: url(https://cdn.shopify.com/s/files/1/0474/9662/6339/files/img_cart_newWindow_bk.png?v=1613114711) center right 3px no-repeat;
+      background-size: contain;
+      padding-right: 50px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Tポロの特徴 */
+    .section-lp__tpolo-feature {
+      margin-bottom: 60px;
+    }
+
+    .section-lp__tpolo-feature:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-lp__tpolo-featureTop-body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .section-lp__tpolo-featureTop-img {
+      flex: 0 1 61%;
+      margin: 0;
+      position: relative;
+    }
+
+    .section-lp__tpolo-featureTop-img::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 66.66666667%;
+    }
+
+    .section-lp__tpolo-featureTop-img>img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-lp__tpolo-featureTop-content {
+      margin-left: 47px;
+      flex: 0 0 421px;
+      font-size: 20px;
+      color: #43434E;
+      line-height: 2;
+    }
+
+    .section-lp__tpolo-featurePoints {
+      margin-top: 80px;
+      display: grid;
+      flex-wrap: wrap;
+      gap: 88px 4%;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .section-lp__tpolo-featureTitle {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+
+    .section-lp__tpolo-feature-body {
+      margin-top: 30px;
+    }
+
+    .section-lp__tpolo-feature-img {
+      position: relative;
+    }
+
+    .section-lp__tpolo-feature-img::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 66.72727273%;
+
+    }
+
+    .section-lp__tpolo-feature-img>img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-lp__tpolo-feature-text {
+      margin-top: 33px;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    .profile__tpolo-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 449px){
+    .max-55{
+      width: 65px;
+    }
+  }
+
+    /* サイズ感レビュー */
+    .section-lp-sizseReview {
+      margin: 70px auto 0;
+      max-width: 1000px;
+    }
+
+    .sizeReviewSlider {}
+
+    .sizeReviewSlider__item {}
+
+    .sizeReviewSlider__img {}
+
+    .sizeReviewSlider__img {
+      position: relative;
+    }
+
+    .sizeReviewSlider__img::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+    }
+
+    .sizeReviewSlider__img>img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sizeReviewSlider__body {
+      margin-top: 20px;
+
+    }
+
+    .sizeReviewSlider__meta {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .sizeReviewSlider__text {
+      margin-top: 16px;
+      font-size: 18px;
+    }
+
+    .slider-button-prev--sizeReview {
+      left: -16px;
+      right: auto;
+    }
+
+    .slider-button-next--sizeReview {
+      left: auto;
+      right: -16px;
+    }
+
+
+
+    /* モデルさんコメント */
+    .section-lp-modelComment {
+      margin-top: 60px;
+    }
+
+    .section-lp .section-lp-modelComment {
+      margin-top: 60px;
+    }
+
+    .modelComment {}
+
+    .modelComment__body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .modelComment__img {
+      flex: 0 0 50%;
+    }
+
+    .modelComment__main {
+      flex: 0 0 50%;
+      padding-left: 60px;
+    }
+
+    .modelComment__head {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .modelComment__text {
+      margin-top: 26px;
+      font-size: 20px;
+    }
+
+    /* utility */
+    .bg-white {
+      background-color: #fff !important;
+    }
+
+    .profile-gray {
+      background-color: #F7F7FC !important;
+    }
+  .circle--color{
+    border-radius: 50px;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+  }
+  .circle--navy {
+    background-color: #0E365B;
+    margin: 0 5px 0 5px  !important;
+  }
+  .circle--dark-navy {
+    background-color: #5b5c6d;
+    margin: 0 5px 0 5px  !important;
+  }
+  .circle--black {
+    background-color: #000000;
+    margin: 0 5px 0 5px  !important;
+  }
+  .circle--earth-gray {
+    background-color: #b1b5a9;
+    margin: 0 5px 0 5px  !important;
+  }
+  .circle--beige {
+    background-color: #d5c3b2;
+    margin: 0 5px 0 5px  !important;
+  }
+
+    @media (max-width: 768px) {
+      .slider-button-prev {
+        left: -10px;
+        right: auto;
+      }
+
+      .slider-button-next {
+        left: auto;
+        right: -10px;
+      }
+
+      .description__items {
+        flex-direction: column;
+        gap: 6rem;
+      }
+
+      .description__area__item {
+        width: 100%;
+      }
+
+      .section-box {
+        padding: 24px 15px;
+      }
+
+      .section-box__header {
+        margin-bottom: 2rem;
+      }
+
+      .section-box__title--icon {
+        font-size: 1.9rem;
+      }
+
+      .section-box__title--icon>span {
+        padding-left: 2.1rem;
+        padding-right: 2.1rem;
+        letter-spacing: 0.1em;
+      }
+
+      .section-box__title--icon>span::before,
+      .section-box__title--icon>span::after {
+        width: 1.9rem;
+        height: 2.8rem;
+      }
+
+      .reviewItem__name {
+        font-size: 1.6rem;
+      }
+
+      .reviewItem__title {
+        font-size: 1.8rem;
+      }
+
+      .reviewItem__text {
+        font-size: 1.6rem;
+      }
+
+      .t-polo-btn {
+        padding: 5vw;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 4vw;
+        display: block;
+      }
+
+      .t-polo-btn>a {
+        padding-right: 9vw;
+      }
+
+      .section-lp .section-lp__description {
+        text-align: left;
+        font-size: 2rem;
+        line-height: 1.75;
+        margin-bottom: 20px;
+      }
+
+      .section-lp__tpolo-feature {
+        margin-bottom: 4.3rem;
+      }
+
+      .section-lp__tpolo-featureTop-body {
+        display: block;
+      }
+
+      .section-lp__tpolo-featureTop-content {
+        margin-left: 0;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+      }
+
+      .section-lp__tpolo-featurePoints {
+        gap: 2.8rem 4%;
+      }
+
+      .section-lp__tpolo-featurePoint {
+        flex-basis: 48%;
+      }
+
+      .section-lp__tpolo-featurePoint:nth-child(2n) {
+        margin-left: 4%;
+      }
+
+/*       .section-lp__tpolo-featurePoint:nth-child(n + 3) {
+        margin-top: 2.8rem;
+      } */
+
+      .section-lp__tpolo-featureTitle {
+        font-size: 1.8rem;
+      }
+
+      .section-lp__tpolo-feature-body {
+        margin-top: 1rem;
+      }
+
+      .section-lp__tpolo-feature-text {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+      }
+
+      .sizeReviewSlider__body {
+        margin-top: 1.8rem;
+      }
+
+      .sizeReviewSlider__meta {
+        font-size: 1.8rem;
+      }
+
+      .sizeReviewSlider__text {
+        font-size: 14px;
+      }
+
+      .slider-button-prev--sizeReview,
+      .slider-button-next--sizeReview {
+        top: 32.53333333vw;
+        margin-top: 0;
+      }
+
+      .modelComment__body {
+        display: block;
+
+      }
+
+      .modelComment__main {
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+
+      .modelComment__head {
+        font-size: 1.8rem;
+      }
+
+      .modelComment__text {
+        margin-top: 1.6rem;
+        font-size: 14px;
+      }
+    }
+
+    .giopants_video .video-container{
+      overflow: hidden;
+    }
+    .giopants_video video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .section-lp-story .giopants-story-description {
+      max-width: 870px;
+      margin: 0 auto 90px;
+    }
+    @media (max-width: 768px) {
+      .section-lp-story .giopants-story-description {
+        margin-bottom: 50px;
+      }
+    }
+    .section-lp-story .giopants-story-description p {
+      font-size: 18px;
+      line-height: 1.9;
+      letter-spacing: 0.1em;
+      margin-bottom: 30px;
+      color: #000;
+    }
+    @media (max-width: 768px) {
+      .section-lp-story .giopants-story-description p {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+    .section-lp-story .giopants-story-description p.txt-strong {
+      text-align: center;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    @media (max-width: 768px) {
+      .section-lp-story .giopants-story-description p.txt-strong {
+        font-size: 15px;
+      }
+    }
+    .section-lp-story .giopants-story-description img {
+      margin: 30px auto;
+      display: block;
+      max-width: 460px;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .section-lp-story .giopants-story-description img {
+        margin: 20px auto;
+      }
+    }
+
+  </style>
+
+  <script>
+    var sectionBoxSceneSlider = new Swiper(".section-box-scene-swiper", {
+      breakpoints: {
+        769: {
+          slidesPerView: 3,
+        },
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".section-box-scene-swiper-button-next",
+        prevEl: ".section-box-scene-swiper-button-prev",
+      },
+      pagination: {
+        el: '.section-box-scene-swiper-pagination',
+        type: 'bullets',
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 100,
+      watchSlidesProgress: true,
+    });
+    let reviewSwiper = new Swiper('.js-reviewSlider', {
+      loop: true,
+      speed: 600,
+      slidesPerView: 'auto',
+      direction: 'horizontal',
+      effect: 'slide',
+
+      breakpoints: {
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 25
+        },
+      },
+
+      navigation: {
+        prevEl: '.js-reviewSlider-button-prev',
+        nextEl: '.js-reviewSlider-button-next',
+      },
+    });
+    let sizeReviewSlider = new Swiper('.js-sizeReviewSlider', {
+      loop: true,
+      speed: 600,
+      slidesPerView: 'auto',
+      direction: 'horizontal',
+      effect: 'slide',
+
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 50
+        },
+      },
+
+      navigation: {
+        prevEl: '.js-sizeReviewSlider-button-prev',
+        nextEl: '.js-sizeReviewSlider-button-next',
+      },
+    });
+    $(document).on('click', '#NullsGiftWrapTitle', function () {
+      var a = $('#NullsgiftWrap');
+      if (a.prop('checked')) {
+        a.prop('checked', false);
+      } else {
+        a.prop('checked', true);
+      }
+    });
+    $(function () {
+      $('a[href^="#"]').click(function (e) {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+
+        $.when(
+          $("html, body").animate({
+            scrollTop: position
+          }, 400, "swing"),
+          e.preventDefault(),
+        ).done(function () {
+          var diff = target.offset().top;
+          if (diff === position) {
+          } else {
+            $("html, body").animate({
+              scrollTop: diff
+            }, 10, "swing");
+          }
+        });
+      });
+
+      $(document).scroll(function () {
+        var scrollStart = $('body').offset().top;
+        var scrollEnd = $('#fixed-scroll-end').offset().top;
+        var distance = 0;
+        distance = $(this).scrollTop();
+        if (scrollStart <= distance) {
+          $('.fixed-footer').addClass('active');
+        } else if (scrollStart >= distance) {
+          $('.fixed-footer').removeClass('active');
+        }
+
+        if (scrollEnd <= distance) {
+          $('.fixed-footer').addClass('none');
+        } else {
+          $('.fixed-footer').removeClass('none');
+        }
+      });
+
+      $('.feature__head--pulldown').on('click', function () {
+        var a = $(this).parent('.feature ')
+        if (a.hasClass('pulldown--open')) {
+          a.removeClass('pulldown--open');
+        } else {
+          a.addClass('pulldown--open');
+        }
+      });
+
+    });
+  </script>
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  Product Data
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+  <script type="application/json" data-product-json>
+    {{ product | json }}
+  </script>
+
+  <script type="application/json" data-model-json="{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+</div>
+
+
+
+{% schema %}
+{
+"name": {
+"cs": "Stránky produktu",
+"da": "Produktsider",
+"de": "Produktseiten",
+"en": "Product pages",
+"es": "Páginas de productos",
+"fi": "Tuotesivut",
+"fr": "Pages de produits",
+"hi": "उत्पाद पेज",
+"it": "Pagine di prodotto",
+"ja": "商品ページ",
+"ko": "제품 페이지",
+"nb": "Produktsider",
+"nl": "Productpagina's",
+"pl": "Strony produktu",
+"pt-BR": "Páginas de produtos",
+"pt-PT": "Páginas de produtos",
+"sv": "Produktsidor",
+"th": "หน้าสินค้า",
+"tr": "Ürün sayfaları",
+"vi": "Trang sản phẩm",
+"zh-CN": "产品页面",
+"zh-TW": "產品頁面"
+},
+"settings": [
+{
+"type": "checkbox",
+"id": "show_quantity_selector",
+"label": {
+"cs": "Zobrazit výběr množství",
+"da": "Vis antalsvælger",
+"de": "Mengenauswahl anzeigen",
+"en": "Show quantity selector",
+"es": "Mostrar selector de cantidad",
+"fi": "Näytä määrän valitsin",
+"fr": "Afficher le sélecteur de quantité",
+"hi": "मात्रा चयनकर्ता दिखाएं",
+"it": "Mostra selettore quantità",
+"ja": "数量セレクターを表示する",
+"ko": "수량 선택기 표시",
+"nb": "Vis mengdevelger",
+"nl": "Hoeveelheidskiezer weergeven",
+"pl": "Pokaż selektor ilości",
+"pt-BR": "Exiba um seletor de quantidade",
+"pt-PT": "Mostrar seletor de quantidade",
+"sv": "Visa kvantitetsväljare",
+"th": "แสดงตัวเลือกจำนวน",
+"tr": "Adet seçiciyi göster",
+"vi": "Hiển thị hộp chọn số lượng",
+"zh-CN": "显示数量选择器",
+"zh-TW": "顯示數量選擇器"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "show_variant_labels",
+"label": {
+"cs": "Zobrazit popisky variant",
+"da": "Vis variantlabels",
+"de": "Varianten-Etiketten anzeigen",
+"en": "Show variant labels",
+"es": "Mostrar etiquetas de variantes",
+"fi": "Näytä vaihtoehtoiset tarrat",
+"fr": "Afficher le nom des variantes",
+"hi": "वेरिएंट लेबल दिखाएं",
+"it": "Mostra etichette varianti",
+"ja": "バリエーションのラベルを表示する",
+"ko": "이형 상품 레이블 표시",
+"nb": "Vis variantetiketter",
+"nl": "Variantlabels weergeven",
+"pl": "Pokaż etykiety wariantów",
+"pt-BR": "Exibir etiquetas de variantes",
+"pt-PT": "Mostrar etiquetas de variantes",
+"sv": "Visa variantetiketter",
+"th": "แสดงป้ายกำกับตัวเลือกสินค้า",
+"tr": "Varyasyon etiketlerini göster",
+"vi": "Hiển thị nhãn mẫu mã",
+"zh-CN": "显示多属性标签",
+"zh-TW": "顯示子類選項標籤"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_vendor",
+"label": {
+"cs": "Zobrazit dodavatele produktu",
+"da": "Vis produktleverandør",
+"de": "Produktanbieter anzeigen",
+"en": "Show product vendor",
+"es": "Mostrar proveedor del producto",
+"fi": "Näytä tuotteen myyjä",
+"fr": "Afficher le distributeur du produit",
+"hi": "उत्पाद विक्रेता दिखाएं",
+"it": "Indica fornitore prodotto",
+"ja": "商品の販売元を表示する",
+"ko": "제품 공급 업체 표시",
+"nb": "Vis produktleverandør",
+"nl": "Productleverancier weergeven",
+"pl": "Pokaż dostawcę produktu",
+"pt-BR": "Exiba o fornecedor do produto",
+"pt-PT": "Mostrar fornecedor do produto",
+"sv": "Visa produktleverantör",
+"th": "แสดงผู้ขายสินค้า",
+"tr": "Ürün satıcısını göster",
+"vi": "Hiển thị nhà cung cấp sản phẩm",
+"zh-CN": "显示产品厂商",
+"zh-TW": "顯示產品廠商"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "enable_payment_button",
+"label": {
+"cs": "Zobrazit dynamické tlačítko pokladny",
+"da": "Vis dynamisk betalingsknap",
+"de": "Dynamischen Checkout Button anzeigen",
+"en": "Show dynamic checkout button",
+"es": "Mostrar botón de pago dinámico",
+"fi": "Näytä dynaaminen kassapainike",
+"fr": "Afficher le bouton de paiement dynamique",
+"hi": "डायनेमिक चेकआउट बटन दिखाएं",
+"it": "Mostra pulsante di check-out dinamico",
+"ja": "動的チェックアウトボタンを表示する",
+"ko": "동적 결제 버튼 표시",
+"nb": "Vis dynamisk knapp for å gå til kassen",
+"nl": "Dynamische betaalknop weergeven",
+"pl": "Pokaż dynamiczny przycisk realizacji zakupu",
+"pt-BR": "Exibir botão de checkout dinâmico",
+"pt-PT": "Mostrar botão dinâmico de finalização da compra",
+"sv": "Visa dynamiska betalningsknappar",
+"th": "แสดงปุ่มชำระเงินแบบไดนามิก",
+"tr": "Dinamik ödeme düğmesini göster",
+"vi": "Hiển thị nút thanh toán động",
+"zh-CN": "显示动态结账按钮",
+"zh-TW": "顯示動態結帳按鈕"
+},
+"info": {
+"cs": "Každý zákazník uvidí platební metodu, kterou ze všech metod dostupných v obchodě (například PayPal nebo Apple Pay) nejvíce preferuje. [Další informace](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"da": "Den enkelte kunde vil se sin foretrukne betalingsmetode blandt dem, der er tilgængelige i din butik, f.eks. PayPal eller Apple Pay. [Få mere at vide](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"de": "Jeder Kunde sieht seine bevorzugte Zahlungsmethode aus den in deinem Shop verfügbaren Zahlungsmethoden wie PayPal oder Apple Pay. [Mehr Informationen](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"es": "Cada cliente verá su forma de pago preferida entre las disponibles en tu tienda, como PayPal o Apple Pay. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"fi": "Kukin asiakas näkee ensisijaisen valintansa kauppasi tarjoamista maksutavoista, esim. PayPal tai Apple Pay. [Lisätietoja](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"fr": "Chaque client verra son moyen de paiement préféré parmi ceux qui sont proposés sur votre boutique, tels que PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"hi": "प्रत्येक ग्राहक आपके स्टोर पर उपलब्ध अपनी पसंदीदा भुगतान की विधि देखेंगे जैसे PayPal या Apple Pay. [अधिक जानें](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"it": "Ogni cliente vedrà il suo metodo di pagamento preferito tra quelli disponibili nel tuo negozio, come PayPal o Apple Pay. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"ja": "PayPalやApple Payなど、ストアで利用可能な希望の決済方法がお客様に表示されます。[詳細情報](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"ko": "각 고객은 PayPal 또는 Apple Pay와 같이 스토어에서 사용 가능한 지불 방법을 확인할 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"nb": "Hver enkelt kunde vil se sin foretrukne betalingsmåte blant de som er tilgjengelig i butikken din, som PayPal eller Apple Pay. [Finn ut mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"nl": "Elke klant ziet zijn of haar beschikbare voorkeursmethode om af te rekenen, zoals PayPal of Apple Pay. [Meer informatie](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pl": "Każdy klient zobaczy swoją preferowaną metodę płatności wśród metod dostępnych w Twoim sklepie, np. PayPal lub Apple Pay. [Dowiedz się więcej ](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pt-BR": "Cada cliente verá a forma de pagamento preferencial dele dentre as disponíveis na loja, como PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pt-PT": "Cada cliente irá ver o seu método de pagamento preferido entre os disponíveis na loja, como o PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"sv": "Varje kund kommer att se den föredragna betalningsmetoden från de som finns tillgängliga i din butik, till exempel PayPal eller Apple Pay. [Läs mer](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"th": "ลูกค้าแต่ละรายจะเห็นวิธีการชำระเงินที่ต้องการจากวิธีที่ใช้ได้ในร้านค้าของคุณ เช่น PayPal หรือ Apple Pay [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"tr": "Her müşteri, mağazanız sunulanlar arasından tercih ettikleri ödeme yöntemini görür (ör. PayPal veya Apple Pay). [Daha fazla bilgi edinin](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"vi": "Mỗi khách hàng sẽ thấy phương thức thanh toán ưu tiên của họ trong những phương thức thanh toán được hỗ trợ tại cửa hàng như PayPal hoặc Apple Pay. [Tìm hiểu thêm](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"zh-CN": "每位客户都可在您商店提供的付款方式中看到他们的首选付款方式，例如 PayPal 或 Apple Pay。[了解详细信息](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"zh-TW": "每位顧客都可以在您商店內開放使用的付款方式中看見他們偏好使用的方式，如 PayPal、Apple Pay 等。[深入瞭解](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_share_buttons",
+"label": {
+"cs": "Zobrazit tlačítka pro sdílení na sociálních sítích",
+"da": "Vis knapper til deling på sociale medier",
+"de": "Buttons für Social Media anzeigen",
+"en": "Show social sharing buttons",
+"es": "Mostrar botones para compartir en redes sociales",
+"fi": "Näytä sosiaalisen median jakamispainikkeet",
+"fr": "Afficher les boutons de partage sur les médias sociaux",
+"hi": "सोशल शेयरिंग बटन दिखाएं",
+"it": "Mostra i pulsanti per la condivisione sui social",
+"ja": "ソーシャルメディアでの共有ボタンを表示する",
+"ko": "소셜 공유 버튼 표시",
+"nb": "Vis knapper for deling på sosiale medier",
+"nl": "Knoppen voor delen via social media weergeven",
+"pl": "Pokaż przyciski udostępniania w mediach społecznościowych",
+"pt-BR": "Exibir botões de compartilhamento em redes sociais",
+"pt-PT": "Mostrar botões de partilha nas redes sociais",
+"sv": "Visa knappar för delning i sociala medier",
+"th": "แสดงปุ่มสำหรับแชร์ลงโซเชียล",
+"tr": "Sosyal medya paylaşım düğmelerini göster",
+"vi": "Hiển thị nút chia sẻ qua mạng xã hội",
+"zh-CN": "显示社交分享按钮",
+"zh-TW": "顯示社群分享按鈕"
+},
+"info": {
+"cs": "Nezapomeňte povolit sdílení na sociálních sítích v obecném nastavení.",
+"da": "Sørg for, at du har aktiveret deling på sociale medier under Generelle indstillinger",
+"de": "Vergewissere dich, dass du in den allgemeinen Einstellungen das Teilen in sozialen Netzwerken aktiviert hast",
+"en": "Make sure you have enabled social sharing in general settings",
+"es": "Asegúrate de haber habilitado la opción para compartir en redes sociales en la configuración general.",
+"fi": "Varmista, että olet ottanut sosiaalisen median jakamisen käyttöön yleisissä asetuksissa",
+"fr": "Assurez-vous d'avoir activé le partage social dans les paramètres généraux",
+"hi": "सुनिश्चित करें कि आपने सामान्य सेटिंग में सोशल शेयरिंग सक्षम किया है",
+"it": "Assicurati di aver abilitato la condivisione sui social nelle impostazioni generali",
+"ja": "一般設定でソーシャルメディアでの共有を有効にしていることを確認してください。",
+"ko": "일반 설정에서 소셜 공유가 되었는지 확인하십시오.",
+"nb": "Sørg for at du har aktivert sosial deling i generelle innstillinger",
+"nl": "Zorg ervoor dat je delen via social media hebt ingeschakeld in de algemene instellingen",
+"pl": "Upewnij się, że włączyłeś(-aś) udostępnianie w mediach społecznościowych w ustawieniach ogólnych",
+"pt-BR": "Verifique se você habilitou o compartilhamento em redes sociais nas configurações gerais",
+"pt-PT": "Certifique-se de que ativou a partilha nas redes sociais nas definições gerais",
+"sv": "Se till att du har aktiverat social delning i allmänna inställningar",
+"th": "ตรวจสอบให้แน่ใจว่าคุณได้เปิดใช้การแชร์บนโซเชียลในการตั้งค่าทั่วไป",
+"tr": "Genel ayarlardan sosyal paylaşımı etkinleştirdiğinizden emin olun",
+"vi": "Đảm bảo bạn đã bật chia sẻ qua mạng xã hội trong cài đặt chung",
+"zh-CN": "确保您在“通用”设置中启用了社交分享",
+"zh-TW": "請確定您已在一般設定內啟用社群分享功能"
+},
+"default": true
+},
+{
+"type": "header",
+"content": {
+"cs": "Multimédia",
+"da": "Medie",
+"de": "Medien",
+"en": "Media",
+"es": "Elementos multimedia",
+"fi": "Media",
+"fr": "Médias",
+"hi": "मीडिया",
+"it": "Media",
+"ja": "メディア",
+"ko": "미디어",
+"nb": "Medier",
+"nl": "Media",
+"pl": "Multimedia",
+"pt-BR": "Mídia",
+"pt-PT": "Multimédia",
+"sv": "Media",
+"th": "สื่อ",
+"tr": "Medya",
+"vi": "Phương tiện",
+"zh-CN": "媒体",
+"zh-TW": "媒體"
+},
+"info": {
+"cs": "Další informace o [typech multimédií](https://help.shopify.com/manual/products/product-media)",
+"da": "Få mere at vide om [media types](https://help.shopify.com/manual/products/product-media)",
+"de": "Mehr Informationen über [Medientypen ](https://help.shopify.com/manual/products/product-media)",
+"en": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)",
+"es": "Más información sobre [tipos de archivos multimedia](https://help.shopify.com/manual/products/product-media)",
+"fi": "Lue lisää [mediatyypeistä](https://help.shopify.com/manual/products/product-media)",
+"fr": "En savoir plus sur les [types de supports multimédia](https://help.shopify.com/manual/products/product-media)",
+"hi": "[मीडिया प्रकार](https://help.shopify.com/manual/products/product-media) के बारे में और जानें",
+"it": "Scopri di più sulle [tipologie di file multimediali](https://help.shopify.com/manual/products/product-media)",
+"ja": "[メディアのタイプ](https://help.shopify.com/manual/products/product-media) について詳しくはこちら",
+"ko": "[미디어 유형](https://help.shopify.com/manual/products/product-media)에 대해 자세히 알아보기",
+"nb": "Lær mer om [medietyper](https://help.shopify.com/manual/products/product-media)",
+"nl": "Meer informatie over [mediatypen](https://help.shopify.com/manual/products/product-media)",
+"pl": "Dowiedz się więcej o [typach multimediów](https://help.shopify.com/manual/products/product-media)",
+"pt-BR": "Saiba mais sobre [tipos de mídia](https://help.shopify.com/manual/products/product-media)",
+"pt-PT": "Saiba mais sobre [media types](https://help.shopify.com/manual/products/product-media)",
+"sv": "Läs mer om [mediatyper](https://help.shopify.com/manual/products/product-media)",
+"th": "ดูข้อมูลเพิ่มเติมเกี่ยวกับ [ประเภทของสื่อ](https://help.shopify.com/manual/products/product-media)",
+"tr": "[Medya türleri](https://help.shopify.com/manual/products/product-media) hakkında daha fazla bilgi edinin",
+"vi": "Tìm hiểu thêm về [loại phương tiện](https://help.shopify.com/manual/products/product-media)",
+"zh-CN": "详细了解[媒体类型](https://help.shopify.com/manual/products/product-media)",
+"zh-TW": "深入瞭解 [媒體類型](https://help.shopify.com/manual/products/product-media)"
+}
+},
+{
+"type": "checkbox",
+"id": "enable_video_looping",
+"label": {
+"cs": "Povolit smyčky videa",
+"da": "Aktivér looping af videoer",
+"de": "Videoschleife aktivieren",
+"en": "Enable video looping",
+"es": "Habilitar la reproducción de video en bucle",
+"fi": "Ota käyttöön videosilmukka",
+"fr": "Activer le bouclage de la vidéo",
+"hi": "वीडियो लूपिंग सक्षम करें",
+"it": "Abilita la riproduzione in loop dei video",
+"ja": "ビデオのループを有効にする",
+"ko": "동영상 루프 활성화",
+"nb": "Aktiver løkkeavspilling av video",
+"nl": "Video-looping inschakelen",
+"pl": "Włącz zapętlanie filmu",
+"pt-BR": "Habilitar loop de vídeo",
+"pt-PT": "Ativar ciclo de vídeo",
+"sv": "Aktivera video-loopning",
+"th": "เปิดใช้การวนซ้ำวิดีโอ",
+"tr": "Video döngüsünü etkinleştir",
+"vi": "Bật vòng lặp video",
+"zh-CN": "启用视频循环",
+"zh-TW": "啟用影片循環功能"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "hide_variant_media",
+"label": {
+"cs": "Skrýt varianty multimédií v galerii",
+"da": "Skjul variantmedie i galleriet",
+"de": "Medienvarianten in der Galerie ausblenden",
+"en": "Hide variant media in gallery",
+"es": "Ocultar elementos multimedia de variantes en la galería",
+"fi": "Piilota versioiden aineisto galleriassa",
+"fr": "Masquer les supports multimédia des variantes dans la galerie",
+"hi": "गैलरी में वेरिएंट मीडिया छिपाएं",
+"it": "Nascondi le varianti dei file nella galleria",
+"ja": "ギャラリーのバリエーションメディアを非表示にする",
+"ko": "갤러리의 이형 상품 미디어 숨기기",
+"nb": "Skjul variantmedier i galleriet",
+"nl": "Verschillende media verbergen in galerie",
+"pl": "Ukryj multimedia wariantów w galerii",
+"pt-BR": "Ocultar mídia variante na galeria",
+"pt-PT": "Ocultar multimédia variante na galeria",
+"sv": "Dölj variantmedia i galleriet",
+"th": "ซ่อนสื่อสำหรับตัวเลือกสินค้าในแกลเลอรี",
+"tr": "Galeride varyasyon medyasını gizle",
+"vi": "Ẩn phương tiện mẫu mã trong bộ sưu tập ảnh",
+"zh-CN": "在图库中隐藏多属性媒体",
+"zh-TW": "在圖庫中隱藏子類選項多媒體檔案"
+},
+"default": true
+}
+]
+}
+{% endschema %}

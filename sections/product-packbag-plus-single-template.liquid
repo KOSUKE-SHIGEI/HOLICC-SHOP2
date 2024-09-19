@@ -584,7 +584,7 @@
       <header class="section-lp__header">
         <h2 class="section-lp__title">カラー・デザインバリエーション</h2>
       </header>
-      <div class="section-lp__description">
+      <div class="section-lp__description color-43434e">
         <b
           >SサイズとLサイズのそれぞれで、<br>
           3つの本体カラー、5種類のストラップから組み合わせを選べます</b
@@ -674,53 +674,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  {% comment %}
-    ------------------------------------------------------------------------------
-    開発ストーリー
-    ------------------------------------------------------------------------------
-  {% endcomment %}
-
-  <section class="section-lp section-lp-gray">
-    <div class="section-lp__wrapper section-lp__wrapper--wide">
-      <header class="section-lp__header">
-        <h2 class="section-lp__title">開発ストーリー</h2>
-      </header>
-
-      <div class="section-lp__description">
-        <b
-          >荷物を減らしたほうが、楽しみは増える。<br>
-          PackBag+ができるまで</b
-        >
-      </div>
-
-      <div class="section-lp-story">
-        <div class="story-description">
-          <p>
-            世界一周経験者が半数の旅好きの社員達からまず聞こえてきた悩みは、「ミニマルに移動したい」。そこで、旅とは切っても切り離せない荷物に着目。<br>
-            圧縮ができて長く使えるもの、そして圧縮だけでなくカバンにもなるという機能変化の視点からも省スペースを考え、ショルダーバッグとしても使える圧縮パックバッグの“初代PackBag”が完成しました。
-          </p>
-
-          <img
-            class="lazyload"
-            data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/pbplus_story_bw.jpg?v=1647324344"
-            alt="開発ストーリー"
-          >
-
-          <p>
-            販売開始後、1,200人ものお客様にご購入いただき喜んでいただきましたが、使う中で出てきた改善してほしい点などをお聞きした結果、「リュックにもなればなあ…」「女性も使える色が欲しい」など、多くの声が集まりました。
-          </p>
-          <p>
-            このようなたくさんの声を反映し、性能もデザインのバリエーションも大幅にバージョンアップして、ついにショルダーにもリュックにもなる超圧縮バッグの進化版PackBag+が完成しました。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-lp">
-    {% include 'product-section-content-about-holicc' %}
   </section>
 
   {% comment %}
@@ -835,8 +788,62 @@
         </div>
       </div>
 
-      {% include 'product-section-content-guarantee' %}
+      {% comment %} {% include 'product-section-content-guarantee' %} {% endcomment %}
     </div>
+  </section>
+
+  {% comment %}
+    ------------------------------------------------------------------------------
+    開発ストーリー
+    ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper section-lp__wrapper--wide">
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">開発ストーリー</h2>
+      </header>
+
+      <div class="section-lp__description">
+        <b
+          >荷物を減らしたほうが、楽しみは増える。<br>
+          PackBag+ができるまで</b
+        >
+      </div>
+
+      <div class="section-lp-story">
+        <div class="story-description">
+          <p>
+            世界一周経験者が半数の旅好きの社員達からまず聞こえてきた悩みは、「ミニマルに移動したい」。そこで、旅とは切っても切り離せない荷物に着目。<br>
+            圧縮ができて長く使えるもの、そして圧縮だけでなくカバンにもなるという機能変化の視点からも省スペースを考え、ショルダーバッグとしても使える圧縮パックバッグの“初代PackBag”が完成しました。
+          </p>
+
+          <img
+            class="lazyload"
+            data-src="https://cdn.shopify.com/s/files/1/0474/9662/6339/files/pbplus_story_bw.jpg?v=1647324344"
+            alt="開発ストーリー"
+          >
+
+          <p>
+            販売開始後、1,200人ものお客様にご購入いただき喜んでいただきましたが、使う中で出てきた改善してほしい点などをお聞きした結果、「リュックにもなればなあ…」「女性も使える色が欲しい」など、多くの声が集まりました。
+          </p>
+          <p>
+            このようなたくさんの声を反映し、性能もデザインのバリエーションも大幅にバージョンアップして、ついにショルダーにもリュックにもなる超圧縮バッグの進化版PackBag+が完成しました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% comment %}
+    ------------------------------------------------------------------------------
+    HOLICCについて
+    ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp section-lp-gray">
+    {% include 'product-section-content-about-holicc' %}
+    {% include 'product-section-content-guarantee' %}
   </section>
 
   {% comment %}
@@ -997,51 +1004,106 @@
     </div>
   </section>
 
-  <section class="section_qa-area">
-    <header class="section-box__header">
-      <h3 class="section-box_line_title">よくあるご質問</h3>
-    </header>
-    <div class="wrapper">
-      <div class="flex_line">
-        <div class="box">
-          <p class="ques">支払い方法を教えてください</p>
-          <p class="ans">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。</p>
-        </div>
-        <div class="box">
-          <p class="ques">返品・交換はできますか？</p>
-          <p class="ans">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。</p>
-        </div>
-      </div>
-      <div class="flex_line">
-        <div class="box">
-          <p class="ques">送料はいくらかかりますか？</p>
-          <p class="ans">
-            全国一律500円（但し、沖縄県は1,500円）です。また、一度のご購入金額が10,000円以上の場合、送料無料となります。
-          </p>
-        </div>
-        <div class="box">
-          <p class="ques">注文後、どれくらいで届きますか？</p>
-          <p class="ans">
-            平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。
-          </p>
-        </div>
-      </div>
-      <div class="flex_line">
-        <div class="box">
-          <p class="ques">配送の日時指定はできますか？</p>
-          <p class="ans">
-            できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。
-          </p>
-        </div>
-        <div class="box">
-          <p class="ques">ギフト用のラッピングはできますか？</p>
-          <p class="ans">
-            有料（500円）にて承ります。ギフトラッピングをご希望の方は商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
-          </p>
-        </div>
+  {% comment %}
+    ------------------------------------------------------------------------------
+    よくあるご質問
+    ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <section class="section-lp">
+    <div class="section-lp__wrapper">
+      <header class="section-lp__header">
+        <h2 class="section-lp__title">よくある質問</h2>
+      </header>
+
+      <div class="section-lp-qa">
+        <ul class="qa-list">
+          <li>
+            <div class="q">支払い方法を教えてください。</div>
+            <div class="a">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。</div>
+          </li>
+          <li>
+            <div class="q">送料はいくらかかりますか？</div>
+            <div class="a">
+              全国一律500円（但し、沖縄県は1,500円）です。<br>
+              また、一度のご購入金額が10,000円以上の場合、送料無料となります。
+            </div>
+          </li>
+          <li>
+            <div class="q">配送の日時指定はできますか？</div>
+            <div class="a">
+              できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。
+            </div>
+          </li>
+          <li>
+            <div class="q">返品・交換はできますか？</div>
+            <div class="a">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。</div>
+          </li>
+          <li>
+            <div class="q">注文後、どれくらいで届きますか？</div>
+            <div class="a">
+              平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。
+            </div>
+          </li>
+          <li>
+            <div class="q">ギフト用のラッピングはできますか？</div>
+            <div class="a">
+              有料（500円）にて承ります。ギフトラッピングをご希望の方は商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。。
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
+
+  {% comment %}
+    旧 Q and A
+    <section class="section_qa-area">
+      <header class="section-box__header">
+        <h3 class="section-box_line_title">よくあるご質問</h3>
+      </header>
+      <div class="wrapper">
+        <div class="flex_line">
+          <div class="box">
+            <p class="ques">支払い方法を教えてください</p>
+            <p class="ans">お支払いは、クレジットカード決済、Amazon Pay決済、Paidy後払いからお選びいただけます。</p>
+          </div>
+          <div class="box">
+            <p class="ques">返品・交換はできますか？</p>
+            <p class="ans">未使用に限り、商品到着から7日以内にご返送いただければ返品・交換を承ります。</p>
+          </div>
+        </div>
+        <div class="flex_line">
+          <div class="box">
+            <p class="ques">送料はいくらかかりますか？</p>
+            <p class="ans">
+              全国一律500円（但し、沖縄県は1,500円）です。また、一度のご購入金額が10,000円以上の場合、送料無料となります。
+            </p>
+          </div>
+          <div class="box">
+            <p class="ques">注文後、どれくらいで届きますか？</p>
+            <p class="ans">
+              平日は10時までにご注文いただければ、即日発送いたします。平日10時以降と土・日・祝日、またお盆・年末年始等の長期休暇期間のご注文は翌営業日発送となります。
+            </p>
+          </div>
+        </div>
+        <div class="flex_line">
+          <div class="box">
+            <p class="ques">配送の日時指定はできますか？</p>
+            <p class="ans">
+              できます。カート内「ショップへの伝言メモ」に記載ください。最速日時以前のご指定は通常の最速で配送となり、時間帯指定は前後2時間程ずれる場合があります。ご了承下さい。
+            </p>
+          </div>
+          <div class="box">
+            <p class="ques">ギフト用のラッピングはできますか？</p>
+            <p class="ans">
+              有料（500円）にて承ります。ギフトラッピングをご希望の方は商品をカートに入れたのち、カートページに表示される「ギフトラッピングをする」より、ギフトラッピングをカートに入れて購入手続きへ進んでください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endcomment %}
 
   <div class="fixed-form active">
     <div class="fixed-form__header pc">

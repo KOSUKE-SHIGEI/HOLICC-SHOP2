@@ -1,5 +1,5 @@
 [ストアへの接続(構築前に行う)]
-shopify theme dev --store ○○.myshopify.com
+shopify theme dev --store holicc-shop.myshopify.com
 
 例:ストアURLが、「hogehoge.myshopify.com」の場合
 shopify theme dev --store hogehoge

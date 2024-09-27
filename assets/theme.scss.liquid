@@ -574,6 +574,12 @@ strong {
   font-weight: $font-weight-bold;
 }
 
+/* こうすけ追記 */
+p{
+  line-height:1.9;
+  letter-spacing:0.1rem;
+}
+
 em {
   font-style: italic;
 }
@@ -755,13 +761,20 @@ h2 {
     line-height: 1.8;
 /*     line-height: line-height(38, 30); */
   }
-
   @include media-query($medium-up) {
     font-size: rem(40);
     line-height: 1.8;
 /*     line-height: line-height(49, 40); */
   }
 }
+
+h2.hero__overlay-title {
+    @include media-query($small) {
+      font-size: rem(20);
+      line-height: 1.8;
+      letter-spacing: 1px;
+    }
+  }
 
 h3 {
   @include media-query($small) {
@@ -2854,7 +2867,7 @@ $card-image-placeholder: rgba($color-body-text, 0.35);
 }
 
 .card__name {
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   line-height: 1.4;
   margin: 5px 0;
 }
@@ -15924,6 +15937,7 @@ button,
 }
 
 .btn--secondary:not(.btn-submit) {
+  letter-spacing:1px;
   border: 1px solid black;
   background: transparent;
 }

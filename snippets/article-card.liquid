@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="{{ "kosuke.css" | asset_url }}" media="print" onload="this.media='all’">
+
+<noscript>{{ 'kosuke.css' | asset_url | stylesheet_tag }}</noscript>
+
 <div class="card critical-clear" data-animate>
   <a href="{{ article.url }}" class="card__wrapper card--article">
     {% if article.image %}

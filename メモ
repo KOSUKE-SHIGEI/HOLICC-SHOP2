@@ -15,6 +15,7 @@ shopify theme dev --poll
 ○Github名○
 
 [リモートリポジトリの確認]
+
 git remote -v
 origin  git@github.com:KOSUKE-SHIGEI/HOLICC-SHOP.git (fetch)
 origin  git@github.com:KOSUKE-SHIGEI/HOLICC-SHOP.git (push)

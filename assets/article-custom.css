@@ -1,3 +1,7 @@
 .card__name.article-heading {
   font-size: 2rem;
 }
+
+.card.critical-clear .card__info .card__excerpt.article-excerpt {
+  font-size: 1.4rem;
+}
